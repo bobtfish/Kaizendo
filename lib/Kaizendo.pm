@@ -66,7 +66,8 @@ Kaizendo - A tool for collaborative authoring of polyscopic documents
 
 =head1 DESCRIPTION
 
-Kaizendo is a framework for discussing and improving texts.
+Kaizendo is a framework for discussing and improving texts and their
+alternatives.
 
 =head1 SEE ALSO
 
@@ -81,7 +82,7 @@ Salve J. Nilsen <sjn@kaizendo.org>
 This library is free software. You can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License v3, AGPLv3.
 
-See L<http://opensource.org/licenses/agpl-v3.html>.
+See L<http://opensource.org/licenses/agpl-v3.html> for details.
 
 =cut
 
