@@ -58,7 +58,7 @@ __PACKAGE__->setup();
 
 =head1 NAME
 
-Kaizendo - A web service for discussing texts.
+Kaizendo - A tool for collaborative authoring of polyscopic documents
 
 =head1 SYNOPSIS
 

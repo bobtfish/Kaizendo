@@ -1,7 +1,7 @@
 ---
-abstract: 'Catalyst based application'
+abstract: 'A tool for collaborative authoring of polyscopic documents'
 author:
-  - 'Salve J. Nilsen,,,'
+  - 'Salve J. Nilsen <sjn@kaizendo.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
   Test::More: 0.88
@@ -26,5 +26,5 @@ requires:
   Config::General: 0
   Moose: 0
   namespace::autoclean: 0
-  perl: 5.8.0
+  perl: 5.8.5
 version: 0.01
