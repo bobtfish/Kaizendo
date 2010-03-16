@@ -1,0 +1,13 @@
+HTTrack3.43-5+libhtsjava.so.2 launched on Wed, 10 Mar 2010 14:34:06 at http://ndla.no/nb/node/3663/menu764
+(httrack -Y -n -q -N3 -s0 -%P -p3 -B -r1 -%e1 -e http://ndla.no/nb/node/3663/menu764 )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:34:08	Warning: 	file not stored in cache due to bogus state (incomplete type): ndla.no/sites/default/files/css/css_65afd451d8f60c1b2c8699fa021ee38f.css
+14:34:09	Info: 	engine: warning: entry cleaned up, but no trace on heap: ndla.no/sites/all/themes/ndla/img/logo.gif (web/logo.gif)
+
+HTTrack Website Copier/3.43-5 mirror complete in 26 seconds : 27 links scanned, 26 files written (739591 bytes overall) [688797 bytes received at 26492 bytes/sec], 75851 bytes transfered using HTTP compression in 2 files, ratio 20%, 4.6 requests per connection
+(No errors, 1 warnings, 1 messages)
