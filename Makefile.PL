@@ -4,6 +4,12 @@
 use inc::Module::Install;
 
 name 'Kaizendo';
+
+resources homepage => 'http://kaizendo.org/';
+resources repository => 'http://github.com/sjn/Kaizendo';
+resources MailingList => 'http://talk.kaizendo.org/mailman/listinfo';
+resources IrcChannel => 'irc://irc.freenode.org/kaizendo';
+
 all_from 'lib/Kaizendo.pm';
 
 requires 'Catalyst::Runtime' => '5.8002';
