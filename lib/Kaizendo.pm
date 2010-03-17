@@ -14,10 +14,10 @@ use Catalyst::Runtime 5.80;
 #                 directory
 
 use Catalyst qw/
-    -Debug
     ConfigLoader
     Static::Simple
 /;
+#    -Debug
 
 extends 'Catalyst';
 
