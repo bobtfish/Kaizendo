@@ -27,4 +27,9 @@ requires:
   Moose: 0
   namespace::autoclean: 0
   perl: 5.8.5
+resources:
+  Homepage: http://kaizendo.org/
+  IrcChannel: irc://irc.freenode.org/kaizendo
+  MailingList: http://talk.kaizendo.org/mailman/listinfo
+  Repository: http://github.com/sjn/Kaizendo
 version: 0.01
