@@ -26,33 +26,9 @@ The root page (/)
 
 =cut
 
-sub _c : Local : ActionClass('REST') {
+sub index : Path : ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
-
-
-sub _c_GET {
-    my ( $self, $c ) = @_;
-    my $accepts = $c->req->headers->{accept};
-
-    my $id = $c->req->args->[0];
-
-    $self->status_ok(
-        $c,
-        entity => {
-            accepts => $accepts,
-            comment => {
-                from => q(sjn@pvv.org),
-                re => q(id00105),
-                id => $id,
-                content => q(Well done!),
-            },
-        },
-    );
-}
-
-
-
 
 =head2 default
 
@@ -60,11 +36,20 @@ Standard 404 error page
 
 =cut
 
-#sub default :Path {
-#    my ( $self, $c ) = @_;
-#    $c->response->body( 'Page not found' );
-#    $c->response->status(404);
-#}
+sub default : Path : ActionClass('REST') {
+    my ( $self, $c ) = @_;
+    $c->response->body( 'Page not found' );
+    $c->response->status(404);
+}
+
+sub default_GET {
+    my ( $self, $c ) = @_;
+    $c->response->body( 'default GET' );
+    $c->response->status(200);
+}
+
+
+
 
 =head2 end
 
@@ -76,12 +61,14 @@ Attempt to render a view, if needed.
 
 =head1 AUTHOR
 
-Salve J. Nilsen,,,
+Salve J. Nilsen <sjn@kaizendo.org>
 
 =head1 LICENSE
 
 This library is free software. You can redistribute it and/or modify
-it under the same terms as Perl itself.
+it under the terms of the GNU Affero General Public License v3, AGPLv3.
+
+See L<http://opensource.org/licenses/agpl-v3.html> for details.
 
 =cut
 
