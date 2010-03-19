@@ -1,0 +1,4 @@
+# Testbed for figuring out the comments data
+# Using YAML::Shell for testing purposes
+
+ysh -r < comment.yml
