@@ -1,4 +1,4 @@
-package Kaizendo::Controller::Comments;
+package Kaizendo::Controller::Comment;
 use Moose;
 use namespace::autoclean;
 
@@ -12,7 +12,7 @@ __PACKAGE__->config(namespace => '_c');
 
 =head1 NAME
 
-Kaizendo::Controller::Comments - Comments handler for Kaizendo
+Kaizendo::Controller::Comment - Comment-handler for Kaizendo
 
 =head1 DESCRIPTION
 
