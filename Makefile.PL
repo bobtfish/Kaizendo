@@ -6,9 +6,10 @@ use inc::Module::Install;
 name 'Kaizendo';
 
 resources Homepage => 'http://kaizendo.org/';
-resources Repository => 'http://github.com/sjn/Kaizendo';
+resources GitHub => 'http://github.com/sjn/Kaizendo';
 resources MailingList => 'http://talk.kaizendo.org/mailman/listinfo';
 resources IrcChannel => 'irc://irc.freenode.org/kaizendo';
+resources Repository => 'git://github.com/sjn/Kaizendo.git';
 
 all_from 'lib/Kaizendo.pm';
 
