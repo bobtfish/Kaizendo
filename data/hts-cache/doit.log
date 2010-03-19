@@ -1,8 +1,0 @@
--Y -n -q -N3 -s0 -%P -p3 -B -r1 -%e1 -e http://ndla.no/nb/node/3663/menu764
-File generated automatically on Wed, 10 Mar 2010 14:34:06, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-
