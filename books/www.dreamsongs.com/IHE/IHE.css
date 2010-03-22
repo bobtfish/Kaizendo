@@ -1,0 +1,896 @@
+body { background-color: #ffcc99 }
+
+.sidebar { background-color: #cfa67c }
+
+A.link {
+	color: blue;
+	text-decoration: underline;
+}
+A.visited {
+	color: purple;
+	text-decoration: underline;
+}
+A.active {
+	color: red;
+	text-decoration: underline;
+}
+A.footnote {
+	margin-left: 2.00pt;
+	margin-right: 2.00pt;
+	vertical-align: top;
+	font-size: 10.00pt;
+}
+LI.AlphaCaps, LI.AlphaCaps1 {
+	list-style-type: upper-alpha;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Attribution {
+	display: block;
+	text-align: right;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 36.00pt;
+	margin-left: 36.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Body {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+BR.Break {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 10.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.Bulleted {
+	text-align: justify;
+	margin-top: 8.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 5.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.BulletedCont {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 4.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 5.0000pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.CellBody {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 4.00pt;
+	margin-right: 4.00pt;
+	margin-left: 4.00pt;
+	font-size: 10.00pt;
+	font-weight: bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.CellHeading {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 4.00pt;
+	margin-left: 4.00pt;
+	font-size: 10.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.CellRow {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 4.00pt;
+	margin-right: 4.00pt;
+	margin-left: 4.00pt;
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Centered {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 4.00pt;
+	margin-bottom: 4.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Dedication {
+	display: block;
+	text-align: right;
+	text-indent: 0.00pt;
+	margin-top: 20.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 36.00pt;
+	margin-left: 40.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.EBody {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-right: 10pt;
+	margin-left: 5pt;
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Figure, H2.Figure, H3.Figure, H4.Figure, H5.Figure, H6.Figure {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 16.00pt;
+	margin-right: 10.00pt;
+	margin-left: 24.00pt;
+	font-size: 10.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Footnote {
+	display: block;
+	text-align: justify;
+	text-indent: -12.00pt;
+	margin-top: 3.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 22.00pt;
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.FootnoteLeft {
+	display: block;
+	text-align: left;
+	text-indent: -12.00pt;
+	margin-top: 3.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 22.00pt;
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.heading-A, H2.heading-A, H3.heading-A, H4.heading-A, H5.heading-A, H6.heading-A {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 17.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #ff0000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Heading0, H2.Heading0, H3.Heading0, H4.Heading0, H5.Heading0, H6.Heading0 {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 18.00pt;
+	margin-bottom: 20.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 24.00pt;
+	font-weight: Bold;
+	font-style: small-caps Regular;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Heading0TOC, H1.Heading0TOC, H2.Heading0TOC, H3.Heading0TOC, H4.Heading0TOC, H5.Heading0TOC, H6.Heading0TOC {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 4.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 14.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Heading1, H2.Heading1, H3.Heading1, H4.Heading1, H5.Heading1, H6.Heading1 {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 18.00pt;
+	margin-bottom: 4.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 20.00pt;
+	font-weight: Bold;
+	font-style: small-caps Regular;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Heading1TOC, H1.Heading1TOC, H2.Heading1TOC, H3.Heading1TOC, H4.Heading1TOC, H5.Heading1TOC, H6.Heading1TOC {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 4.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 30.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Heading2, H2.Heading2, H3.Heading2, H4.Heading2, H5.Heading2, H6.Heading2 {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 16.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 14.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Heading3, H2.Heading3, H3.Heading3, H4.Heading3, H5.Heading3, H6.Heading3 {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 14.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Indented {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 18.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.IndentedBody {
+	display: block;
+	text-align: justify;
+	text-indent: 20.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.IndentedNumbered, LI.IndentedNumbered1 {
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 15.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Index-1 {
+	display: block;
+	text-align: left;
+	text-indent: -20.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 30.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Index-2 {
+	display: block;
+	text-align: left;
+	text-indent: -20.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 50.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.LeftBody {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.Listalpha, LI.ListAlpha1 {
+	list-style-type: lower-alpha;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.000pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.List2alpha, LI.List2Alpha1 {
+	list-style-type: lower-alpha;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 0.000pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.List3Alpha, LI.List3Alpha1 {
+	list-style-type: lower-alpha;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 0.000pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.LNumbered, P.LNumbered1 {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.MPLBody {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 60.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.Numbered, LI.Numbered1 {
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 5.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.NumberedCont {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 5.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.Quote {
+	display: block;
+	text-align: justify;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 26.00pt;
+	margin-left: 26.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.ReportAuthor {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 10.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 24.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.ReportSubtitle, H2.ReportSubtitle, H3.ReportSubtitle, H4.ReportSubtitle, H5.ReportSubtitle, H6.ReportSubtitle {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 35.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 24.00pt;
+	font-weight: Bold;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.ReportTitle, H2.ReportTitle, H3.ReportTitle, H4.ReportTitle, H5.ReportTitle, H6.ReportTitle {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 30.00pt;
+	margin-bottom: 25.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 36.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+P.RightBody {
+	display: block;
+	text-align: right;
+	text-indent: 0.00pt;
+	margin-top: 12.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 0.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+LI.Roman, LI.Roman1 {
+	list-style-type: lower-roman;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.Spacer, H2.Spacer, H3.Spacer, H4.Spacer, H5.Spacer, H6.Spacer {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 6.00pt;
+	margin-bottom: 6.00pt;
+	margin-right: 10.00pt;
+	margin-left: 10.00pt;
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+H1.TableTitle, H2.TableTitle, H3.TableTitle, H4.TableTitle, H5.TableTitle, H6.TableTitle {
+	display: block;
+	text-align: center;
+	text-indent: 0.00pt;
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-right: 10.00pt;
+	margin-left: 24.00pt;
+	font-size: 10.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+B.Boldface {
+	font-weight: Bold;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.Bullet2Symbol {
+	font-size: 12.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.BulletSymbol {
+	font-size: 12.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	font-family: "Courier";
+}
+EM.Callout {
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	font-family: "TimesNewRoman";
+}
+EM.Dingbats {
+	font-size: 24.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: sub;
+	text-transform: none;
+	font-family: "ZapfDingbats";
+}
+EM.Emphasis {
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.EmphasisFootnote {
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.EquationVariables {
+	font-style: Italic;
+}
+EM.HTML-Typewriter {
+	font-size: 12.00pt;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Courier, monospace;
+}
+EM.Hyperlink {
+	font-size: 10.00pt;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.link {
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.Semibold {
+	font-size: 12.00pt;
+	font-weight: Bold;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+EM.Typewriter {
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Courier, monospace;
+}
+EM.TypewriterItal {
+	font-size: 10.00pt;
+	font-weight: medium;
+	font-style: Oblique;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Courier, monospace;
+}
+EM.URL {
+	font-size: 12.00pt;
+	font-weight: medium;
+	font-style: Normal;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: Georgia, AGaramond, helvetica, lucida sans, Verdana, sans-serif;
+}
+
+/* Left nav bar */
+.locallink { font-family: Georgia, AGaramond, helvetica, lucida sans; font-size: 11pt; text-decoration: none; color: #ffffff; font-weight: normal; }
+
+.nomargin {
+	text-indent: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-right: 0pt;
+	margin-left: -5pt;
+}

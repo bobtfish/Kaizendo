@@ -1,0 +1,7 @@
+This directory contains prospective "seed books" to use as a basis
+for discussion with the Kaizendo tool.
+
+www.dreamsongs.com
+   "Innovation Happens Elsewhere" mirror.
+   Licensed CC-BY-SA-2.0: http://creativecommons.org/licenses/by-nc-sa/2.0/
+   wget -m -p -k -R .pdf -np http://www.dreamsongs.com/IHE/

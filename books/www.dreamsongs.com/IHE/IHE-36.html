@@ -1,0 +1,637 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="IHE.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<META NAME="DATE-PUBLISHED" CONTENT="September 17, 2005 16:53:53">
+<META NAME="owner" CONTENT="Ron Goldman">
+<title>Business Reasons for Choosing to Open Source Your Code</title>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div align="center">
+ <a href="http://www.dreamsongs.com/index.html"><img src="images/DreamsongsBannerWeb.jpg" width="800" height="95" border="0"></a>
+</div>
+
+<TABLE CLASS="nomargin" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" >
+ <TR>
+  <TD CLASS="sidebar" VALIGN="TOP" WIDTH="180">
+
+<!-- START SIDEBAR NAVIGATION -->
+<font CLASS="locallink" COLOR="#FFFFFF" >
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" WIDTH="180">
+ <TR>
+  <TD ALIGN="CENTER" VALIGN="TOP" COLSPAN="3" >
+   <a href="http://www.amazon.com/exec/obidos/tg/detail/-/1558608893/">
+   <img src="images/IHEcover.jpg" WIDTH="180" HEIGHT="233"
+       BORDER="0" ALT="IHE book cover" TITLE="IHE book cover">
+   </a>
+  </TD>
+ </TR>
+
+ <TR><TD ALIGN="LEFT" VALIGN="TOP" COLSPAN="3"><BR></TD></TR>
+
+ <TR>
+  <TD ALIGN="center" COLSPAN="3" >
+   <A CLASS="locallink" HREF="IHE.html">
+    <FONT FACE="Georgia, AGaramond, helvetica, lucida sans" 
+     SIZE="5" COLOR="#FFFFFF">
+     <B>Innovation Happens Elsewhere</B>
+     </FONT>
+    </A>
+    <br>
+    <font size=3> (Version 1.01) </font><br><br>
+  </TD>
+ </TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP"><BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A CLASS="locallink" HREF="IHE-6.html">Table of Contents</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP"><BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A CLASS="locallink" HREF="IHE-7.html">Forward</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP"><BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A CLASS="locallink" HREF="IHE-8.html">Preface</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">1. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A CLASS="locallink" HREF="IHE-10.html">Introduction</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">2. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A CLASS="locallink" HREF="IHE-18.html">Innovation Happens Elsewhere</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">3. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-25.html" CLASS="locallink">What Is Open Source?</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">4. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-35.html" CLASS="locallink">Why Consider Open Source?</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">5. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-42.html" CLASS="locallink">Licenses</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">6. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-52.html" CLASS="locallink">How To Do Open Source Development </A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">7. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-60.html" CLASS="locallink">Going with Open Source</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">8. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-66.html" CLASS="locallink">How To Build Momentum</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">9. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-72.html" CLASS="locallink">What To Avoid</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">10. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-84.html" CLASS="locallink">Closing Thoughts</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">A1. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-85.html" CLASS="locallink">Resources</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">A2. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-90.html" CLASS="locallink">Licences</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">A3. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-108.html" CLASS="locallink">Contributor Agreements</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP">A4. <BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-114.html" CLASS="locallink">Codename Spinnaker</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP"><BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-115.html" CLASS="locallink">Bibliography</A><BR></TD></TR>
+
+ <TR><TD ALIGN="RIGHT" VALIGN="TOP"><BR></TD><TD ALIGN="LEFT" VALIGN="TOP"><A HREF="IHE-116.html" CLASS="locallink">Index</A><BR></TD></TR>
+
+ <TR>
+  <TD WIDTH="14%">&nbsp;</TD>
+  <TD WIDTH="83%">&nbsp;</TD>
+  <TD WIDTH="3%">&nbsp;</TD>
+ </TR>
+</TABLE>
+</font>
+<!-- END SIDEBAR NAVIGATION -->
+
+  </TD>
+  <TD VALIGN="TOP" ROWSPAN=2>
+
+<!-- START PAGE CONTENT -->
+
+<p align="center">
+<a href="IHE-35.html">Previous</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-6.html">Table of Contents</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-35.html">Up</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-37.html">Next</a>
+</p>
+
+</DIV>
+<H1 CLASS="Heading1">
+<A NAME="pgfId-956107"></A><A NAME="43299"></A>Business Reasons for Choosing to Open Source Your Code</H1>
+<P CLASS="Body">
+<A NAME="pgfId-956108"></A>Deciding to manage a development project as an open-source project requires making a careful determination of the project's business goals--an open-source project is generally more expensive to operate than a proprietary project, and there are different scheduling and development processes that need to be adopted and that can affect product delivery.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956109"></A>The following is a list of business reasons to support the use of open source for a project. To illustrate them, we provide concrete examples based on our experiences with various Sun-sponsored projects such as NetBeans, OpenOffice, Project JXTA, Java.net, and Jini.</P>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956110"></A>Visibility</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956111"></A>When a project is run using open source, the existence and nature of the project are visible to the outside world and to people in other parts of your company. If the project is visible to a strategically important community--whether it participates in the project or not--your company is better able to present plans, goals, features, and statements of progress. Open source makes available additional communication channels, including more informal ones consulted by the target developer community.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956112"></A>For example, any sort of open, Java-related activity, such as the NetBeans project, enables the Sun developers working on it to use the various Java newsgroups as well as Slashdot and other weblogs to communicate directly with other developers. Although this is a good way to get feedback from the community about technical matters, it is not suited to marketing hype.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956113"></A>Training and Education</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956114"></A>The best way to learn design and implementation skills is to read and study good designs and source code. This teaching method is rarely used in software development and engineering curricula, so it's often up to companies to do on-the-job training. Whether the open-source project is internal or external, it can supply source code, design documents (or at least archives of design discussions), and provide opportunities to try out ideas and talk to designers and implementors.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956115"></A>In general, this is an advantage with transparency. For example, creative writing, music, art, sculpture, and most engineering disciplines use publicly visible artifacts to educate practitioners. Apprenticeships are a classic form of observational education. In some older crafts, an apprentice would do menial tasks such as cleanup and setup for months or years before actually being instructed and helping with the real work, and this was educational because the apprentice could observe the craftsperson at work, which would help him or her know what practicing the craft was all about.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956116"></A>Ubiquity</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956117"></A>By providing an open-source offering, a project can begin to spread that offering first to the outside users and developers of the project, then out to the broader open-source community, and then perhaps to the larger developer community. Both the no-cost and open nature of the offering and the transparent stance of the project to the users of the offering contribute to the spread of the offering. The transparent stance conveys the message that your company's developers don't consider themselves the ultimate authority on the offering and not only value the contributions of the community but consider other members of the community as equals.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956118"></A>For example, an explicit goal of NetBeans was to create a common IDE platform that would be one of the three most popular Java development environments. This is a ubiquity goal. Jini is another example of a project that has attempted to establish a new, ubiquitous platform for services. Eclipse is also directed at ubiquity.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956119"></A>Another example is StarOffice, for which ubiquity includes creating a large and diverse user base. A person might go to OpenOffice.org to download the latest version, but then stay to participate in the mailing-list discussions of how to best use the OpenOffice application and how it might be improved. Because of the feeling of community that arises from being part of those discussions, the person is much more likely to recommend OpenOffice to others; and a user becomes a community member.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956120"></A>Ubiquity helps a company engage in service businesses. With Eclipse, IBM is creating a plug-in platform that its professional services business can leverage, and similarly GE's involvement with the Visualization Toolkit enables them to have more convincing and substantial engagements, both inside and outside the company.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956121"></A>Design Discipline</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956122"></A>Doing development open-source style requires making almost all decisions on mailing lists open to the public. Design and implementation proposals are made in writing and discussed by the community, and the resulting decisions are summarized in writing. All this written material is archived and available to everyone. By enforcing this level of discipline, the quality of the design and implementation decisions is likely to increase--simply because they are being done deliberately and in writing. The process of writing it all down creates a need to express issues in a clear way, which often forces you to better understand matters. This better understanding then leads to a better design. In many ways, the open-source process resembles the literate programming methods promoted over the years by computer scientists such as Donald Knuth.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956123"></A>Best Standards Development</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956124"></A>Some projects have as a goal developing a standard--API definitions, language extensions, or tool extensions. Opening up the process to everyone makes it more likely to get the best advice and achieve the greatest adoption.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956125"></A>The best and first example of this is the Common Lisp<A HREF="IHE-36.html#pgfId-957185" CLASS="footnote">1</A> community, which was created precisely to do standards development. Initially, the goal was a de facto standard embodied in a particular book (<EM CLASS="Emphasis">
+Common Lisp the Language,</EM>
+ by Guy L. Steele Jr.) and a set of informal agreements, but after the artificial intelligence industry and the Department of Defense embraced the language, it became the subject of ANSI standardization.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956126"></A>The NetBeans IDE APIs had been designed in an open way to begin with, so an open-source approach simply maintained this practice. A goal for OpenOffice was to create an XML standard for file formats.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956127"></A>In general, it appears that a standardization effort that is based on an open-source or commons-based community is less likely to suffer from the worst of politics. Open-source and commons-based communities almost always have at least a hint of meritocracy built in, where status and influence are based on achievements within the community rather than on the strength or influence of the organization that the individual represents. Further, the decision-making conversations in such a community are much more likely to center around technical and engineering issues than around business and marketing issues.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956128"></A>For example, the Jini Community is partially organized around a standards-granting body. Because the community is made up of both individuals and companies, its organization has two &quot;houses,&quot; one in which each individual has one vote and the other in which each company has one vote. Any proposed standard must be approved by both houses to be adopted by this community. The discussions in this community about proposed standards indeed revolve around the technology, and the community has been quite successful at getting companies to work together that traditionally have had a lot of trouble doing so. We believe it is important that the sponsoring company, Sun Microsystems, rarely has a significant stake directly in the application area and thereby can act as an unbiased helper in the discussions--Sun's stake is in the underlying infrastructure that Jini provides, which is provided at no cost.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956129"></A>Conversations</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956130"></A>A technology company can thrive when it engages in conversations with its customers and potential customers. Such conversations largely take place between a salesperson and a technical customer, but relationships between technical staffs are important.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956131"></A>Open source is a way to engage a broad group of people--fans and foes alike. Some of the conversations are about design and implementation issues directly associated with the source code, but there are many other, indirect opportunities for a company to learn.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956132"></A>It is relatively rare for an outsider to be interested in helping a company with its proprietary products, and frequently outsiders are not in a position to know enough about a company's strategy and dynamics to offer useful advice. But, by listening carefully to the corners of the conversations with outsiders in an open forum such as an open-source project, a company can learn quite a bit that could impact new products and product directions.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956133"></A>By listening to people talking about the challenges and problems they face--particularly with the technology of the open-source project--a company can figure out what new products or directions would help with those problems. When participants talk about how they use some other technology in conjunction with the technology being developed by the open-source project, a company might make plans to integrate this other technology or make it easier to work with by creating or extending the infrastructure. This is not the same as just doing what the customer says because the customer might not know or care enough about the technology behind the solution--it's seeing the problems and trends that matter. The listening company needs to think and problem solve carefully to come up with a good solution.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956134"></A>Such conversations sometimes are more natural face to face. A sponsoring company can arrange for a community meeting or other event where members of the community are given an opportunity to talk about their projects and work. The wise company will send someone hopelessly curious to find out all about the problems and exciting opportunities facing community members and thereby arrange to bring back valuable ideas for new products.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956135"></A>Naturally, conversations such as these can forge relationships between companies, such relationships being less likely in the more adversarial and isolated world of business. By letting people talk to people, companies can talk to companies.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956136"></A>Design Help</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956137"></A>By opening up the design process to the community, a project can get not only advice on direction but help on how to design the implementation for that direction. This can come in the form of what is generally considered design, as well as direction regarding features and usability from pure users. We call users who provide good directions and even pure design <EM CLASS="Emphasis">
+user/designers.</EM>
+</P>
+<P CLASS="Body">
+<A NAME="pgfId-956138"></A>Most developers don't distinguish between development and design, so by aiming for development help, many open-source projects expect design help as well. Getting design help was an important goal for the Jini project, because for Jini success meant defining Jini services for printing and consumer appliances that fall outside of Sun's areas of expertise. Community feedback on the benefits of using NetBeans, not just as an IDE but also as an application run-time platform, resulted in adding a new direction to the NetBeans project. Now NetBeans also supports developers who wish to create applications on top of the NetBeans core framework. This new focus on NetBeans as a platform has also helped to improve the NetBeans IDE.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956139"></A>Of all the business reasons given here, design help may be the most important. Many software products fail because they do not meet the needs of their intended users. An article in <EM CLASS="Emphasis">
+Scientific American</EM>
+ by W. Wyatt Gibbs (&quot;Software's Chronic Crisis,&quot; September 1994) stated that &quot;some three quarters of all large systems are <EM CLASS="Emphasis">
+operating failures</EM>
+ that either do not function as intended or are not used at all.&quot; Indeed, the 1994 <EM CLASS="Emphasis">
+CHAOS Report</EM>
+ by the Standish Group stated that over 30% of software projects are canceled, with the greatest risk factor being lack of user involvement. User feedback, coupled with the open-source practice of incremental development and frequent releases, helps keep a project in touch with reality and focused on what is most important. Feedback from users includes answering the question of whether the project is even worth doing at all.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956140"></A>Guidance for Proprietary Products</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956141"></A>Some open-source licenses permit proprietary products to be based on an open-source system, sometimes by adding features and sometimes by providing quality and support. The ability to develop the best such product can be improved by commentary and feedback from the community.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956142"></A>Apple's Darwin open-source project, of course, forms the basis for OS X--it is the underlying operating system on top of which the nice Finder-based look-and-feel is implemented.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956143"></A>Guidance for proprietary products was a major goal for NetBeans, with the Forte for Java Internet and Enterprise Editions being for-sale products built on the NetBeans platform. (<EM CLASS="Emphasis">
+Note:</EM>
+ Forte for Java has been renamed Sun Java Studio.)</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956144"></A>Build a Market for a Proprietary Product</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956145"></A>When a company has a proprietary product built on top of a free, open-source version, the free version will bring in customers and increase the company's market share. Users of the free version can be persuaded to upgrade to the for-sale version to get new features, better support, training, or consulting services. It also makes it more difficult for competitors to enter the market because they will need to compete with a free product.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956146"></A>Rather than having their proprietary product possibly compete with their open-source version, some companies make them one and the same. However, new features may appear first in the proprietary version and make their way into a later release of the open-source version only after a delay of several months. Customers who want the latest features are often willing to pay for the proprietary version rather than wait for them to be added to the free version. This approach was pioneered by Aladdin Enterprises for GhostScript, probably the world's most widely used second-source PostScript and PDF interpreter, and has also been used by TurboLinux.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956147"></A>Another approach is to release the software as open source--using a license such as the GPL that requires that any larger work based on the open-source code also be made open source--and then license the software to any companies that wish to use it in a proprietary product. This is what Trolltech AS does with its Qt multiplatform application development framework, which is the basis of the open-source KDE graphical desktop for Linux. It is also the strategy used by both MySQL AB and Sleepycat Software for their database products.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956148"></A>Being able to sell or license a proprietary product based on an open-source code base requires that a company own the copyright to all the source code and be doing most of the development of the code. You should expect only minimal contributions from outside developers, who are generally not eager to have a company profit from their work.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956149"></A>Development Help</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956150"></A>One of the myths of open source is that an open-source project will attract a lot of developers, and therefore the costs of operating a project using open source will be lower than using proprietary processes. This isn't true<A HREF="IHE-36.html#pgfId-957188" CLASS="footnote">2</A> primarily because most software is still largely monolithic or made of modules that are too large and so most volunteer developers do not have the time or motivation to fully understand the code well enough to want or be able to add significantly to it. However, finding bugs, fixing some bugs, and porting software to other platforms or making it work in new configurations are the sort of help a project can reasonably hope to get.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956151"></A>If the code for your project is relatively modular and doesn't require weeks of study in order to be modified, then you can expect outside developers to contribute code for new features and even entire new modules. But note that these contributions will probably not be for features you had planned on for the next release. Instead they will be whatever the individual outside developers need for their work. Such contributions may appeal to many other community members, broadening the project's scope.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956152"></A>NetBeans is structured as a set of modules communicating through APIs. One goal was to create a community of module developers, which has happened: Outside developers have indeed contributed new modules and continue to work on them. Similarly, the OpenOffice community has been effective in improving its huge code base by adding new modules for spell checking and printing, helping port OpenOffice to Linux, working on a port to Mac OS X, and localizing it to more than two dozen languages.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956153"></A>Internal Open Source and Reuse</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956154"></A>A company can use an open-source methodology within its walls for a variety of internal benefits. By organizing development around the commons, the entire organization can be informed about which projects exist, how the project is doing, and who is working on it. Sometimes people can make quick but significant contributions. And sometimes the organization can make use of intermediate releases and participate in quality control. For companies that do alpha and beta testing, such internal releases can help find and fix problems before--rather instead of--releasing them outside the company.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956155"></A>Detailed internal information such as this can benefit sales, marketing, and sales engineering by providing ways of finding out information without (over)burdening development.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956156"></A>But most important, doing internal open source opens up the possibility of reuse. By reuse we don't mean the planned <EM CLASS="Emphasis">
+use</EM>
+ of libraries and frameworks but the unexpected and serendipitous reuse similar to what happens when you visit the junkyard or scrapheap. There may be pieces of code not designed to be used in multiple contexts that can cannibalized or used in unexpected ways, and an open-source or commons-based development approach can provide visibility into projects, thereby encouraging such reuse.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956157"></A>Support Help</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956158"></A>One of the hallmarks of a good open-source project is that community members provide support to each other. More experienced developers and users help out folks with less knowledge, and practically everyone answers the questions posted by beginners. Community members assemble and edit lists of <EM CLASS="Emphasis">
+frequently asked questions</EM>
+ (FAQs) and post them to the project's website. Some folks may even write tutorials and articles to help others get started. All of this community support activity is work that you do not need to provide resources to do.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956159"></A>For the Jini project, Sun's top developers participate on the public mailing lists. This has attracted lots of experienced outside developers to these lists because they know both that they can get their advanced questions answered there and also that they can benefit from seeing the answers to other people's questions. Because of the community feeling that has been created, these outside developers are then willing to answer the less difficult questions, freeing up the Sun core team to do other work.</P>
+<P CLASS="Body">
+<A NAME="pgfId-957331"></A>But keep in mind this is not a way to get something for nothing. There must be a reason for knowledgeable folks to want to visit your project's website and participate in discussions. One of the best reasons is that you have one or more employees participating who are even more experienced and who can answer the more difficult questions that are posted to the project's mailing lists. This could be some of your senior developers, or someone slightly less experienced who can refer the question to the appropriate senior developer. It should not be a junior person because community members will quickly perceive this and feel that you consider them second-class citizens.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956160"></A>Although Jini is mostly a community of developers, this sharing of support also works with users, as can be seen on OpenOffice.org. The OpenOffice community has written <EM CLASS="Emphasis">
+How-to</EM>
+ guides giving step-by-step instructions on how to do specific tasks with OpenOffice, has put together lists of FAQs, and has created sample and template files that demonstrate OpenOffice's capabilities and how to accomplish certain tasks. This help has been made available in many languages including Chinese, Dutch, English, French, German, Italian, Portuguese, and Spanish. The website also has a general users' mailing list--plus native language mailing lists in over two dozen languages--where anyone with a problem can post questions that others in the community will answer.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956161"></A>Facilitate Technology Transfer</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956162"></A>When you are introducing a new technology and trying to spread it to other developers, creating an open-source project can help. The project provides an attractive place for people to come to learn the new technology by doing things with it and seeing what others are doing with it. The people that originated the technology are available to answer questions and to steer further development based on community feedback.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956163"></A>The Jini project is an example of how a gated-community effort can help to introduce many new developers to a technology. Having Sun's core Jini team working with outside developers that were trying to learn about Jini created a vibrant Jini community that continues to flourish and to help introduce Jini technology to new developers.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956164"></A>This is very different from creating a user group for a technology. User groups tend to be places for novices to go to download tutorials and white papers, to read FAQs, and to ask their questions. Aside from the occasional online chat session, there is no sense of discussing issues with the team developing the technology. As a result, as soon as developers start to master the technology they tend to drift away.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956165"></A>Using corporate source can facilitate technology transfer within your company. When ongoing research is both visible and accessible through an internal open-source effort, developers in other parts of your company can learn about and experiment with new technologies and better relate them to your products and marketplace. Just encouraging more communication between researchers and the rest of your company can be a win. Both HP Labs and Sun Labs have internal open-source efforts to help them to move new technologies into the rest of the company.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956166"></A>Limited Resources</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956167"></A>Sometimes you just may not have enough resources to do all the work that's needed on your own. We've pointed out several times that you can't expect volunteer help to pick up the slack, but there are several other open-source-related options that might work for you.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956168"></A>The simplest is building on top of an existing open-source project. If the work you want to do adds value to the work already done by the project and fits in with its vision, then the community will welcome your contributions. Depending on the project's license and philosophy, you might be able to create a for-sale product if that is important to your business model.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956169"></A>Sun took this route when deciding how to improve the desktop shipped with Solaris. Rather than investing the effort in upgrading its proprietary Common Desktop Environment (CDE), it made more sense to switch to GNOME and focus Sun's resources on improving certain aspects of GNOME such as accessibility, integration with Java, and documentation--all areas where the GNOME community welcomed additional participation.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956170"></A>If there is no existing project you can join, then creating a new open-source project or a gated community might work, provided that you can recruit other companies and individuals that share your vision and are willing to work to realize it. An open-source project may provide a better framework than trying to set up a more formal consortium. The way Java is developed is an example of this strategy: Through the Java Community Process, new extensions to Java are jointly developed by participating companies that write the necessary specifications, reference implementations, and technology compatibility kits.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956171"></A>You can also use corporate source to pool the efforts of developers and engineers throughout your company that have common needs. For example, within Sun various teams in different parts of the company each needed to develop an internal tool to monitor service requests (trouble tickets) and report various statistics about them. A team in France developed a client-server version of the tool, which they then shared with another team in Germany that had been looking into writing a similar one. The German team had to rewrite part of the tool to work in their particular environment, but that was much easier than starting from scratch. Moreover, their revised version improved on the server component and the French team was able to adopt their changes. Meanwhile, other teams in the United Kingdom and Sweden have joined in the effort and are working on other improvements. Each team now has a better tool with less effort on its part then if it had developed it alone.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956172"></A>Note that all of these options are quite different from putting out a half-done project and hoping someone will come along to help finish it.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956173"></A>Improved Quality</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956174"></A>When releases are made available to users early in the development process, bugs are more likely to be caught. When the source code is made available to developers outside the core team, those bugs can be located and fixed. The outside developers can also add many of the small features that the core team wants but doesn't have time to get to--making the product more usable. This all results in greatly improved quality in the official release. Moreover, the bugs that bother users the most are the ones that are actually most apt to be fixed.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956175"></A>For example, sendmail is the Internet mail program used in the majority of email systems worldwide. Eric Allman, sendmail's original author and now CTO of Sendmail Inc., which offers a commercial version based on the open-source version, had the following to say on how open source improves product quality:</P>
+<P CLASS="Quote">
+<A NAME="pgfId-956176"></A>Another thing I've learned big time is that there is no QA department better than the Internet itself. Nobody can afford to simulate the Internet QA lab. By having the open source support, we get this incredible base of people that are willing to be on the bleeding edge, and give great feedback.<A HREF="IHE-36.html#pgfId-957191" CLASS="footnote">3</A></P>
+<P CLASS="Body">
+<A NAME="pgfId-956177"></A>Perhaps the Visualization Toolkit people would dispute this by claiming that adding automated testing to an open-source project achieves an even higher level of quality.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956178"></A>Time To Market</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956179"></A>For open source, there is a time-to-market advantage, but it is a more complicated notion than simply getting a product into a space quickly. By using available open-source code in a project, a company is able to avoid re-inventing it. This can speed up getting to market, but the more important effect is that a company can get to a very good product quickly, especially one with a greater number of already proven features and better quality. That is, the right product is achieved faster. If existing open-source code is available, this could also mean getting a product into the new market space ahead of the competition. If such code isn't available and the idea is to start an open-source project to design and implement a new product, then the company will not get a product out faster than by going it alone, but the initial open-source-based product will probably be a better product than one done with proprietary methodologies. Tellis and Golder argue this is likely a better strategy than simply being first (see the section <A HREF="IHE-23.html#59733" CLASS="XRef">Creativity</A> in Chapter 2).</P>
+<P CLASS="Body">
+<A NAME="pgfId-956180"></A>Although open source may sometimes seem slower than proprietary development, it is also more deliberate and informed development because of the extensive design help from the community. The 1.0 release of an open-source project usually compares to the 2.0 or 3.0 release of a proprietary product.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956181"></A>Better Way to Do Releases</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956182"></A>The open-source process of doing daily development releases and frequent stable releases in addition to periodic, major, official releases is often better suited to customer needs. Cutting-edge customers immediately have access to the latest features and bug fixes by downloading daily or weekly builds, whereas more conservative customers--customers who adopt change slowly to avoid risk--can wait for major releases that are guaranteed to be more solid and bug-free. In short, customers can choose the level of risk they are comfortable with.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956183"></A>Major releases are possibly done less frequently, but by having an open development process with more communication between users and developers, the development can be done less frantically without everyone feeling that the project has slowed down.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956184"></A>In this and in other ways, open source is like some of the agile methodologies.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956185"></A>Better Relations with Customers</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956186"></A>Open source breaks down the barriers between your company and your customers. Being included in the development process makes outside developers and users feel they are a part of the community working on the project. When done correctly, this leads to a better relationship between them and your company.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956187"></A>Many of these developers and users are also key influencers in their own companies, so their having a closer relationship with your company can directly translate into their recommending other products from your company for use by their organization.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956188"></A>By having more direct interactions with your customers, you can get a much better sense of what they need and how you can adapt your products to satisfy those needs. In fact, giving your customers access to the source code lets them assist in fixing the bugs and adding the features that they care most about. Even making the source code available through a gated-community approach, instead of full open source, can still provide additional value to the customer.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956189"></A>Better Relations with Other Parts of Your Company</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956190"></A>Open source can also help break down barriers within your company. In many companies, the formal organization makes it difficult or impossible for two people in separate parts of the company to collaborate. Making the source code part of an open-source project can allow you to more readily share it with other people within your own company. The open-source methodology creates a context where it is both easy and natural for anyone, anywhere in the company, to join the project's public discussions. This can encourage cross-company communications and cooperation, such as between researchers and product engineers, between developers and customer support, or among geographically dispersed parts of the organization.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956191"></A>Corporate source--limiting the scope of an open-source project to keep it within your company--can have a similar effect. An important consideration is whether your development organization requires <EM CLASS="Emphasis">
+transparency</EM>
+ or open development. Transparency means that the plans, roadmap, design documents, and sometimes the source code are visible within your company, but does not require that development follow an open-source development methodology. It may be that your company's development culture wouldn't tolerate such a methodology, but an informal commons-based approach using transparency and informal communications is sufficient. One way to determine this is to ask whether serendipitous development help or reuse is something your company needs; if this is the case, the source code needs to be available and probably an open-source process needs to be in place.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956192"></A>Nurture Innovation</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956193"></A>One of the benefits of open-source projects can be the innovative new features and applications that people come up with. These innovations can help your project build momentum or expand to a new audience, move your technology forward, increase the size of the marketplace, generate positive publicity, and generally help you win. Most often, the innovations will come as a surprise. A related benefit to working with open source is to find out what potential customers are doing, which can lead to new products or new features for existing products. By observing the problems other people are having, you can sometimes come up with engineering that can solve, resolve, or alleviate those problems. The nature of innovation and how working in the commons can benefit it is described in Chapter 2.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956194"></A>You can work to make innovation more likely by making your project a safe place for people to experiment. It is important to remove as many barriers to collaboration as possible: social, political, and technical. A good project provides developers with the necessary infrastructure (CVS, mailing lists, etc.) so they can focus on creating novel software.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956195"></A>With the Jini project, we made it very easy for anyone to create a new subproject. Each registered community member could get disk space on the project's website to encourage code sharing. At community meetings and in other ways, developers were encouraged to report on what they were doing with Jini technology. One result of this was to increase the project's momentum by expanding people's ideas about what the Jini technology could be used for.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956196"></A>Nurturing innovation can be important both for traditional open-source projects and for corporate source projects within your company. In both cases, it is important that you recognize innovation when it happens and actively work to harvest it. Innovation can present a golden opportunity if you are able to follow up on it.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956197"></A>Community Building for Speculative Reasons</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956198"></A>In some cases, your company is interested in getting into a new area where it may have little or only emerging expertise and credibility. Starting an open-source project can bring expertise and contacts from the community concerned with the area.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956199"></A>An example is Project JXTA. Sun engineers are collaborating with many outside experts to explore possibilities of peer-to-peer computing (P2P). By working with a larger community, Sun hopes to better establish expertise in the P2P space and to be able to take early advantage of business opportunities that arise based on P2P.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956200"></A>Another Sun example is the Java.net website,<A HREF="IHE-36.html#pgfId-957194" CLASS="footnote">4</A> which was created primarily as a community site but also as a sort of central open-source hosting site for Java-related projects--a kind of SourceForge for Java. However, not only were the usual open-source tools provided, but social software tools such as wikis and weblogs were added. The website has a newspaper feel, and there is a site editor, akin to a newspaper's editor-in-chief. The goal is to bring together open-source developers in the hopes that a marketplace might develop.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956201"></A>Avoiding Lock-In</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956202"></A>A common strategy for companies is to offer a high-value product and create brand lock-in--making it hard to move to another product--by providing special platform-specific capabilities. An open-source community will not tolerate proprietary lock-in and will generally move toward making the offering as portable as possible.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956203"></A>This was a major goal for NetBeans, where the competitors to NetBeans and Forte for Java were seen as promoting lock-in not only to their own IDEs but perhaps also to particular Java implementations.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956204"></A>This could be a goal for Eclipse, as well. IBM is concerned with the dominance of Microsoft in the software development and server markets, and Eclipse certainly could be aimed at providing a popular, open-source alternative to Microsoft's proprietary products in this area.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956205"></A>Risk Reduction</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956206"></A>Of concern to many companies is the risk they face if a software product they depend on is discontinued. With open-source applications, they know they can continue product development even if the original developers stop working on it. In the past, the primary way of reducing the risk that a producer would abandon software or go out of business was a practice called <EM CLASS="Emphasis">
+software escrow</EM>
+ wherein the source code was held by a third party as if in a vault whose contents were to be released to the consumer of the software upon certain contractually defined events.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956207"></A>The risk that a software product might stop being supported can be acute when the product is offered by a small company. Customers are often wary of buying a product from a small company because the company might go out of business. By making the product open source, a small company can assure customers that even if the company disappears the software will still survive. Rather than making its money from software sales, the small company would instead need to sell support, training, and/or consulting services.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956208"></A>Making an application open source also reduces the risk for the company that initially developed it. For example, Cisco Systems decided to release their Cisco Enterprise Print System software (CEPS) under an open-source license partly to reduce its dependency on in-house programming staff. Cisco wanted to make sure that if the original programmers left the company, the software would continue to be maintained. In fact, one of the two original developers did eventually take a new job elsewhere, but, because it is an open-source project, he has been able to continue to work on it. If a developer really identifies with a project, then you can ensure that person's participation for a long time by making it open source.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956209"></A>Another way that a company reduces its own risk by making a product open source is that the outside developers who work on the project become attractive candidates to hire: They are knowledgeable about the product and have a proven track record. There are numerous examples where a major contributor is later hired by the company that started the open-source project.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956210"></A>Appeal to the Community Whose Name Is &quot;The Open-Source Community&quot;</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956211"></A>Some open-source pundits and leaders talk about &quot;the open-source community&quot; as if it were a clearly identifiable set of people. Some even speak as if this community were homogeneous and universal, making statements such as &quot;the open-source community rejects&quot; some company-sponsored project. This happened to the Jini project when it first appeared.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956212"></A>Jini was one of the first forays by a large company into commons-based software development. (Other small companies, such as Lucid, Inc., in the 1980s, worked on open-source software as part of their product strategies.) Jini was released under a gated-community license called the Sun Community Source License (SCSL), and Sun termed this sort of license a &quot;community source&quot; license, both to distinguish it from open-source licenses and to ensure that there would be no confusion between the two types of development communities. Some of the open-source leaders denounced Sun for hijacking the concept of open source, for confusing the public by introducing a new name, and for introducing a new model. Further, some of these leaders stated to the press that open-source developers were not interested in community source and did not participate in the Jini community. Actually, there were quite a few open-source developers in the Jini community at that time and still are.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956213"></A>Since then, the early leaders of the &quot;open-source community&quot; have grown to accept community source and other gated communities to the extent that they don't go out of their way to criticize them much. And many of those leaders have come to accept that this is a different idea needing a different name to avoid confusion. Moreover, these leaders have assumed a diminished role as open source has been adopted by more companies and people.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956214"></A>A prime example of this was releasing the StarOffice source code under the GNU LGPL. Using that license, which is a favorite of many in &quot;the open-source community,&quot; improved Sun's reputation.</P>
+<P CLASS="Body">
+<A NAME="pgfId-957455"></A>But even today there is a benefit to be had by gaining the acceptance of and positive statements from the pundits and leaders of &quot;the open-source community&quot; and of some of the smaller communities within it. For example, the Linux community is a thriving Unix community within the broader open-source community. By doing an open-source project, the organization running the project can get closer to that community.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956215"></A>The open-source community was not a strong Java development community when NetBeans was open sourced in June 2000. In fact, much of this community is not a strong C++ development community, favoring C instead. Further, this community was slow to pick up Java partly because of Sun's ownership of it. By doing a full-up Java project as open source, Sun hoped to improve its standing with that community. Note that since then many successful Java open-source projects have been created and that there is now a very large and vibrant open-source community for Java.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956216"></A>Storytelling through Connected Activities</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956217"></A>This is a general marketing-based goal. Typically marketing takes place via collateral material, events such as JavaOne and product launches and press releases. There are not very many ways to get small pieces of news into the world. Websites have helped with this. An open-source project has a website, mailing lists, and community events, but they are aimed more at developers and users than at the press and analysts. It is possible to tell these smaller stories within the context of normal open-source communications. For example, a developer could mention in a design consideration something that implies a new strategic direction for your company. Even simply having a developer at your company working hard at making some program or system work well on a competitor's system conveys a story about your company's values that is not possible to tell through normal marketing avenues.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956218"></A>Storytelling was an explicit NetBeans goal, although it is not likely that many outside the inner circle of the NetBeans-community designers were comfortable thinking of it in this way. The Forte for Java product line is marketed partly through the open-source project, and statements about the Forte for Java direction are made indirectly through the actions and discussions by NetBeans developers working in the NetBeans community.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956219"></A>Statement of Vision and Terms of Engagement</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956220"></A>Sometimes a company would like to make a statement of vision or establish new terms of engagement. This can be thought of as changing or adding to the conceptual landscape of the field or market. For example, when IBM wanted to establish itself further as a leader in part of the Java landscape, it released Eclipse as open source. Eclipse is &quot;a kind of universal tool platform--an open extensible IDE for anything and nothing in particular.&quot;<A HREF="IHE-36.html#pgfId-957197" CLASS="footnote">5</A></P>
+<P CLASS="Body">
+<A NAME="pgfId-956221"></A>At that time, the only significant open-source Java IDE was NetBeans. IBM had established itself as a supporter of open source through its support for Linux, and it had put out some small open-source projects such as Jikes, but it had yet to make a big statement of its beliefs in open source in the Java arena. Moreover, it didn't have an open-source Java IDE as its competitor, Sun, did. The full Eclipse story is recounted later.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956222"></A>Statement of Values</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956223"></A>Doing an open-source project signals your company's belief in open-source principles and acknowledges that the world beyond your company is full of expertise and innovation. It is a statement of humility. Every open-source project achieves this result, at least to some degree.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956224"></A>The previous example about working to enhance the performance of a competitor's product shows that your company cares about its customers and wants to provide them with the best products possible--even if they come from a competitor.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956225"></A>The business goal that is achieved by affirming your company's values is indirect, helping to establish your company's reputation. This, in turn, influences how potential customers and business partners think about your company and what they expect in their dealings with your company.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956226"></A>An important characteristic of a company is its trustworthiness. Trustworthiness is hard to come by--you cannot achieve it with a single act but only with a long sequence of good acts. Trustworthiness is also built by making what you do very transparent so that there are no secrets. Open source is a way to live in a glass house; and when people observe you acting well just as they often do, then your trustworthiness will increase.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956227"></A>Get Brand Loyalty for Your Company's Hardware/Software</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956228"></A>Creating a community of users and developers around an open-source project earns your company the reputation of being a &quot;good guy,&quot; and that can create brand loyalty.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956229"></A>Every company-sponsored open-source project has this goal, whether stated or not. For example, with NetBeans the primary business goal was to increase the number of Java developers by providing a solid Java IDE, but making it an open-source project helped Sun gain some brand loyalty for both the Sun and Java brands.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956230"></A>Get the Hit Effect Working</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956231"></A>By studying how movies and popular music become runaway hits, researchers have found that a large network of key influencers can cause a word-of-mouth wildfire to spread rapidly. If the right people speak favorably about a work, those favorable words can spread and the same favorable message bumping into the same person from different directions can cause that person to become a fan. This can happen with an open-source project when key influencers are in the community and are favorable to its projects.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956232"></A>This is an important mechanism for ubiquity.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956233"></A>Create a Marketplace</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956234"></A>By providing a ubiquitous open-source platform, you can create a marketplace for add-ons, support, and other related products and services. Having an open-source base platform greatly reduces the risk a player in the new marketplace must take on because there is no single owner of the underlying technology to possibly leave the market or go out of business.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956235"></A>Building a marketplace can require a multistep process using at least two distinct approaches. The first is to build an open-source community around a single software project that can have associated, perhaps for-sale software developed by outside parties. NetBeans is an example. NetBeans is an IDE that enables modules conforming to certain APIs to be plugged into it, and these modules are the goods in the marketplace. Sun hopes that it can participate in the marketplace with proprietary software, and that the existence of the marketplace for Java increases the Java programmer population. Eclipse, originally an IBM open-source project and associated IDE, is another example of this approach. Part of this marketplace can be seen at the Eclipse plug-in website,<A HREF="IHE-36.html#pgfId-957200" CLASS="footnote">6</A> which describes itself as a portal and marketplace.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956237"></A>The other approach is to build an infrastructure for a set of open-source projects centered on the technology around which the company wishes to form a market. Sun has built such an infrastructure and community called Java.net. Java.net is both a set of communities that creates Java software and a website containing infrastructure to host those communities. Groups and companies are encouraged to host their own open-source projects at Java.net at no cost, and, because there is also an active, portal-like community associated with Java.net, ideas and partnerships may spawn as well as source code spreading. Java.net is therefore like a great city attracting creative people into its neighborhoods. A second, loosely affiliated website called Java.com is provided where Java software can be advertised and sold. In each of these examples (NetBeans, Eclipse, and Java.net), an open-source approach was used to anchor a community that creates the desired marketplace.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956238"></A>Commoditize Competition</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956239"></A>Providing a no-cost offering can force a competitor to play a commodity game where small advantages and brand loyalty, for example, can play a stronger role than in a high-value game.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956240"></A>OpenOffice is an example of this goal: Its free office-productivity software makes it more difficult for other companies, such as Microsoft, to charge large amounts for proprietary software with similar features. It transforms office-productivity software from a high-value, single-vendor product into a commodity.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956241"></A>Pricing for Small Businesses</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956242"></A>Small companies face problems that larger, more established companies do not. We have already mentioned how making a product open source reduces customer risk because the product can then survive a small company going out of business. Making a product open source can also resolve a potential problem of how to price the product.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956243"></A>When a small company enters an existing market and underprices its product to be competitive, customers will wonder why the price is low. This suspicion may keep customers away from the new product. If the company meets market prices, then it comes up against many other issues that favor large, established companies. Making the product open source makes the question of pricing go away. Customers no longer wonder why the price is so low because this aspect of open source is understood. They are okay with the product being &quot;free&quot; and the small company charging for a nicely packaged version of the software, manuals, support, and training or consulting services.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956244"></A>Acquisition and partnership--personal and corporate</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956245"></A>In the mid-1990s DOOM was released as open source. DOOM is a first-person shooter (FPS) game. Since then, there has been growth in the development and distribution of <EM CLASS="Emphasis">
+mods</EM>
+, which are variants or updates to proprietary computer game engines that have game-extension capabilities such as scripting languages. The current range of mods includes new game types, game character models and skins (surface textures), levels (game play arenas or virtual worlds), and artificially intelligent game bots (in-game opponents). Two game companies, id Software and Epic Games, provide tools for creating mods and require essentially open-source licenses for their creation. Half-Life: Counter Strike is among the most popular of the FPS games (fall 2003) and was developed under an open-source license. The two primary developers now have a financial arrangement with Valve, the commercial developers of Half-Life, sharing in the revenue stream for Counter Strike.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956246"></A>This is a business model in which developers create a market with an open-source project based around a commercial product. By increasing the size of the commercial product's market, these developers might be able to arrange a partnership with the commercial company or be bought out by it.</P>
+</DIV>
+<DIV>
+<H2 CLASS="Heading2">
+<A NAME="pgfId-956247"></A><A NAME="89621"></A>The Eclipse Story</H2>
+<P CLASS="Body">
+<A NAME="pgfId-956248"></A>Eclipse is a good example of a successful business-related open-source project. As with all real success stories, there is no single or simple thread or fact that explains all aspects. That is, Eclipse was done as open source not for one strategic reason but instead for several.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956249"></A>Since the time IBM committed to Java, the company had developed a strong competence and practice in Java. Because IBM values being able to work with customers on their own terms, it wanted to bolster Java in the marketplace so that it would not need to invest excessively in maintaining multiple expertises. Because Microsoft succeeds at least partly by providing good tools for developers, IBM wanted to establish serious competition for Microsoft Visual Studio in the eyes of developers. Further, IBM had had only modest success selling to customers who were not already IBM's. Open source provided legitimacy to appeal to the Linux, C, and Microsoft installed bases without involving much IBM baggage. Eclipse was a way to address these issues.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956250"></A>There was also the issue of effort. For a plug-in technology such as Eclipse, the problems of integrating a variety of pluggable components were bigger than one company could continue to solve while providing sensible investments in the infrastructure, and open source could provide a way to share the costs while providing a broad set of tools.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956251"></A>To accomplish these goals, IBM decided to engage the open-source community.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956252"></A>Where did Eclipse come from? The Eclipse project was the natural follow-up to IBM's VisualAge family of development tools. Many of the substantial contributions to Eclipse came from a Canadian company IBM had acquired called Object Technology International (OTI), headquartered in Ottawa. OTI had previously developed IDEs and virtual machines (VMs)<A HREF="IHE-36.html#pgfId-957203" CLASS="footnote">7</A> for IBM's VisualAge Smalltalk and VisualAge Java. The early work on a Java-based IDE was part of a broader research effort on multiple language technologies at OTI where the IDE was given the internal name Eclipse.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956253"></A>The goal of the OTI Eclipse project was to provide IBM product developers and key independent software vendors (ISVs) with a common, extensible tool platform competitive with Microsoft's Visual Studio. The first commercial release of Eclipse technology was IBM's VisualAge Micro Edition (later called WebSphere Studio Device Developer), an IDE for embedded Java development where important design constraints come from diminished computing and presentation resources.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956254"></A>The Eclipse team had two primary objectives for the roll-out of the technology:</P>
+<P CLASS="Body">
+<A NAME="pgfId-956255"></A>Deliver technology to establish a perception of ubiquity--that developers, engineers, and users all use (this is a bottom-up developer-to-developer approach).</P>
+<P CLASS="Body">
+<A NAME="pgfId-956256"></A>Build an ecosystem or marketplace for companies to build commercial offerings on top of the open-source base; the hope was that this would generate a healthy tension between the paradigm of open source and the commercial need for profitable products.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956257"></A>For many computer companies, a medium- and long-term strategy is to work with researchers and educators who then train their students on that company's products and technology. This translates into future sales and loyalty. This is one of the reasons that Unix and now Linux are as popular as they are--Unix was once a staple of university computer science and engineering departments. However, this requires investment and an understanding of the university and laboratory scene, which were problems for IBM. Eclipse provided technology that researchers could get excited about.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956258"></A>Similarly, IBM had difficulties penetrating non-IBM installed markets despite the existence of both programs and investments in this area. In both these cases, IBM was unable to make headway in markets and communities important to its future. Eclipse provided the perception of independence and provided a forum for competitors and other IBM outsiders to observe and with which to engage.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956259"></A>Eclipse could have been released as a free but proprietary tool, but IBM realized that the platform would see wider acceptance in the broader developer and vendor community if it were made a true open-source project. Furthermore, this would drive home the message that Java and open source could provide a serious challenge to Microsoft. By providing the ability to support platforms and languages other than Java, Eclipse enabled developers with existing languages and tools to benefit from the same IDE framework and tools, providing many of the benefits of Visual Studio Net. This reduced the need for expensive tooling for a wide variety of researchers and tool vendors.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956260"></A>IBM therefore made a concerted effort to engage educators, researchers, vendors, and key influencers to move Eclipse from an IBM internal development to a full open-source project. The internal code name was familiar to developers, so IBM deviated from its normal naming practices and allowed the internal code name Eclipse.org to represent the project. This provided a lightning rod for developers expressing their frustration at Sun's control of Java.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956261"></A>IBM brought some well-known names into the mix: Erich Gamma was the first author of <EM CLASS="Emphasis">
+Design Patterns</EM>
+, and Kent Beck was a founder of the software patterns community and the father of Extreme Programming. Gamma is now one of the main Eclipse project leaders, and he and Beck wrote a book called <EM CLASS="Emphasis">
+Contributing to Eclipse: Principles, Patterns, and Plugins</EM>
+, which is part of a new Addison-Wesley series called The Eclipse Series.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956262"></A>IBM played its marketing hand quite well. IBM sponsored Eclipse receptions and workshops at major object-oriented programming conferences, produced the excellent book mentioned above, made research grants to universities, and eventually created an Eclipse conference, called EclipseCon. The Gamma-Beck book was given as a gift to all attendees of OOPSLA 2003 by IBM Research.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956263"></A>This extraordinary marketing effort combined with the technical excellence of Eclipse resulted in the Eclipse project's having 50 corporate members and 18 million downloads by the end of 2003. Further, this success also motivated IBM to spin out Eclipse.org in 2004 as a nonprofit foundation; this new Eclipse.org has a tiered hierarchy of governance and management, with IBM retaining a small but significant degree of control in the form of having a member on the board of directors and a full-time executive director to lead the management team. Three separate councils oversee Eclipse development projects.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956264"></A>As part of the spin-out effort, IBM reached out to other companies such as Sun, which was suspicious about IBM and had a major investment in its own IDE, NetBeans. Sun declined to join Eclipse.org.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956265"></A>The result was that IBM gained the high ground and changed the landscape for competition in Java tools platforms. Eclipse is the exemplar in this area, and the vocabulary and terms of engagement in this arena are largely under IBM's control.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956266"></A>Two facts about Eclipse raise the question of whether part of IBM's strategy was to deliver some tweaks to Sun as part of their cooperative/competitive relationship. First, even though the choice of the name Eclipse might not have been aimed originally at Sun, the fact that it has the meaning of overshadowing the Sun was probably not a negative factor in IBM's decision to use the code name as the external name. Second, IBM had always felt that Sun had been overbearing in its control and expansion of Java, and therefore IBM might have been trying to wrest some control from Sun and criticize it technically by using a different windowing toolkit from the standard one, which is called Swing. The toolkit Eclipse uses, called the Standard Widget Toolkit (SWT), was considered by some to be easier to work with than Swing and performed better on the operating systems platforms to which it was targeted.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956267"></A>The question of the toolkit, however, is complicated, as such things always are. A hallmark of the VisualAge family was portable support for native look and feel; this was carried forward with SWT, which leveraged OTI's peer-layer experience with Smalltalk IDEs. Because SWT already existed for WebSphere Studio Device Developer, time-to-market considerations added to the push to use SWT in Eclipse as a graphical user interface (GUI) for Eclipse-based tools.</P>
+<P CLASS="Body">
+<A NAME="pgfId-956268"></A>The Eclipse story is only one of IBM's engagements with open source, which includes working on Linux--again to create an alternative to the Microsoft platforms. Although IBM's commitment to Eclipse is significant, it spends much more on Linux.</P>
+</DIV>
+<HR>
+<DIV CLASS="footnotes">
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+1.</SPAN>
+<A NAME="pgfId-957185"></A>Although the Lisp language is currently not in vogue, in the 1980s it was an important language during the Artificial Intelligence boom. Sun, IBM, DEC, HP, and other manufacturers of general-purpose computers offered Lisp implementations and development environments either developed in-house or by one of several third-party Lisp software companies. In addition, five companies--LMI, Symbolics, Three Rivers, Xerox, and Texas Instruments--produced special-purpose &quot;Lisp machines&quot; specifically for executing Lisp code.</P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+2.</SPAN>
+<A NAME="pgfId-957188"></A>On SourceForge, only about 1% of all projects have more than 10 developers.</P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+3.</SPAN>
+<A NAME="pgfId-957191"></A>From an interview with Boardwatch, formerly located at:<EM CLASS="Emphasis">
+ </EM>
+<A HREF="http://www.boardwatch.com/boardwatchonline/2002/may02/technology-ericallman.htm" CLASS="URL">http://www.boardwatch.com/boardwatchonline/2002/may02/technology-ericallman.htm.</A></P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+4.</SPAN>
+<A NAME="pgfId-957194"></A><A HREF="http://java.net" CLASS="URL">http://java.net</A></P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+5.</SPAN>
+<A NAME="pgfId-957197"></A>This is how Eclipse is described on the Eclipse community website<EM CLASS="Emphasis">
+ </EM>
+<A HREF="http://www.eclipse.org" CLASS="URL">(http://www.eclipse.org).</A></P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+6.</SPAN>
+<A NAME="pgfId-957200"></A><A HREF="http://www.eclipseplugincentral.com" CLASS="URL">http://www.eclipseplugincentral.com</A></P>
+</DIV>
+<DIV CLASS="footnote">
+<P CLASS="Footnote">
+<SPAN CLASS="footnoteNumber">
+7.</SPAN>
+<A NAME="pgfId-957203"></A>A virtual machine is software that runs on a real computer and presents an execution environment more amenable to executing code in a particular programming language than the real computer. It is a way to achieve portability of applications over a wide range of computer hardware.</P>
+</DIV>
+</DIV>
+<br><hr>
+<table width="100%">
+ <tr valign="top">
+  <td><p class="EBody"><i>Innovation Happens Elsewhere</i><br>
+      Ron Goldman & Richard P. Gabriel<br>
+      Send your comments to us at IHE at dreamsongs.com.</p>
+  </td>
+  <td><p>
+<a href="IHE-35.html">Previous</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-6.html">Table of Contents</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-35.html">Up</a>&nbsp;&nbsp;&nbsp;
+<a href="IHE-37.html">Next</a>
+</p>
+  </td>
+ </tr>
+</table>
+
+<!-- END PAGE CONTENT -->
+  </TD>
+ </TR>
+ <TR>
+  <TD CLASS="sidebar">
+
+<p><!-- Creative Commons License -->
+<div align="center" >
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+ <img alt="Creative Commons License" border="0" 
+      src="http://creativecommons.org/images/public/somerights20.gif" />
+</a></div>
+<!-- /Creative Commons License --><!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+--></p>
+
+  </TD>
+ </TR>
+</TABLE>
+
+</BODY>
+</HTML>
