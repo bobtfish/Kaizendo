@@ -28,9 +28,8 @@ requires:
   namespace::autoclean: 0
   perl: 5.8.5
 resources:
-  GitHub: http://github.com/sjn/Kaizendo
   Homepage: http://kaizendo.org/
   IrcChannel: irc://irc.freenode.org/kaizendo
   MailingList: http://talk.kaizendo.org/mailman/listinfo
-  Repository: git://github.com/sjn/Kaizendo.git
+  Repository: http://github.com/sjn/Kaizendo
 version: 0.01
