@@ -15,6 +15,7 @@ use Catalyst::Runtime 5.80;
 
 use Catalyst qw/
     ConfigLoader
+    +CatalystX::Debug::RequestHeaders
     Static::Simple
 /;
 #    -Debug
@@ -37,21 +38,6 @@ __PACKAGE__->config(
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
 );
-
-# Add debug output for HTTP Request headers
-after 'prepare_headers' => sub {
-    my $c = shift;
-    if ( $c->debug && keys %{ $c->request->headers } ) {
-        my $t = Text::SimpleTable->new( [ 35, 'Header' ], [ 36, 'Value' ] );
-        for my $key ( sort keys %{ $c->req->headers } ) {
-            my $header_value = $c->req->headers->{$key};
-            my $value = defined($header_value) ? $header_value : '';
-            $t->row( $key,
-                ref $value eq 'ARRAY' ? ( join ', ', @$value ) : $value );
-        }
-        $c->log->debug( "Request Headers are:\n" . $t->draw );
-    }
-};
 
 # Start the application
 __PACKAGE__->setup();

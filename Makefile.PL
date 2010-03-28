@@ -14,6 +14,7 @@ resources Repository => 'git://github.com/sjn/Kaizendo.git';
 all_from 'lib/Kaizendo.pm';
 
 requires 'Catalyst::Runtime' => '5.8002';
+requires 'CatalystX::Debug::RequestHeaders';
 requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
