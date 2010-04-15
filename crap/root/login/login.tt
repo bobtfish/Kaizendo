@@ -1,0 +1,9 @@
+<form method="POST">
+    [% IF login_failed %]
+        Bad email address or password...<br />
+    [% END %]
+    Email: <input type="text" name="email" value="[% email %]" /><br />
+    Password: <input type="password" name="password" /><br />
+    <input type="submit" />
+</form>
+

@@ -1,0 +1,5 @@
+<form method="POST">
+    Section name: <input type="text" name="subsection_name" />
+    <input type="submit" />
+</form>
+

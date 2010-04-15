@@ -1,0 +1,7 @@
+Overall project dashboard screen.
+
+<h2>List of your projects</h2>
+<ul>[%- FOREACH item = list %]
+    <li><a href="[% c.uri_for(c.controller.action_for('project'), [ item.name ]) %]/Summary">[% item.name %]</a></li>
+[%- END -%]
+</ul>

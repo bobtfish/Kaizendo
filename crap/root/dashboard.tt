@@ -1,0 +1,26 @@
+logged in user dashboard area.
+
+[% IF c.user.get_object.admin -%]
+[% PROCESS dashboard_admin.tt -%]
+[% END -%]
+
+<h3>My documents</h3>
+[%# FIXME - epic abstraction fail %]
+<ul>
+[% FOREACH document = c.user.get_object.documents.members %]
+    <li><a href="[% c.uri_for_action('/project/project_overview',
+            [ document.name ]) %]">
+        [% document.name %]
+    </a></li>
+[% END %]
+</ul>
+
+<h3>My organisation: [% c.user.get_object.organisation.name %]</h3>
+<ul>
+[% FOREACH document = c.user.get_object.organisation.documents.members %]
+    <li><a href="[% c.uri_for_action('/project/project_overview',
+                [ document.name ]) %]">
+        [% document.name %]
+    </a></li>
+[% END %]
+</ul>

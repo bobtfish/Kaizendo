@@ -1,0 +1,9 @@
+<h2>Overview of project: [% document.name %]</h2>
+
+<h3>Has the following sections:</h3>
+FIXME - named sections 1 level deep
+
+<h3>Current working copy</h3>
+FIXME - rendering of entire document
+[% document.render %]
+[% INCLUDE 'project/project.tt' %]

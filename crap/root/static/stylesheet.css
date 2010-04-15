@@ -1,0 +1,80 @@
+/* general */
+body {font: 76% arial, sans-serif; color:#333; margin:10px 0; padding:0}
+body {text-align:center; /* centres content in ie4/5 */}
+.wrapper {margin:0 auto; width:986px;}
+.clear-all {clear:both; height:0; line-height:0; font-size:0;}
+.clear-right {clear:right; height:0; line-height:0; font-size:0;}
+img {border:none;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+input, select {vertical-align:middle;}
+/* header */
+#selector, #summary, #nav, #content {text-align:left;}
+#main, #footer {margin-top:10px;}
+#logo {display:inline; float:left;}
+#myaccount {display:inline; float:right;}
+#projects, #selector, #summary {background-color:#eee;}
+#projects {padding:6px 10px; height:44px; margin-top:10px;}
+#selector {display:inline; float:left; width:250px; height:22px; margin-right:10px; padding:10px;}
+#selector select {margin-left:10px; width:192px;}
+#summary {display:inline; float:right; width:660px; height:30px; padding:6px 10px;}
+#summary div {font-weight:bold;}
+#software_version { float: right; padding-top: 1em; }
+
+/* leftnav */
+#nav {display:inline; float:left; width:283px; margin-right:10px;}
+#nav .tabs {height:22px;}
+#nav .tabs_heading {display:block; height:22px; background-color:#fc0; border-left:solid 1px #999; border-right:solid 1px #999; color:#000; vertical-align:bottom;}
+#nav .tabs img {float:left;}
+#nav .tabs a {float:left; border-top:solid 1px #B7BABC; background:url(images/bg_nav_tab.gif) repeat-x; height:19px; width:76px; color:#000; text-align:center; padding-top:2px;}
+#nav .tabs a.active {background:none #fc0; width:105px;}
+#nav .tabs_heading img {float:left;}
+#tree {border-top:solid 1px #fff; border-right:solid 1px #999; border-bottom:solid 1px #999; border-left:solid 1px #999; height:404px;}
+#tree .element {display:block; border-bottom:solid 1px #ccc; height:20px; color:#000; padding:4px 10px 0 10px;}
+#tree .level_1_open {background-color:#9cf; padding-left:20px;}
+#tree .level_1_closed {background-color:#9cf; padding-left:20px;}
+#tree .level_1_active {background-color:#9cf; padding-left:20px;}
+#tree .level_2_closed, #tree .level_2_active {padding-left:30px;}
+#tree .level_2_closed {background-color:#D5EAFF;}
+#tree .level_2_active {background-color:#ff9; color:#090; font-weight:bold;}
+
+/* content */
+#content {display:inline; float:left; width:693px; height:450px;}
+#content .tabs {height:22px;}
+#content .tabs_heading {background-color:#09f; height:35px; color:#fff;}
+#content .tabs_heading h1 {margin:0; padding:7px 10px 0 10px; display:inline; float:left; font-size:18px;}
+#viewer {display:inline; float:right; padding:6px 10px 0 10px;}
+#viewer select {margin-left:10px;}
+#display {height:392px;}
+#edit {height:361px;}
+/* #reqdata {display:none;} t0m - xinha editor doesn't work for me, remove this rule so I can at least edit stuff... */
+#display {border-right:solid 1px #999; border-bottom:solid 1px #999; border-left:solid 1px #999; overflow:auto; padding-left:10px;}
+#display .save, #edit .save { float: right; }
+#content .tabs a {float:left; border-top:solid 1px #B7BABC; background:url(images/bg_nav_tab.gif) repeat-x; height:19px; width:90px; color:#000; text-align:center; padding-top:1px; font-size:85%; line-height:9px; height:21px;}
+#content .tabs .active a {background:none #09f; width:93px; color:#fff;}
+#content .tabs a.single {line-height:normal; padding-top:4px;}
+#content .tabs a:hover {text-decoration:none;}
+#content .tabs div .left {display:inline; float:left; background:url(images/main_tabimg_0_-.gif) no-repeat; width:3px; height:22px; margin-left:3px;}
+#content .tabs div .right {display:inline; float:left; background:url(images/main_tabimg_-_0.gif) no-repeat; width:3px; height:22px;}
+#content .tabs div .first {margin-left:0;}
+#content .tabs .active {background:none #09f; color:#fff;}
+#content .tabs .active .left {background:url(images/main_tabimg_1_-.gif) no-repeat;}
+#content .tabs .active .right {background:url(images/main_tabimg_-_1.gif) no-repeat;}
+#content .reqtitle .title { padding-left: 1em }
+#comments .comment { background-color: #ff7; padding-left: 0.5em; margin-bottom: 0.5em; border: 1px solid black; }
+#comments .comment .author { border-bottom: 1px solid black; }
+#comments { float: right; width: 200px; margin-right: 1em; margin-left: 1em; }
+#comments .comment .author { float: right; }
+#comments .comment .date { float: left; }
+#comments #addcomment { float: right; margin-bottom: 10px; }
+textarea {width:435px;}
+
+/* footer */
+#footer { text-align:right;}
+#chang { padding-top: 20px;}
+
+/* list styles */
+.listcontainer ul {margin: 0; padding: 0; list-style: none;}
+.listcontainer li {float: left; display: inline; border-left-width: 1px; border-left-style: solid; padding: 0 15px;}
+.listcontainer li.first {border-left: 0;}
+.listcontainer li.last {padding-right: 0;}

@@ -1,0 +1,12 @@
+<b>list users</b>.
+<ul>
+[% FOREACH user = organisation.users %]
+<li>
+    [% IF user.admin %]<strong>[% INCLUDE a_user %]</strong>
+    [% ELSE; INCLUDE a_user; END %]
+</li>
+[% END %]
+</ul>
+[% BLOCK a_user %]
+    [% user.firstname %] [% user.surname %] &lt;[% user.id %]&gt;
+[% END %]

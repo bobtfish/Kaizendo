@@ -1,0 +1,5 @@
+<h2>Orgs</h2>
+<ul>[% FOREACH org = orgs %]
+<li><a href="[% c.uri_for(c.controller('Admin::Organisation').action_for('view'), org.name) %]">[% org.name %]</a></li>
+[% END %]</ul>
+

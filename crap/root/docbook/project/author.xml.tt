@@ -1,0 +1,11 @@
+[%- author = document.owner -%]
+<authorgroup>
+    <author>
+        <firstname>[% author.firstname %]</firstname>
+        <surname>[% author.surname %]</surname>
+        <affiliation>
+            <orgname>[% author.organisation.name %]</orgname>
+        </affiliation>
+    </author>
+</authorgroup>
+

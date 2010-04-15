@@ -1,0 +1,12 @@
+<table border="1">
+<tr><th><h2>Admin</h2></th></tr>
+<tr><td><ul>
+    <li><a href="[% c.uri_for_action('admin/organisation/index_page') %]">Add organisation</a></li>
+    <li><a href="[% c.uri_for_action('admin/user/index_page') %]">Add user</a></li>
+</ul></td>
+<td>
+[% PROCESS 'admin/organisation/list.tt' %]
+</td>
+</tr>
+</table>
+

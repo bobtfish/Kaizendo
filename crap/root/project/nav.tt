@@ -1,0 +1,31 @@
+<div id="nav">
+	<div class="tabs">
+		<img alt="" src="[% c.uri_for('/static/images/ln_tabimg_1.gif') %]" />
+		<a href="#" class="active">Requirements</a>
+		<img alt="" src="[% c.uri_for('/static/images/ln_tabimg_2.gif') %]" />
+		<a href="#">Reports</a>
+		<img alt="" src="[% c.uri_for('/static/images/ln_tabimg_3.gif') %]" />
+		<a href="#">Team</a>
+		<img alt="" src="[% c.uri_for('/static/images/ln_tabimg_4.gif') %]" />
+	</div>
+	<a href="[% c.uri_for(c.controller('Project').action_for('add_subsection'), c.req.captures) %]/[% c.req.arguments.join('/') %]" class="tabs_heading"><img alt="#" src="[% c.uri_for('/static/images/add_requirement.gif') %]" />Add New Requirement</a>
+    <div id="tree">
+        [% INCLUDE tree_sub_block requirementset => requirementset, selected => selected, level => 0, saved_path => [] %]
+    </div>
+    <div id="metadata">
+        <h3>Attributes</h3>
+        Title: [% document.name %]<br />
+        Status: FIXME<br />
+        Author: [% document.owner.firstname %] [% document.owner.surname %]<br />
+        Date: [% document.createdate %]<br />
+    </div>
+</div>
+[% BLOCK tree_sub_block %]
+    [%# FIXME - horrible code below, breaks law of demeter %]
+    [% FOREACH requirement = document.subsections.children %]
+    <a href="[% c.uri_for('/project', project_name, 'section') %]/[% saved_path.merge([requirement.name]).join('/') %]" class="element level_[% level %]_[% IF requirement.section == selected %]active[% ELSE %]closed[% END %]">[% requirement.name %]</a>
+        [% IF requirement.children > 0 %]
+        [% INCLUDE tree_sub_block, document => requirement, selected => selected, level => level + 1, saved_path => saved_path.merge([requirement.name]) %][% END %]
+    [% END %]
+
+[% END %]

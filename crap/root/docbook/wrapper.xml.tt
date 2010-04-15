@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+  include entities
+  
+  TODO: probably should be including a file here for the entities
+-->
+
+<!DOCTYPE book [
+  <!ENTITY copy	"&#x00A9;">  <!-- COPYRIGHT SIGN -->
+  <!ENTITY nbsp " "> <!-- HTML non breaking space - &nbsp; -->
+]>
+
+<book>
+
+  <info>
+
+    <title>[% document.name %]</title>
+
+    <date>[% document.createdate %]</date>
+
+    <legalnotice>All information contained in this document is proprietary and confidential.</legalnotice>
+    <copyright>
+      <year>2009</year>
+      <holder><trademark class="registered">Venda</trademark> Ltd., all rights reserved.</holder>
+    </copyright>
+    
+    <releaseinfo>Work in progress</releaseinfo>
+
+	[% INCLUDE 'project/author.xml.tt' %]
+	
+    <revhistory>
+			<revision>
+				<revnumber>0.0</revnumber>
+				<date>2009-04-01</date>
+				<authorinitials>Damon Mannion</authorinitials>
+				<revremark>Initial revision; mostly just an outline</revremark>
+			</revision>
+			<revision>
+				<revnumber>0.1</revnumber>
+				<date>2009-04-02</date>
+				<authorinitials>Damon Mannion</authorinitials>
+				<revremark>Firmed up the outline, based on the evolution of mau5</revremark>
+			</revision>
+      <revision>
+        <revnumber>0.2</revnumber>
+        <date>2009-04-03</date>
+        <authorinitials>Damon Mannion</authorinitials>
+        <revremark>Added more wob</revremark>
+      </revision>
+    </revhistory>
+
+	</info>
+
+ [% INCLUDE tree_sub_block level => 0 %]
+[% BLOCK tree_sub_block %]
+	[%# FIXME - horrible code below, breaks law of demeter %]
+    [% FOREACH requirement = document.subsections.children %]
+	<section title="[% requirement.name %]">
+
+        [% INCLUDE fragments_block fragments => requirement.fragments.children %]
+
+        [% IF requirement.children > 0 %]
+        [% INCLUDE tree_sub_block, document => requirement, level => level + 1 %][% END %]
+    </section>
+    [% END %]
+[% END %]
+
+[% BLOCK fragments_block %]
+<fragments>
+    [%- FOREACH fragment = fragments %]
+	<fragment>[% fragment.render %]</fragment>
+    [% END -%]
+</fragments>
+[% END %]
+</book>

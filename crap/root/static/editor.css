@@ -1,0 +1,25 @@
+#toolbar {width:300px;}
+.editGroup {width:378px;}
+.editArea {width:300px; max-width:290px; padding:5px; background-color:#eee; border-left:1px dashed #aeaeae; border-right:1px dashed #aeaeae; border-bottom:1px dashed #aeaeae; float:left; display:inline;}
+#section-1, #feedback, #feedback-title {font: 95% sans-serif;}
+#feedback {width:300px;}
+#feedbackTitle {color:#fff; background-color:#ccc; margin-top:20px; padding:5px; height:16px;}
+#feedbackTitle span {float:left;}
+#feedbackTitle a {float:right; text-decoration:none; color:#fff;}
+#feedbackArea {border:1px solid #ccc; color:#666; padding:5px;}
+
+/* default nicEdit styles for the toolbar, button and selected areas */
+.nicEdit-selected {background-color: #fff !important; border: solid 1px #ccc; position:relative; left:-3px; top:-1px; width:306px;}
+/* .nicEdit-panel {background-color: #fff !important;}
+   .nicEdit-button {background-color: #fff !important;} */
+.editFragment {background-color:white; border:none;}
+/* .editControl a:hover {cursor:pointer;} no longer needed */
+img {border:0;}
+
+.editBlank {display:none;}
+.topLine {border-bottom: dashed 1px #aeaeae; width:300px; line-height:1px; background-color:#fff; min-height:20px;}
+
+#controls {display:none; padding-left:5px; width:73px;}
+#restore {display:none;}
+.blankFragment {display:none;}
+.editGroup {width:383px;}

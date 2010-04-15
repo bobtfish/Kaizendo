@@ -1,0 +1,5 @@
+<form method="POST">
+    New project name: <input type="text" name="name">
+    <input type="Submit" />
+</form>
+

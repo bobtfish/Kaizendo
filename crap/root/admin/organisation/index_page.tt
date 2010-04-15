@@ -1,0 +1,3 @@
+[% PROCESS 'admin/organisation/add.tt' %]
+[% PROCESS 'admin/organisation/list.tt' %]
+

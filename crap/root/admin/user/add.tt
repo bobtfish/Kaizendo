@@ -1,0 +1,19 @@
+<h3>Create user</h3>
+
+[% IF error %]<div class="errortext">[% error %]</div>[% END %]
+
+<form method="POST" action="[% c.uri_for_action('/admin/user/index_page') %]">
+    Email: <input type="text" name="name" /><br />
+    First Name: <input type="text" name="firstname" /><br />
+    Surname: <input type="text" name="surname" /><br />
+    Password: <input type="password" name="password" /><br />
+    Password (again): <input type="password" name="password2" /><br />
+    [% IF organisation %]<input type="hidden" name="organisation_name" value="[% organisation.name %]" />[% ELSE %]Organisation: <select name="organisation_name">[% END %]
+        [% FOREACH org = organisations %]
+            <option>[% org.name %]</option>
+        [% END %]
+        </select>
+    Admin: <input type="checkbox" name="admin" /><br />
+    <input type="submit" />
+</form>
+

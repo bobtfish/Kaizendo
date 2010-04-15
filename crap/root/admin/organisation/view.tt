@@ -1,0 +1,12 @@
+<h2>org view<h2>
+
+<h3>[% organisation.name %]</h3>
+
+<h4>Users:</h4>
+[% PROCESS 'admin/user/list.tt' %]
+
+<h4>Add user</h4>
+[% PROCESS 'admin/user/add.tt' %]
+
+<a href="[% c.uri_for('/') %]">Back</a>
+

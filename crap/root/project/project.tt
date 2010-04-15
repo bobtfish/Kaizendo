@@ -1,0 +1,20 @@
+[% INCLUDE 'project/nav.tt', requirementset => requirementset, level => 0 %]
+<div id="content">
+	<div class="tabs_heading">
+        <h1>[% requirement_title %]</h1>
+		<div id="viewer">
+			<form class="editlink" method="GET">
+			<label for="selectcompare">View:</label>
+			<select name="edit" onchange="this.form.submit();">
+			    <option value="" selected="selected">View</option>
+				<option value="1">Edit &amp; Comment</option>
+				<option value="">Side by side</option>
+			</select>
+			</form>
+		</div>
+	</div>
+	<div id="display">
+		<!-- content -->
+   [% subsection.render %] 
+    </div>
+</div>

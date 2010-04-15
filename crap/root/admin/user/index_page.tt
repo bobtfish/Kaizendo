@@ -1,0 +1,12 @@
+<table border="1">
+<tr>
+<td>[% PROCESS 'admin/user/add.tt' %]</td>
+<td>[% FOREACH organisation = organisations %]
+    <h3>[% organisation.name %]</h3>
+    [% INCLUDE 'admin/user/list.tt' %]
+[% END %]</td>
+</tr>
+</table>
+
+<a href="[% c.uri_for('/') %]">&lt; &lt; Back</a>
+

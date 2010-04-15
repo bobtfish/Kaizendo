@@ -1,0 +1,82 @@
+Code Features:
+  - Generation of numbered versions of overall document / revision history.
+  - 'global admin' only can add orgs, local admins can only add users
+     to their org
+  - need global admin and org admin, this creates confusion when you create a doc with an admin user, as you need to remember the parent org as that's where it creates the doc
+  - no user / org amend/delete function
+  - submit query for creating a user with with empty data crashes
+  - Safari login issues.
+  - can create users based on emails which are not valid emails
+  - creating a new doc with an existing doc name but for a diff org generates this - doc name should be unique within an org only
+
+t0m and ant together:
+  - Deal with / expose multiple fragments properly (t0m + ant)
+  - Side by side editing
+
+Small features/interface (t0m):
+  - Subsection rendering, for view page.
+  - Track update times in document and display
+  - User permissions
+
+HTML (ant):
+  - Top of document link in left hand nav
+  - Refactor editor to be one .js
+  - Refactor CSS out of main template
+  - Numbering of sections in left hand nav
+  - Numbering of fragments in edit screen
+  - Edit and discuss link
+  - Styles for comment boxes + html mockup - not in iteration 1
+  - Multiple fragments - reordering interface
+  - Multiple sections - reordering interface
+
+Unanswered questions:
+  - Landing / homepage dashboard contents / features
+
+Testing:
+  - Fix performance of finding things, looping through the entire directory
+    won't keep working well.
+  - Injecting nasty HTML etc - filter down to known tags.
+
+========================
+
+# Messages from front end JS to server:
+
+## Save fragment
+
+    {
+        id: "XXXXX-XXXX-XXXXX",
+        __CLASS__: "Fragment",
+        html: "html of fragment text"
+        after_fragment: "XXXXXX-XXXXX-XXXXXX"
+    }
+
+### Replies
+
+#### Reply to add a new fragment
+
+   {
+       __CLASS__: 'SaveResponse',
+       id: "XXXXX-XXXX-XXXX",
+       old_id: "__NEW__XX",
+       after_fragment: "XXXXX-XXXXX-XXXXX"
+       status: "OK"
+   }
+
+   Javascript _MUST_ change the id of the fragment from old_id => id
+
+#### Reply to standard save
+
+    {
+        __CLASS__: 'SaveResponse',
+        id: 'XXXXX-XXXXX-XXXX'
+        status: "OK"
+    }
+
+#### Reply to save if html is undef:
+
+    {
+        __CLASS__: 'SaveResponse',
+        id: 'XXXXX-XXXX-XXXX',
+        status: "DELETED"
+    }
+
