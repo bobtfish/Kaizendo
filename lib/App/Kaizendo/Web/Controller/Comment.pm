@@ -2,7 +2,7 @@ package App::Kaizendo::Web::Controller::Comment;
 use Moose;
 use namespace::autoclean;
 
-BEGIN {extends 'Catalyst::Controller::REST'; }
+BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST'; }
 
 #
 # Sets the actions in this controller to be registered with no prefix
