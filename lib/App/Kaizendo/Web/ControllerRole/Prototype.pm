@@ -2,9 +2,9 @@ package App::Kaizendo::Web::ControllerRole::Prototype;
 use Moose::Role;
 use namespace::autoclean;
 
-#requires qw/
-#    base
-#/;
+requires qw/
+    base
+/;
 
 after base => sub {
     my ($self, $c) = @_;
