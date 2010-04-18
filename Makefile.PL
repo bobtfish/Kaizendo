@@ -33,7 +33,7 @@ author_requires 'Test::EOL' => '0.7';
 author_requires 'Test::NoTabs';
 
 tests 't/*.t';
-author_tests 't/author/';
+author_tests 't/author';
 
 catalyst;
 
