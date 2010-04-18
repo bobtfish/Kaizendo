@@ -29,6 +29,8 @@ test_requires 'Test::More' => '0.88';
 
 author_requires 'Test::Pod::Coverage' => '1.04';
 author_requires 'Test::Pod' => '1.14';
+author_requires 'Test::EOL' => '0.7';
+author_requires 'Test::NoTabs';
 
 tests 't/*.t';
 author_tests 't/author/';
