@@ -1,7 +1,8 @@
 #!/usr/bin/env perl
 # IMPORTANT: if you delete this file your app will not work as
 # expected.  You have been warned.
-use inc::Module::Install;
+use inc::Module::Install 0.91;
+use strict;
 
 name 'Kaizendo';
 
@@ -11,9 +12,9 @@ resources MailingList => 'http://talk.kaizendo.org/mailman/listinfo';
 resources IrcChannel => 'irc://irc.freenode.org/kaizendo';
 resources Repository => 'git://github.com/sjn/Kaizendo.git';
 
-all_from 'lib/Kaizendo.pm';
+all_from 'lib/Kaizendo/Web.pm';
 
-requires 'Catalyst::Runtime' => '5.8002';
+requires 'Catalyst::Runtime' => '5.80022';
 requires 'CatalystX::Debug::RequestHeaders';
 requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
