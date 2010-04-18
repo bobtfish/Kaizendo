@@ -2,7 +2,7 @@ package App::Kaizendo::Web::Controller::Comment;
 use Moose;
 use namespace::autoclean;
 
-BEGIN {extends 'Catalyst::Controller::REST'; }
+BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST'; }
 
 #
 # Sets the actions in this controller to be registered with no prefix
@@ -27,7 +27,11 @@ Catalyst Controller.
 
 =cut
 
-sub index : Path : ActionClass('REST') {
+sub base : Chained('/base') PathPart('') CaptureArgs(0) {}
+
+sub list : Chained('base') PathPart('#') Args(0) {}
+
+sub index : Chained('base') PathPart('_c') Args(0) ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
