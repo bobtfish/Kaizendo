@@ -1,4 +1,4 @@
-package Kaizendo::Web;
+package App::Kaizendo::Web;
 
 use 5.008005;
 use Moose;
@@ -21,8 +21,6 @@ use Catalyst qw/
 #    -Debug
 
 extends 'Catalyst';
-
-our $VERSION = '0.01'; $VERSION = eval $VERSION;
 
 # Configure the application.
 #

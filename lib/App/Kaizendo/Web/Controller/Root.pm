@@ -1,4 +1,4 @@
-package Kaizendo::Web::Controller::Root;
+package App::Kaizendo::Web::Controller::Root;
 use Moose;
 use namespace::autoclean;
 
