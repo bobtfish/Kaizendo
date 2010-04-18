@@ -1,31 +1,29 @@
-ABOUT
+# ABOUT
 
 Kaizendo is about creating collaboratively authored polyscopic documents.
 
 The goal is to create a web service that allows the management and creation
-of texts that have "alternatives" each conveying the same message but in
+of texts that have "_alternatives_" each conveying the same message but in
 different ways. E.g. a textbook chapter that is has alternatives written
 for dyslectics and for fast readers. To write such a text is a monumental
 task, and the Kaizendo project is about making it not only feasible, but
 as easy as possible.
 
-
-STATUS
+# STATUS
 
 The project is still in the starting phase, and needs your help. If you're
-interested, join us on the Kaizendo.org mailing list or the #kaizendo IRC
-channel on irc.freenode.org.
+interested, have a look at the [web site](http://kaizendo.org/) or join
+us on the [mailing list](http://talk.kaizendo.org/mailman/listinfo/kaizendoers)
+or the _#kaizendo_ IRC channel on irc.freenode.org.
 
+# COMMUNITY
 
-COMMUNITY
+  * [IRC (Chat)](irc://irc.freenode.org/kaizendo)
+  * [Mailing list](http://talk.kaizendo.org/mailman/listinfo/kaizendoers)
+  * [Main webpage](http://kaizendo.org/)
+  * [Drumbeat project page](http://drumbeat.org/projects/kaizendo)
+  * [GitHub repository](http://github.com/sjn/Kaizendo)
 
-  IRC:  irc://irc.freenode.org/kaizendo
-  Mailing list: http://talk.kaizendo.org/mailman/listinfo/kaizendoers
-  Main webpage: http://kaizendo.org/
-  Drumbeat project page: http://drumbeat.org/projects/kaizendo
-  GitHub repository: http://github.com/sjn/Kaizendo
-
-
-TESTING
+# TESTING
 
 Run script/kaizendo_server.pl to test the application.
