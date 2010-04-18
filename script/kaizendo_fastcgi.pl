@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('Kaizendo', 'FastCGI');
+Catalyst::ScriptRunner->run('Kaizendo::Web', 'FastCGI');
 
 1;
 

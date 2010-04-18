@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Test::More;
 
-BEGIN { use_ok 'Catalyst::Test', 'Kaizendo' }
+BEGIN { use_ok 'Catalyst::Test', 'Kaizendo::Web' }
 
 ok( request('/')->is_success, 'Request should succeed' );
 
