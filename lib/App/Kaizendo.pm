@@ -1,4 +1,6 @@
 package App::Kaizendo;
+
+use 5.008_005;
 use strict;
 use warnings;
 
@@ -9,6 +11,32 @@ $VERSION = eval $VERSION;
 
 =head1 NAME
 
-App::Kaizendo
+App::Kaizendo - A tool for collaborative authoring of polyscopic documents
+
+
+=head1 SYNOPSIS
+
+    script/kaizendo_server.pl
+
+
+=head1 DESCRIPTION
+
+Kaizendo is a framework for discussing and improving texts and their
+alternatives.
+
+
+=head1 AUTHORS
+
+Salve J. Nilsen <sjn@kaizendo.org>
+Thomas Doran <bobtfish@bobtfish.net>
+
+
+=head1 LICENSE
+
+This library is free software. You can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License v3, AGPLv3.
+
+See L<http://opensource.org/licenses/agpl-v3.html> for details.
+
 
 =cut
