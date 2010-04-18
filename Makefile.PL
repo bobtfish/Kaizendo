@@ -3,6 +3,8 @@
 # expected.  You have been warned.
 use inc::Module::Install 0.91;
 use strict;
+use Module::Install::AuthorTests;
+use Module::Install::AuthorRequires;
 
 name 'App-Kaizendo';
 
@@ -22,8 +24,15 @@ requires 'Catalyst::Action::RenderView';
 requires 'Moose';
 requires 'namespace::autoclean';
 requires 'Config::General'; # This should reflect the config file format you've chosen
-                 # See Catalyst::Plugin::ConfigLoader for supported formats
+
 test_requires 'Test::More' => '0.88';
+
+author_requires 'Test::Pod::Coverage' => '1.04';
+author_requires 'Test::Pod' => '1.14';
+
+tests 't/*.t';
+author_tests 't/author/';
+
 catalyst;
 
 install_script glob('script/*.pl');

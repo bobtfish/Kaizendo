@@ -4,13 +4,13 @@ package Module::Install::Base;
 use strict 'vars';
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.95';
+	$VERSION = '0.91';
 }
 
 # Suspend handler for "redefined" warnings
 BEGIN {
-	my $w = $SIG{__WARN__};
-	$SIG{__WARN__} = sub { $w };
+#	my $w = $SIG{__WARN__};
+#	$SIG{__WARN__} = sub { $w };
 }
 
 #line 42
@@ -70,7 +70,7 @@ sub DESTROY {}
 
 # Restore warning handler
 BEGIN {
-	$SIG{__WARN__} = $SIG{__WARN__}->();
+#	$SIG{__WARN__} = $SIG{__WARN__}->();
 }
 
 1;
