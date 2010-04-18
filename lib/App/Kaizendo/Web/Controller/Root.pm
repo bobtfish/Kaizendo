@@ -26,7 +26,9 @@ The root page (/)
 
 =cut
 
-sub index : Path : ActionClass('REST') {
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+
+sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
@@ -41,23 +43,6 @@ sub default : Path : ActionClass('REST') {
     $c->response->body( 'Page not found' );
     $c->response->status(404);
 }
-
-sub default_GET {
-    my ( $self, $c ) = @_;
-    $c->response->body( 'default GET' );
-    $c->response->status(200);
-}
-
-
-
-
-=head2 end
-
-Attempt to render a view, if needed.
-
-=cut
-
-#sub end : ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
