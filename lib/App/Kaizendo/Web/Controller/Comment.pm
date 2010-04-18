@@ -4,38 +4,17 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST'; }
 
-#
-# Sets the actions in this controller to be registered with no prefix
-# so they function identically to actions created in MyApp.pm
-#
 __PACKAGE__->config(namespace => '_c');
 
-=head1 NAME
+with 'App::Kaizendo::Web::ControllerRole::Prototype';
 
-Kaizendo::Controller::Comment - Comment-handler for Kaizendo
+sub base : Chained('/base') PathPart('_c') CaptureArgs(0) {}
 
-=head1 DESCRIPTION
-
-Catalyst Controller.
-
-=head1 METHODS
-
-=cut
-
-
-=head2 index
-
-=cut
-
-sub base : Chained('/base') PathPart('') CaptureArgs(0) {}
-
-sub list : Chained('base') PathPart('#') Args(0) {}
-
-sub index : Chained('base') PathPart('_c') Args(0) ActionClass('REST') {
+sub list : Chained('base') PathPart('') Args(0) ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
-sub index_GET {
+sub list_GET {
     my ( $self, $c ) = @_;
     my $accepts = $c->req->headers->{accept};
 
@@ -55,6 +34,15 @@ sub index_GET {
     );
 }
 
+=head1 NAME
+
+Kaizendo::Controller::Comment - Comment-handler for Kaizendo
+
+=head1 DESCRIPTION
+
+Catalyst Controller.
+
+=head1 METHODS
 
 =head1 AUTHOR
 
