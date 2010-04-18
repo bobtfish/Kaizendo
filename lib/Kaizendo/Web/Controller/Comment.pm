@@ -1,4 +1,4 @@
-package Kaizendo::Controller::Comment;
+package Kaizendo::Web::Controller::Comment;
 use Moose;
 use namespace::autoclean;
 

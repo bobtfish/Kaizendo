@@ -1,4 +1,4 @@
-package Kaizendo;
+package Kaizendo::Web;
 
 use 5.008005;
 use Moose;
