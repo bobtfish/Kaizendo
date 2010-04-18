@@ -4,7 +4,7 @@
 use inc::Module::Install 0.91;
 use strict;
 
-name 'Kaizendo';
+name 'App-Kaizendo';
 
 resources Homepage => 'http://kaizendo.org/';
 resources GitHub => 'http://github.com/sjn/Kaizendo';
@@ -12,7 +12,7 @@ resources MailingList => 'http://talk.kaizendo.org/mailman/listinfo';
 resources IrcChannel => 'irc://irc.freenode.org/kaizendo';
 resources Repository => 'git://github.com/sjn/Kaizendo.git';
 
-all_from 'lib/Kaizendo/Web.pm';
+all_from 'lib/App/Kaizendo.pm';
 
 requires 'Catalyst::Runtime' => '5.80022';
 requires 'CatalystX::Debug::RequestHeaders';
