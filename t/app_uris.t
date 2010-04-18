@@ -9,6 +9,7 @@ foreach my $uri (qw{
     /
     /;
     /_c
+    /#
 }) { test_uri($uri) }
 
 sub test_uri {
