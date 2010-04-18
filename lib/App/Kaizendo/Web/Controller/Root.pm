@@ -2,7 +2,7 @@ package App::Kaizendo::Web::Controller::Root;
 use Moose;
 use namespace::autoclean;
 
-BEGIN { extends 'Catalyst::Controller::REST' }
+BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
 #
 # Sets the actions in this controller to be registered with no prefix
@@ -32,13 +32,15 @@ sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
+sub index_GET {}
+
 =head2 default
 
 Standard 404 error page
 
 =cut
 
-sub default : Path : ActionClass('REST') {
+sub default : Chained('base') Args() ActionClass('REST') {
     my ( $self, $c ) = @_;
     $c->response->body( 'Page not found' );
     $c->response->status(404);

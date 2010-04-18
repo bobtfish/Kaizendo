@@ -27,7 +27,9 @@ Catalyst Controller.
 
 =cut
 
-sub index : Path : ActionClass('REST') {
+sub base : Chained('/base') PathPart('_c') CaptureArgs(0) {}
+
+sub index : Chained('base') PathPart('') Args(0) ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
