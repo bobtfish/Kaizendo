@@ -1,9 +1,12 @@
 package App::Kaizendo::Web::View::HTML;
+use Moose;
+use namespace::autoclean;
 
-use strict;
-use base 'Catalyst::View::TT';
+BEGIN { extends  'Catalyst::View::TT' }
 
-__PACKAGE__->config(TEMPLATE_EXTENSION => '.tt');
+__PACKAGE__->config(
+    TEMPLATE_EXTENSION => '.html',
+);
 
 =head1 NAME
 
