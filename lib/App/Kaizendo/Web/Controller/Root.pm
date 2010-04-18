@@ -40,10 +40,18 @@ Standard 404 error page
 
 =cut
 
-sub default : Chained('base') PathPart('') Args() ActionClass('REST') {
+sub default : Chained('base') PathPart('') Args() {
     my ( $self, $c ) = @_;
     $c->response->body( 'Page not found' );
     $c->response->status(404);
+}
+
+sub serialize : ActionClass('Serialize') {}
+
+sub end : Action {
+    my ($self, $c) = @_;
+    $c->forward('serialize')
+        unless $c->response->body;
 }
 
 =head1 AUTHOR
