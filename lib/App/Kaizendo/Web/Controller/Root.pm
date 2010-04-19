@@ -7,6 +7,7 @@ BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 with qw/
     App::Kaizendo::Web::ControllerRole::Aspect
     App::Kaizendo::Web::ControllerRole::User
+    App::Kaizendo::Web::ControllerRole::Comment
 /;
 
 #
