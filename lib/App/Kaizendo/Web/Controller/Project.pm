@@ -5,7 +5,10 @@ use namespace::autoclean;
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
 with 'App::Kaizendo::Web::ControllerRole::Prototype';
-with 'App::Kaizendo::Web::ControllerRole::Aspect';
+with qw/
+    App::Kaizendo::Web::ControllerRole::Aspect
+    App::Kaizendo::Web::ControllerRole::User
+/;
 
 sub base : Chained('/base') PathPart('') CaptureArgs(0) {}
 
@@ -17,7 +20,8 @@ sub view : Chained('item') PathPart('') Args(0) {}
 
 __PACKAGE__->config(
     action => {
-        'aspect_base' => { Chained => 'item' },
+        aspect_base => { Chained => 'item' },
+        user_base => { Chained => 'item' },
     },
 );
 
