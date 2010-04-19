@@ -14,6 +14,10 @@ foreach my $uri (qw{
     /project_name/;
     /project_name/_user
     /project_name/_c
+    /project_name/a_section
+    /project_name/a_section/;
+    /project_name/a_section/_user
+    /project_name/a_section/_c
 }) { test_uri($uri) }
 
 sub test_uri {
