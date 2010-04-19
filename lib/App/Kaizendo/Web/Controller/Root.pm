@@ -4,6 +4,12 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
+with qw/
+    App::Kaizendo::Web::ControllerRole::Aspect
+    App::Kaizendo::Web::ControllerRole::User
+    App::Kaizendo::Web::ControllerRole::Comment
+/;
+
 #
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
