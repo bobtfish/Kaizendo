@@ -5,6 +5,7 @@ use namespace::autoclean;
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
 with 'App::Kaizendo::Web::ControllerRole::Prototype';
+with 'App::Kaizendo::Web::ControllerRole::Aspect';
 
 sub base : Chained('/base') PathPart('') CaptureArgs(0) {}
 
@@ -14,6 +15,10 @@ sub item : Chained('base') PathPart('') CaptureArgs(1) {
 
 sub view : Chained('item') PathPart('') Args(0) {}
 
-sub view_aspects : Chained('item') PathPart(';') Args(0) {}
+__PACKAGE__->config(
+    action => {
+        'aspect_base' => { Chained => 'item' },
+    },
+);
 
 __PACKAGE__->meta->make_immutable;
