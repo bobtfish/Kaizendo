@@ -2,18 +2,21 @@
 
 Kaizendo is about creating collaboratively authored polyscopic documents.
 
-The goal is to create a web service that allows the management and creation
-of texts that have "_alternatives_" each conveying the same message but in
-different ways. E.g. a textbook chapter that is has alternatives written
-for dyslectics and for fast readers. To write such a text is a monumental
-task, and the Kaizendo project is about making it not only feasible, but
-as easy as possible.
+The goal is to create a web service that allows the management and
+creation of texts that have "_aspects_" each conveying the same message
+but in different ways. E.g. a textbook with chapters that have alternative
+texts written for dyslectics, for fast readers and for "average" readers.
+
+To write such a text is a difficult and time-consuming task, especially
+when you want to take into account all the different combinations of
+aspects. The Kaizendo project is about making this both feasible and as
+easy as possible.
 
 # STATUS
 
 The project is still in the starting phase, and needs your help. If you're
-interested, have a look at the [web site](http://kaizendo.org/) or join
-us on the [mailing list](http://talk.kaizendo.org/mailman/listinfo/kaizendoers)
+interested, have a look at our [web site](http://kaizendo.org/) or join
+our [mailing list](http://talk.kaizendo.org/mailman/listinfo/kaizendoers)
 or the _#kaizendo_ IRC channel on irc.freenode.org.
 
 # COMMUNITY
