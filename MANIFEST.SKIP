@@ -8,3 +8,4 @@ blib/*
 .bak$
 App-Kaizendo-*
 Makefile$
+META.yml$
