@@ -1,6 +1,7 @@
 META.yml
 inc*
 MANIFEST
+App-Kaizendo-*
 blib*
 Makefile
 Makefile.old
