@@ -3,12 +3,12 @@ use Moose::Role;
 use namespace::autoclean;
 
 requires qw/
-    base
-/;
+  base
+  /;
 
 after base => sub {
-    my ($self, $c) = @_;
-    $c->stash(template => \'Hello world');
+    my ( $self, $c ) = @_;
+    $c->stash( template => \'Hello world' );
 };
 
 1;

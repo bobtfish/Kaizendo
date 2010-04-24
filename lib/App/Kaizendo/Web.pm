@@ -14,10 +14,11 @@ use Catalyst::Runtime 5.80;
 #                 directory
 
 use Catalyst qw/
-    ConfigLoader
-    +CatalystX::Debug::RequestHeaders
-    Static::Simple
-/;
+  ConfigLoader
+  +CatalystX::Debug::RequestHeaders
+  Static::Simple
+  /;
+
 #    -Debug
 
 extends 'Catalyst';
@@ -33,6 +34,7 @@ extends 'Catalyst';
 
 __PACKAGE__->config(
     name => 'Kaizendo',
+
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
 );

@@ -5,16 +5,16 @@ use namespace::autoclean;
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
 with qw/
-    App::Kaizendo::Web::ControllerRole::Aspect
-    App::Kaizendo::Web::ControllerRole::User
-    App::Kaizendo::Web::ControllerRole::Comment
-/;
+  App::Kaizendo::Web::ControllerRole::Aspect
+  App::Kaizendo::Web::ControllerRole::User
+  App::Kaizendo::Web::ControllerRole::Comment
+  /;
 
 #
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
 #
-__PACKAGE__->config(namespace => '');
+__PACKAGE__->config( namespace => '' );
 
 =head1 NAME
 
@@ -32,13 +32,14 @@ The root page (/)
 
 =cut
 
-sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+sub base : Chained('/') PathPart('') CaptureArgs(0) {
+}
 
 sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
-sub index_GET {}
+sub index_GET { }
 
 =head2 default
 
@@ -48,16 +49,17 @@ Standard 404 error page
 
 sub default : Chained('base') PathPart('') Args() {
     my ( $self, $c ) = @_;
-    $c->response->body( 'Page not found' );
+    $c->response->body('Page not found');
     $c->response->status(404);
 }
 
-sub serialize : ActionClass('Serialize') {}
+sub serialize : ActionClass('Serialize') {
+}
 
 sub end : Action {
-    my ($self, $c) = @_;
+    my ( $self, $c ) = @_;
     $c->forward('serialize')
-        unless $c->response->body;
+      unless $c->response->body;
 }
 
 =head1 AUTHOR

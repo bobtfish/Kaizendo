@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('App::Kaizendo::Web', 'Create');
+Catalyst::ScriptRunner->run( 'App::Kaizendo::Web', 'Create' );
 
 1;
 

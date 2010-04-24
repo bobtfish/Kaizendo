@@ -2,11 +2,9 @@ package App::Kaizendo::Web::View::HTML;
 use Moose;
 use namespace::autoclean;
 
-BEGIN { extends  'Catalyst::View::TT' }
+BEGIN { extends 'Catalyst::View::TT' }
 
-__PACKAGE__->config(
-    TEMPLATE_EXTENSION => '.html',
-);
+__PACKAGE__->config( TEMPLATE_EXTENSION => '.html', );
 
 =head1 NAME
 

@@ -5,7 +5,7 @@ BEGIN {
 }
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('App::Kaizendo::Web', 'Server');
+Catalyst::ScriptRunner->run( 'App::Kaizendo::Web', 'Server' );
 
 1;
 

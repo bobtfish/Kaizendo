@@ -5,7 +5,8 @@ use Test::More;
 
 use Catalyst::Test 'App::Kaizendo::Web';
 
-foreach my $uri (qw{
+foreach my $uri (
+    qw{
     /
     /;
     /_c
@@ -18,7 +19,11 @@ foreach my $uri (qw{
     /project_name/a_section/;
     /project_name/a_section/_user
     /project_name/a_section/_c
-}) { test_uri($uri) }
+    }
+  )
+{
+    test_uri($uri);
+}
 
 sub test_uri {
     my $uri = shift || '';
