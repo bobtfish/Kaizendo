@@ -16,3 +16,4 @@ pod2htm*.tmp
 Kaizendo-*
 MANIFEST.bak
 META.yml
+*.bak
