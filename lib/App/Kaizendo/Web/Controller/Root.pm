@@ -26,18 +26,30 @@ Kaizendo::Controller::Root - Root Controller for Kaizendo
 
 =head1 METHODS
 
-=head2 index
+=head2 base
 
-The root page (/)
+FIXME
 
 =cut
 
 sub base : Chained('/') PathPart('') CaptureArgs(0) {
 }
 
+=head2 index
+
+The root page (/)
+
+=cut
+
 sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
+
+=head2 index_GET
+
+The root page (/) GET handler
+
+=cut
 
 sub index_GET { }
 
@@ -53,8 +65,20 @@ sub default : Chained('base') PathPart('') Args() {
     $c->response->status(404);
 }
 
+=head2 serialize
+
+The root page (/)
+
+=cut
+
 sub serialize : ActionClass('Serialize') {
 }
+
+=head2 end
+
+Forwards to content serializer if there's no response body
+
+=cut
 
 sub end : Action {
     my ( $self, $c ) = @_;
@@ -65,6 +89,7 @@ sub end : Action {
 =head1 AUTHOR
 
 Salve J. Nilsen <sjn@kaizendo.org>
+Thomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 
