@@ -2,10 +2,11 @@ books/*
 inc/*
 MANIFEST.SKIP$
 pm_to_blib
-.git
-.gitignore
+.git/
+.gitignore$
 blib/*
 .bak$
 App-Kaizendo-*
 Makefile$
 META.yml$
+~$

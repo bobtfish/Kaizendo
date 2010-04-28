@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 # IMPORTANT: if you delete this file your app will not work as
 # expected.  You have been warned.
-use inc::Module::Install 0.91;
+use inc::Module::Install 0.95;
 use strict;
-use Module::Install::AuthorTests;
-use Module::Install::AuthorRequires;
 
 name 'App-Kaizendo';
 
@@ -24,8 +22,9 @@ requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::View::TT';
 requires 'Moose';
 requires 'namespace::autoclean';
-requires
-  'Config::General';  # This should reflect the config file format you've chosen
+requires 'Config::General';
+
+recommends 'Module::Install::ExtraTests';
 
 test_requires 'Test::More' => '0.88';
 
@@ -35,7 +34,7 @@ author_requires 'Test::EOL'           => '0.7';
 author_requires 'Test::NoTabs';
 
 tests 't/*.t';
-author_tests 't/author';
+extra_tests;
 
 catalyst;
 
