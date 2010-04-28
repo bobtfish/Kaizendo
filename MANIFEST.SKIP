@@ -1,5 +1,4 @@
 books/*
-inc/*
 MANIFEST.SKIP$
 pm_to_blib
 .git/
