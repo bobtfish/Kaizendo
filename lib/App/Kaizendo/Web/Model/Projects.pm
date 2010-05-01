@@ -1,4 +1,4 @@
-package App::Kaizendo::Web::Model::Documents;
+package App::Kaizendo::Web::Model::Projects;
 use Moose;
 use MooseX::Types::LoadableClass qw/ClassName/;
 use namespace::autoclean;

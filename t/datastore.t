@@ -6,7 +6,7 @@ use lib "$Bin/lib";
 
 use TestDataStore;
 
-use aliased 'App::Kaizendo::DataStore::Document';
+use aliased 'App::Kaizendo::DataStore::Project';
 use aliased 'App::Kaizendo::DataStore::Comment';
 
 my $store = getTestDataStore();
@@ -14,7 +14,7 @@ ok $store;
 
 my $s = $store->new_scope;
 
-my $doc = Document->new(name => 'Foo');
+my $doc = Project->new(name => 'Foo');
 ok $doc;
 
 ok $store->store($doc);
