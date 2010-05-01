@@ -37,12 +37,13 @@ sub base : Chained('/') PathPart('') CaptureArgs(0) {
 
 =head2 index
 
-The root page (/)
+The root page (/). List (projects).
 
 =cut
 
 sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
+    $c->stash( projects => $c->model('Projects')->get_all_projects );
 }
 
 =head2 index_GET

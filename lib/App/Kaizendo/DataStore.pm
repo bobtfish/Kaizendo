@@ -13,4 +13,10 @@ around BUILDARGS => sub {
     return $args;
 };
 
+method get_all_projects { # Please pay no attention to the contents of this method, it needs to die :)
+    my $bulk = $self->root_set;
+    my @all = grep { $_->isa('App::Kaizendo::DataStore::Project') } $bulk->all;
+    return [ @all ];
+}
+
 __PACKAGE__->meta->make_immutable;

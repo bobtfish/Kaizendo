@@ -9,3 +9,4 @@ has document => ( is => 'ro', required => 1, isa => 'App::Kaizendo::DataStore::P
 has text => ( is => 'ro', required => 1 );
 
 __PACKAGE__->meta->make_immutable;
+1;

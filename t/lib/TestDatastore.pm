@@ -9,9 +9,10 @@ my $to_unlink;
 my $fn;
 
 sub import {
-    my ($class, %args) = @_;
-    $fn = 'kiokudb.sqlite3.' . $$;
-    unless ($args{no_unlink}) {
+    my ($class, $args) = @_;
+    pop if $args;
+    $fn = 'kiokudb.sqlite3';
+    unless ($args->{no_unlink}) {
         $to_unlink = $fn;
     }
     goto &Exporter::import;

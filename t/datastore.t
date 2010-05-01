@@ -4,7 +4,7 @@ use Test::More;
 use FindBin qw/$Bin/;
 use lib "$Bin/lib";
 
-use TestDataStore;
+use TestDataStore { no_unlink => 1 };
 
 use aliased 'App::Kaizendo::DataStore::Project';
 use aliased 'App::Kaizendo::DataStore::Comment';
