@@ -25,6 +25,8 @@ requires 'Moose';
 requires 'JSON';
 requires 'namespace::autoclean';
 requires 'Config::General';
+requires 'KiokuX::Model';
+requires 'aliased';
 
 recommends 'JSON::XS';
 
