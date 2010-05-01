@@ -1,4 +1,4 @@
-package App::Kaizendo::Datastore::Document;
+package App::Kaizendo::DataStore::Document;
 use Moose;
 use Method::Signatures::Simple;
 use namespace::autoclean;
