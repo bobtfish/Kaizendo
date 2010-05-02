@@ -40,7 +40,7 @@ sub buildTestData {
     ok $store->store($doc);
 
     for my $n (1..5) {
-        ok $store->store($doc->add_chapter( text => "Chapter $n text" )), 'Added chapter';
+        $doc->add_chapter( text => "Chapter $n text" );
     }
     $store->store($doc);
 
