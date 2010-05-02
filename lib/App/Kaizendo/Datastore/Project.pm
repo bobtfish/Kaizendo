@@ -1,10 +1,6 @@
 package App::Kaizendo::DataStore::Project;
-use Moose;
-use Method::Signatures::Simple;
-use Moose::Autobox;
+use App::Kaizendo::Moose;
 use MooseX::Types::Moose qw/ ArrayRef /;
-use Moose::Util::TypeConstraints;
-use namespace::autoclean;
 
 use aliased 'App::Kaizendo::DataStore::ProjectSnapshot';
 

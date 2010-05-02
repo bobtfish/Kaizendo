@@ -1,8 +1,5 @@
 package App::Kaizendo::DataStore::Comment;
-use Moose;
-use Method::Signatures::Simple;
-use Moose::Util::TypeConstraints;
-use namespace::autoclean;
+use App::Kaizendo::Moose;
 
 class_type 'App::Kaizendo::DataStore::Project';
 has project => ( is => 'ro', required => 1, isa => 'App::Kaizendo::DataStore::Project' );
