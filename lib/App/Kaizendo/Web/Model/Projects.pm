@@ -15,3 +15,9 @@ __PACKAGE__->config(
 has '+model_class' => ( isa => ClassName, coerce => 1 );
 
 __PACKAGE__->meta->make_immutable;
+
+=head1 NAME
+
+App::Kaizendo::Web::Model::Projects
+
+=cut

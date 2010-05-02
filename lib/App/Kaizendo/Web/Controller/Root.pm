@@ -62,18 +62,22 @@ Standard 404 error page
 
 sub default : Chained('base') PathPart('') Args() {
     my ( $self, $c ) = @_;
+    $c->detach('/error404');
+}
+
+sub error404 : Action {
+    my ($self, $c) = @_;
     $c->response->body('Page not found');
     $c->response->status(404);
 }
 
 =head2 serialize
 
-The root page (/)
+Causes the REST serialization of the output.
 
 =cut
 
-sub serialize : ActionClass('Serialize') {
-}
+sub serialize : ActionClass('Serialize') {}
 
 =head2 end
 
@@ -85,6 +89,7 @@ sub end : Action {
     my ( $self, $c ) = @_;
     $c->forward('serialize')
       unless $c->response->body;
+    die("Forced debug") if $c->debug && $c->request->param('')
 }
 
 =head1 AUTHOR

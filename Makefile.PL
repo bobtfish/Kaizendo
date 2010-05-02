@@ -23,6 +23,8 @@ requires 'Catalyst::Action::REST';
 requires 'Catalyst::View::TT';
 requires 'Catalyst::Model::KiokuDB';
 requires 'Moose';
+requires 'MooseX::Types';
+requires 'Method::Signatures::Simple';
 requires 'JSON';
 requires 'namespace::autoclean';
 requires 'Config::General';
