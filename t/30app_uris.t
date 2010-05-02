@@ -22,10 +22,10 @@ foreach my $uri (
     /TestProject/;
     /TestProject/_user
     /TestProject/_c
-    /TestProject/a_section
-    /TestProject/a_section/;
-    /TestProject/a_section/_user
-    /TestProject/a_section/_c
+    /TestProject/1
+    /TestProject/1/;
+    /TestProject/1/_user
+    /TestProject/1/_c
     }
   )
 {
