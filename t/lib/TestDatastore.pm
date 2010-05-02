@@ -34,7 +34,7 @@ sub buildTestData {
     my ($store) = @_;
     my $s = $store->new_scope;
 
-    my $doc = Project->new(name => 'Foo');
+    my $doc = Project->new(name => 'TestProject');
     ok $doc;
 
     ok $store->store($doc);
