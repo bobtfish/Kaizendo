@@ -28,8 +28,12 @@ alternatives.
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
 
+Tomas Doran <bobtfish@bobtfish.net>
+
+=head1 COPYRIGHT
+
+Copyright the above authors.
 
 =head1 LICENSE
 
@@ -38,5 +42,6 @@ it under the terms of the GNU Affero General Public License v3, AGPLv3.
 
 See L<http://opensource.org/licenses/agpl-v3.html> for details.
 
-
 =cut
+
+1;

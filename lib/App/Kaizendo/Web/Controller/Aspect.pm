@@ -6,6 +6,14 @@ BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
 with 'App::Kaizendo::Web::ControllerRole::Prototype';
 
+sub base : Chained('/base') PathPart(';') CaptureArgs(0) {
+}
+
+sub list : Chained('base') PathPart('') Args(0) {
+}
+
+__PACKAGE__->meta->make_immutable;
+
 =head1 NAME
 
 App::Kaizendo::Web::Controller::Aspect
@@ -16,32 +24,12 @@ App::Kaizendo::Web::Controller::Aspect
 
 FIXME
 
-=cut
-
-sub base : Chained('/base') PathPart(';') CaptureArgs(0) {
-}
-
 =head2 list
 
 FIXME
 
-=cut
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-sub list : Chained('base') PathPart('') Args(0) {
-}
-
-=head1 AUTHOR
-
-Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
-
-__PACKAGE__->meta->make_immutable;

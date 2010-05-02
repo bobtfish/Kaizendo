@@ -11,26 +11,8 @@ with qw/
   App::Kaizendo::Web::ControllerRole::Comment
   /;
 
-=head1 NAME
-
-App::Kaizendo::Web::Controller::Section
-
-=head1 METHODS
-
-=head2 base
-
-FIXME
-
-=cut
-
 sub base : Chained('/project/item') PathPart('') CaptureArgs(0) {
 }
-
-=head2 item
-
-FIXME
-
-=cut
 
 sub item : Chained('base') PathPart('') CaptureArgs(1) {
     my ( $self, $c, $chapter_no ) = @_;
@@ -39,11 +21,6 @@ sub item : Chained('base') PathPart('') CaptureArgs(1) {
     $c->stash(chapter => $chapter);
 }
 
-=head2 view
-
-FIXME
-
-=cut
 
 sub view : Chained('item') PathPart('') Args(0) {
 }
@@ -56,17 +33,27 @@ __PACKAGE__->config(
     },
 );
 
-=head1 AUTHOR
+=head1 NAME
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+App::Kaizendo::Web::Controller::Section
 
-=head1 LICENSE
+=head1 METHODS
 
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
+=head2 base
 
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+FIXME
+
+=head2 item
+
+FIXME
+
+=head2 view
+
+FIXME
+
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

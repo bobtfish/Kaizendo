@@ -20,4 +20,8 @@ __PACKAGE__->meta->make_immutable;
 
 App::Kaizendo::Web::Model::Projects
 
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
+
 =cut

@@ -25,3 +25,9 @@ method get_project_by_name ($name) {
 }
 
 __PACKAGE__->meta->make_immutable;
+
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
+
+=cut

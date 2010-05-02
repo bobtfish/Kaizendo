@@ -59,16 +59,9 @@ alternatives.
 
 L<Kaizendo::Controller::Root>, L<Catalyst>
 
-=head1 AUTHOR
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-Salve J. Nilsen <sjn@kaizendo.org>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

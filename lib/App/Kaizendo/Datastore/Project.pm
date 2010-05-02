@@ -25,3 +25,9 @@ method add_chapter (%args) {
 
 __PACKAGE__->meta->make_immutable;
 1;
+
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
+
+=cut
