@@ -18,7 +18,7 @@ sub item : Chained('base') PathPart('') CaptureArgs(1) {
     my ( $self, $c, $project_name ) = @_;
     my $project = $c->model('Projects')->get_project_by_name( $project_name )
         or $c->detach('/error404');
-    $c->stash( project => $project );
+    $c->stash( project => $project->latest_snapshot );
 }
 
 sub view : Chained('item') PathPart('') Args(0) {
