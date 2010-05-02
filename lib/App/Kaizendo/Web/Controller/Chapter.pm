@@ -1,4 +1,4 @@
-package App::Kaizendo::Web::Controller::Section;
+package App::Kaizendo::Web::Controller::Chapter;
 use Moose;
 use namespace::autoclean;
 
