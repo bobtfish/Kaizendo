@@ -2,8 +2,10 @@ package TestDataStore;
 use Exporter ();
 use Test::More;
 use aliased 'App::Kaizendo::DataStore';
+use aliased 'App::Kaizendo::DataStore::Project';
+use aliased 'App::Kaizendo::DataStore::Comment';
 
-our @EXPORT = qw/getTestDataStore/;
+our @EXPORT = qw/getTestDataStore buildTestData/;
 
 my $to_unlink;
 my $fn;
@@ -19,12 +21,30 @@ sub import {
 }
 
 sub getTestDataStore {
+    unlink $fn if -f $fn;
     my $storage = DataStore->new(
         dsn => "dbi:SQLite:dbname=$fn",
         extra_args => { create => 1, },
     );
     system("chmod 666 $fn");
     return $storage;
+}
+
+sub buildTestData {
+    my ($store) = @_;
+    my $s = $store->new_scope;
+
+    my $doc = Project->new(name => 'Foo');
+    ok $doc;
+
+    ok $store->store($doc);
+
+    my $comment = Comment->new( project => $doc, text => 'A comment' );
+    ok $comment;
+
+    ok $store->store($comment);
+
+    return $store;
 }
 
 END {
