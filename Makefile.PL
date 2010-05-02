@@ -2,6 +2,7 @@
 # IMPORTANT: if you delete this file your app will not work as
 # expected.  You have been warned.
 use inc::Module::Install 0.95;  # xt/ support
+use Module::Install::Catalyst;
 use strict;
 
 name 'App-Kaizendo';
@@ -14,6 +15,7 @@ resources Repository  => 'git://github.com/sjn/Kaizendo.git';
 
 all_from 'lib/App/Kaizendo.pm';
 
+configure_requires 'Module::Install::Catalyst';
 configure_requires 'File::Copy::Recursive';  # needed by Module::Install::Catalyst
 requires 'JSON';
 requires 'Moose';
