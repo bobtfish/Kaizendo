@@ -4,7 +4,6 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
-with 'App::Kaizendo::Web::ControllerRole::Prototype';
 with qw/
   App::Kaizendo::Web::ControllerRole::Aspect
   App::Kaizendo::Web::ControllerRole::User

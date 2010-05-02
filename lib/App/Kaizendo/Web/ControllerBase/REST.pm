@@ -4,6 +4,16 @@ use namespace::autoclean;
 
 BEGIN { extends 'Catalyst::Controller::REST'; }
 
+sub serialize : ActionClass('Serialize') {}
+
+sub end : Action {
+    my ( $self, $c ) = @_;
+    $c->forward('serialize')
+      unless $c->response->body;
+    die("Forced debug") if $c->debug
+        && $c->request->param('dump_info');
+}
+
 __PACKAGE__->config(
     default   => 'text/html',
     stash_key => 'rest',

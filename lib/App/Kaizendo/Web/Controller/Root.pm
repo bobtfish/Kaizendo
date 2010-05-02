@@ -38,15 +38,6 @@ sub error404 : Action {
     $c->response->status(404);
 }
 
-sub serialize : ActionClass('Serialize') {}
-
-sub end : Action {
-    my ( $self, $c ) = @_;
-    $c->forward('serialize')
-      unless $c->response->body;
-    die("Forced debug") if $c->debug && $c->request->param('')
-}
-
 =head1 NAME
 
 Kaizendo::Controller::Root - Root Controller for Kaizendo
