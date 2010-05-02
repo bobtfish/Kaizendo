@@ -12,11 +12,15 @@ has chapters => (
     traits     => ['Array'],
     handles => {
         no_of_chapters => 'count',
+        get_chapter_by_number => 'get',
+        _add_chapter => 'push',
     } );
 
 method add_chapter (%args) {
     # FIXME - persist
-    Chapter->new( project => $self, number => $self->no_of_chapters + 1, text => $args{text} );
+    my $chapter = Chapter->new( project => $self, number => $self->no_of_chapters + 1, text => $args{text} );
+    $self->_add_chapter($chapter);
+    return $chapter;
 }
 
 __PACKAGE__->meta->make_immutable;

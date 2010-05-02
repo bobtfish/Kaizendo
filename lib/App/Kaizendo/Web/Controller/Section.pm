@@ -33,7 +33,10 @@ FIXME
 =cut
 
 sub item : Chained('base') PathPart('') CaptureArgs(1) {
-    my ( $self, $c, $section_name ) = @_;
+    my ( $self, $c, $chapter_no ) = @_;
+    my $chapter = $c->stash->{project}->get_chapter_by_number($chapter_no)
+        or $c->detach('/error404');
+    $c->stash(chapter => $chapter);
 }
 
 =head2 view
