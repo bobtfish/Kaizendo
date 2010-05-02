@@ -1,6 +1,7 @@
 package App::Kaizendo::DataStore;
 use Moose;
 use Method::Signatures::Simple;
+use Moose::Autobox;
 use namespace::autoclean;
 
 extends qw/ KiokuX::Model /;
@@ -17,6 +18,10 @@ method get_all_projects { # Please pay no attention to the contents of this meth
     my $bulk = $self->root_set;
     my @all = grep { $_->isa('App::Kaizendo::DataStore::Project') } $bulk->all;
     return [ @all ];
+}
+
+method get_project_by_name ($name) {
+    (grep { $_->name eq $name } $self->get_all_projects->flatten)[0];
 }
 
 __PACKAGE__->meta->make_immutable;

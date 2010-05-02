@@ -4,7 +4,6 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
-with 'App::Kaizendo::Web::ControllerRole::Prototype';
 with qw/
   App::Kaizendo::Web::ControllerRole::Aspect
   App::Kaizendo::Web::ControllerRole::User
@@ -38,6 +37,9 @@ FIXME
 
 sub item : Chained('base') PathPart('') CaptureArgs(1) {
     my ( $self, $c, $project_name ) = @_;
+    my $project = $c->model('Projects')->get_project_by_name( $project_name)
+        or $c->detach('/error404');
+    $c->stash( project => $project );
 }
 
 =head2 view

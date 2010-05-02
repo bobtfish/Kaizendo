@@ -1,6 +1,6 @@
 Projects:
 <ul>
     [% FOREACH project = projects %]
-        <li>[% project.name %]</li>
+        <li><a href="[% c.uri_for_action('/project/view', [project.name]) %]">[% project.name %]</li>
     [% END %]
 </ul>
