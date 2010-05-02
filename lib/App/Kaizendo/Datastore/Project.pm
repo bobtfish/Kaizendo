@@ -17,9 +17,12 @@ has snapshots => (
         ];
     },
     traits     => ['Array'],
+    handles => {
+        _add_snapshot => 'push',
+    },
 );
 
-method latest_snapshot { $self->snapshots->first }
+method latest_snapshot { $self->snapshots->last }
 
 __PACKAGE__->meta->make_immutable;
 1;

@@ -23,14 +23,20 @@ has chapters => (
     handles => {
         no_of_chapters => 'count',
         get_chapter_by_number => 'get',
-        _add_chapter => 'push',
     },
 );
 
 method add_chapter (%args) {
-    my $chapter = Chapter->new( project => $self->project, number => $self->no_of_chapters + 1, text => $args{text} );
-    $self->_add_chapter($chapter);
-    return $chapter;
+    my $new_chapter = Chapter->new( project => $self->project, number => $self->no_of_chapters + 1, text => $args{text} );
+    my $new_snapshot = blessed($self)->new(
+        project => $self->project,
+        chapters => [
+            $self->chapters->flatten,
+            $new_chapter,
+        ],
+    );
+    $self->project->_add_snapshot($new_snapshot);
+    return $new_snapshot;
 }
 
 __PACKAGE__->meta->make_immutable;

@@ -42,7 +42,7 @@ sub buildTestData {
 
     my $latest_snapshot = $doc->latest_snapshot;
     for my $n (1..5) {
-        $latest_snapshot->add_chapter( text => "Chapter $n text" );
+        $latest_snapshot = $latest_snapshot->add_chapter( text => "Chapter $n text" );
     }
     $store->store($doc);
 
