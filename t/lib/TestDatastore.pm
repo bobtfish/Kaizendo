@@ -2,6 +2,7 @@ package TestDataStore;
 use Exporter ();
 use Moose::Autobox;
 use Test::More;
+use FindBin qw/$Bin/;
 use aliased 'App::Kaizendo::DataStore';
 use aliased 'App::Kaizendo::DataStore::Project';
 use aliased 'App::Kaizendo::DataStore::Comment';
@@ -41,8 +42,12 @@ sub buildTestData {
     is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
 
     my $latest_snapshot = $doc->latest_snapshot;
-    for my $n (1..5) {
-        $latest_snapshot = $latest_snapshot->add_chapter( text => "Chapter $n text" );
+    my @chapter_fns = glob("$Bin/../books//www.dreamsongs.com/IHE/plain/ch*.html");
+    for my $fn (@chapter_fns) {
+        my $fh;
+        open($fh, '<', $fn) or die $!;
+        my $data = do { local $/; <$fh> };
+        $latest_snapshot = $latest_snapshot->add_chapter( text => $data );
     }
     $store->store($doc);
 
