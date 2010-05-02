@@ -26,6 +26,11 @@ has chapters => (
     },
 );
 
+around get_chapter_by_number => sub {
+    my ($orig, $self, $no) = @_;
+    $self->$orig($no - 1);
+};
+
 method add_chapter (%args) {
     my $new_chapter = Chapter->new( project => $self->project, number => $self->no_of_chapters + 1, text => $args{text} );
     my $new_snapshot = blessed($self)->new(
