@@ -15,6 +15,8 @@ my $s = $store->new_scope;
 my $project = $store->get_project_by_name('TestProject');
 ok $project;
 
-ok scalar($project->chapters->flatten), 'Has some chapters';
+my $snap = $project->latest_snapshot;
+
+ok scalar($snap->chapters->flatten), 'Has some chapters';
 
 done_testing;

@@ -24,6 +24,7 @@ requires 'Catalyst::View::TT';
 requires 'Catalyst::Model::KiokuDB';
 requires 'Moose';
 requires 'MooseX::Types';
+requires 'Moose::Autobox' => '0.11';
 requires 'Method::Signatures::Simple';
 requires 'JSON';
 requires 'namespace::autoclean';

@@ -1,5 +1,6 @@
 package TestDataStore;
 use Exporter ();
+use Moose::Autobox;
 use Test::More;
 use aliased 'App::Kaizendo::DataStore';
 use aliased 'App::Kaizendo::DataStore::Project';
@@ -37,10 +38,11 @@ sub buildTestData {
     my $doc = Project->new(name => 'TestProject');
     ok $doc;
 
-    ok $store->store($doc);
+    is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
 
+    my $latest_snapshot = $doc->latest_snapshot;
     for my $n (1..5) {
-        $doc->add_chapter( text => "Chapter $n text" );
+        $latest_snapshot->add_chapter( text => "Chapter $n text" );
     }
     $store->store($doc);
 
