@@ -3,6 +3,7 @@
 # expected.  You have been warned.
 use inc::Module::Install 0.95;  # xt/ support
 use strict;
+use Module::Install::AuthorRequires;
 
 name 'App-Kaizendo';
 
