@@ -1,5 +1,6 @@
 books/*
 MANIFEST.SKIP$
+README-Github.mkdn$
 pm_to_blib
 .git/
 .gitignore$

@@ -1,0 +1,8 @@
+# BUILDING
+
+To build Kaizendo from the github source, you'll need to have installed
+the following author dependencies.
+
+Module::Install::Catalyst
+Test::EOL
+Test::NoTabs

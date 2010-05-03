@@ -15,7 +15,6 @@ resources Repository  => 'git://github.com/sjn/Kaizendo.git';
 
 all_from 'lib/App/Kaizendo.pm';
 
-configure_requires 'Module::Install::Catalyst';
 configure_requires 'File::Copy::Recursive';  # needed by Module::Install::Catalyst
 requires 'JSON';
 requires 'Moose';
