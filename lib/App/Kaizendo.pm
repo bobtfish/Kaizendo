@@ -4,7 +4,7 @@ use 5.008_005;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.000_001';
 $VERSION = eval $VERSION;
 
 1;
@@ -21,15 +21,13 @@ App::Kaizendo - A tool for collaborative authoring of polyscopic documents
 
 =head1 DESCRIPTION
 
-Kaizendo is a framework for discussing and improving texts and their
-alternatives.
-
+Kaizendo is a framework for discussing and improving texts that have
+alternative versions ("aspects") of itself.
 
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
 Thomas Doran <bobtfish@bobtfish.net>
-
 
 =head1 LICENSE
 

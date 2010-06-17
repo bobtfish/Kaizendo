@@ -62,6 +62,7 @@ L<Kaizendo::Controller::Root>, L<Catalyst>
 =head1 AUTHOR
 
 Salve J. Nilsen <sjn@kaizendo.org>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 

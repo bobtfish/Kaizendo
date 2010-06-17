@@ -86,7 +86,7 @@ sub end : Action {
       unless $c->response->body;
 }
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
 Thomas Doran <bobtfish@bobtfish.net>

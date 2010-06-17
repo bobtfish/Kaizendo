@@ -28,7 +28,7 @@ sub aspect_list : Chained('aspect_base') PathPart('') Args(0) {
     $c->stash( template => \'Hello world ASPECT' );
 }
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
 Thomas Doran <bobtfish@bobtfish.net>

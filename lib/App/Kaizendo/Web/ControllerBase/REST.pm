@@ -20,7 +20,7 @@ App::Kaizendo::Web::ControllerBase::REST
 
 =cut
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
 Thomas Doran <bobtfish@bobtfish.net>

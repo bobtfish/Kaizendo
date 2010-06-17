@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 # IMPORTANT: if you delete this file your app will not work as
 # expected.  You have been warned.
-use inc::Module::Install 0.95;  # xt/ support
+use inc::Module::Install 0.96;  # xt/ and agpl_3 support
 use Module::Install::Catalyst;
 use strict;
 

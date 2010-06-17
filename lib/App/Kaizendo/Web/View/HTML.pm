@@ -18,14 +18,17 @@ TT View for App::Kaizendo::Web.
 
 L<App::Kaizendo::Web>
 
-=head1 AUTHOR
+=head1 AUTHORS
 
-Tomas Doran
+Salve J. Nilsen <sjn@kaizendo.org>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 
-This library is free software, you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This library is free software. You can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License v3, AGPLv3.
+
+See L<http://opensource.org/licenses/agpl-v3.html> for details.
 
 =cut
 

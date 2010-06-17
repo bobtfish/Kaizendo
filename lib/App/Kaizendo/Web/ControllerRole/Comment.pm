@@ -55,7 +55,7 @@ sub comment_list_GET {
     $c->stash( template => \'Hello world _comment_list' );
 }
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
 Thomas Doran <bobtfish@bobtfish.net>
