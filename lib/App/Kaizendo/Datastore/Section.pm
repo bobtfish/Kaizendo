@@ -1,4 +1,4 @@
-package App::Kaizendo::DataStore::Chapter;
+package App::Kaizendo::DataStore::Section;
 use App::Kaizendo::Moose;
 use MooseX::Types::Moose qw/ Int /;
 
