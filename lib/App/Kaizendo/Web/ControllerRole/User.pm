@@ -25,13 +25,13 @@ List users
 
 sub user_list : Chained('user_base') PathPart('') Args(0) {
     my ( $self, $c ) = @_;
-    $c->stash( template => \'Hello world _user' );
+    $c->stash( template => \'Hello world, this is ControllerRole::User user_list' );
 }
 
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 

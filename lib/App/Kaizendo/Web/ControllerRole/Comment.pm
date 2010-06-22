@@ -52,13 +52,51 @@ sub comment_list_GET {
             },
         },
     );
-    $c->stash( template => \'Hello world _comment_list' );
+    $c->stash( template => \"Hello world, this is ControllerRole::Comment comment_list_GET($id)" );
 }
+
+
+
+=head2 comment_show
+
+Show a specific comment
+
+=cut
+
+
+sub comment_show : Chained('comment_base') PathPart('') Args(1)
+  ActionClass('REST') {
+    my ( $self, $c ) = @_;
+}
+
+
+
+sub comment_show_GET {
+    my ( $self, $c ) = @_;
+    my $accepts = $c->req->headers->{accept};
+
+    my $id = $c->req->args->[0];
+
+    $self->status_ok(
+        $c,
+        entity => {
+            accepts => $accepts,
+            comment => {
+                from    => q(sjn@pvv.org),
+                re      => q(id00105),
+                id      => $id,
+                content => q(Well done!),
+            },
+        },
+    );
+    $c->stash( template => \"Hello world, this is ControllerRole::Comment comment_show_GET($id)" );
+}
+
 
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 

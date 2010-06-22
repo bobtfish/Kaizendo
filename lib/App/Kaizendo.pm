@@ -27,7 +27,7 @@ alternative versions ("aspects") of itself.
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 

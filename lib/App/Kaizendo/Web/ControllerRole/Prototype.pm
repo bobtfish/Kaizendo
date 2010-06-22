@@ -14,13 +14,13 @@ App::Kaizendo::Web::ControllerRole::Prototype
 
 after base => sub {
     my ( $self, $c ) = @_;
-    $c->stash( template => \'Hello world' );
+    $c->stash( template => \'Hello world, this is ControllerRole::Prototype' );
 };
 
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 

@@ -26,6 +26,7 @@ or the _#kaizendo_ IRC channel on irc.freenode.org.
   * [Main webpage](http://kaizendo.org/)
   * [Drumbeat project page](http://drumbeat.org/projects/kaizendo)
   * [GitHub repository](http://github.com/sjn/Kaizendo)
+  * [Bugtracker](https://rt.cpan.org/Public/Dist/Display.html?Name=App-Kaizendo)
 
 # TESTING
 

@@ -12,6 +12,7 @@ resources GitHub      => 'http://github.com/sjn/Kaizendo';
 resources MailingList => 'http://talk.kaizendo.org/mailman/listinfo';
 resources IrcChannel  => 'irc://irc.freenode.org/kaizendo';
 resources Repository  => 'git://github.com/sjn/Kaizendo.git';
+resources Bugtracker  => 'http://rt.cpan.org/Public/Dist/Display.html?Name=App-Kaizendo';
 
 all_from 'lib/App/Kaizendo.pm';
 

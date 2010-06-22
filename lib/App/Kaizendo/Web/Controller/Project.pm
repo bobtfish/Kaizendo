@@ -4,7 +4,7 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
-with 'App::Kaizendo::Web::ControllerRole::Prototype';
+#with 'App::Kaizendo::Web::ControllerRole::Prototype';
 with qw/
   App::Kaizendo::Web::ControllerRole::Aspect
   App::Kaizendo::Web::ControllerRole::User
@@ -30,13 +30,13 @@ FIXME
 sub base : Chained('/base') PathPart('') CaptureArgs(0) {
 }
 
-=head2 item
+=head2 section
 
 FIXME
 
 =cut
 
-sub item : Chained('base') PathPart('') CaptureArgs(1) {
+sub section : Chained('base') PathPart('') CaptureArgs(1) {
     my ( $self, $c, $project_name ) = @_;
 }
 
@@ -46,21 +46,21 @@ FIXME
 
 =cut
 
-sub view : Chained('item') PathPart('') Args(0) {
+sub view : Chained('section') PathPart('') Args(0) {
 }
 
 __PACKAGE__->config(
     action => {
-        aspect_base  => { Chained => 'item' },
-        user_base    => { Chained => 'item' },
-        comment_base => { Chained => 'item' },
+        aspect_base  => { Chained => 'section' },
+        user_base    => { Chained => 'section' },
+        comment_base => { Chained => 'section' },
     },
 );
 
 =head1 AUTHORS
 
 Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 LICENSE
 
