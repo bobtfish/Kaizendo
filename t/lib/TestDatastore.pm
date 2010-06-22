@@ -15,7 +15,7 @@ my $fn;
 sub import {
     my ($class, $args) = @_;
     pop if $args;
-    $fn = 'kiokudb.sqlite3';
+    $fn = $Bin . '/kiokudb.sqlite3';
     unless ($args->{no_unlink}) {
         $to_unlink = $fn;
     }
@@ -52,6 +52,7 @@ sub buildTestData {
 
     my $latest_snapshot = $doc->latest_snapshot;
     my @chapter_fns = glob("$Bin/../books//www.dreamsongs.com/IHE/plain/ch*.html");
+    ok scalar(@chapter_fns), 'Have some chapters';
     for my $fn (@chapter_fns) {
         my $fh;
         open($fh, '<', $fn) or die $!;
