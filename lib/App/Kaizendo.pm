@@ -29,6 +29,10 @@ alternative versions ("aspects") of itself.
 Salve J. Nilsen <sjn@kaizendo.org>
 Tomas Doran <bobtfish@bobtfish.net>
 
+=head1 COPYRIGHT
+
+Copyright the above authors.
+
 =head1 LICENSE
 
 This library is free software. You can redistribute it and/or modify
@@ -36,5 +40,6 @@ it under the terms of the GNU Affero General Public License v3, AGPLv3.
 
 See L<http://opensource.org/licenses/agpl-v3.html> for details.
 
-
 =cut
+
+1;

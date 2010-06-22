@@ -6,28 +6,18 @@ requires qw/
   base
   /;
 
-=head1 NAME
-
-App::Kaizendo::Web::ControllerRole::Prototype
-
-=cut
-
 after base => sub {
     my ( $self, $c ) = @_;
     $c->stash( template => \'Hello world, this is ControllerRole::Prototype' );
 };
 
-=head1 AUTHORS
+=head1 NAME
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
+App::Kaizendo::Web::ControllerRole::Prototype
 
-=head1 LICENSE
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

@@ -1,7 +1,14 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use FindBin qw/$Bin/;
+use lib "$Bin/lib";
+
 use Test::More;
+
+use TestDataStore;
+
+my $store = buildTestData(getTestDataStore());
 
 use Catalyst::Test 'App::Kaizendo::Web';
 
@@ -11,14 +18,14 @@ foreach my $uri (
     /;
     /_c
     /_user
-    /project_name
-    /project_name/;
-    /project_name/_user
-    /project_name/_c
-    /project_name/a_section
-    /project_name/a_section/;
-    /project_name/a_section/_user
-    /project_name/a_section/_c
+    /TestProject
+    /TestProject/;
+    /TestProject/_user
+    /TestProject/_c
+    /TestProject/1
+    /TestProject/1/;
+    /TestProject/1/_user
+    /TestProject/1/_c
     }
   )
 {

@@ -12,33 +12,23 @@ App::Kaizendo::Web::ControllerRole::User
 
 FIXME
 
-=cut
-
-sub user_base : Chained('base') PathPart('_user') CaptureArgs(0) {
-}
-
 =head2 user_list
 
 List users
 
 =cut
 
+sub user_base : Chained('base') PathPart('_user') CaptureArgs(0) {
+}
+
 sub user_list : Chained('user_base') PathPart('') Args(0) {
     my ( $self, $c ) = @_;
     $c->stash( template => \'Hello world, this is ControllerRole::User user_list' );
 }
 
-=head1 AUTHORS
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

@@ -4,6 +4,16 @@ use namespace::autoclean;
 
 BEGIN { extends 'Catalyst::Controller::REST'; }
 
+sub serialize : ActionClass('Serialize') {}
+
+sub end : Action {
+    my ( $self, $c ) = @_;
+    $c->forward('serialize')
+      unless $c->response->body;
+    die("Forced debug") if $c->debug
+        && $c->request->param('dump_info');
+}
+
 __PACKAGE__->config(
     default   => 'text/html',
     stash_key => 'rest',
@@ -18,19 +28,9 @@ __PACKAGE__->config(
 
 App::Kaizendo::Web::ControllerBase::REST
 
-=cut
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-=head1 AUTHORS
-
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

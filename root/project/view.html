@@ -1,1 +1,8 @@
-project/view.html template
+Project view page for [% project.name %].
+
+<h2>Chapters</h2>
+<ul>
+    [% FOREACH chapter = project.chapters %]
+        <li><a href="[% c.uri_for_action('/chapter/view', [project.name, chapter.number]) %]">[% chapter.number %]</a></li>
+    [% END %]
+</ul>

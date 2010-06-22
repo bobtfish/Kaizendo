@@ -18,17 +18,9 @@ TT View for App::Kaizendo::Web.
 
 L<App::Kaizendo::Web>
 
-=head1 AUTHORS
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

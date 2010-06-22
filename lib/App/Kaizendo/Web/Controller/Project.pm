@@ -4,12 +4,39 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
-#with 'App::Kaizendo::Web::ControllerRole::Prototype';
 with qw/
   App::Kaizendo::Web::ControllerRole::Aspect
   App::Kaizendo::Web::ControllerRole::User
   App::Kaizendo::Web::ControllerRole::Comment
   /;
+
+
+sub base : Chained('/base') PathPart('') CaptureArgs(0) {
+}
+
+=head2 section
+
+FIXME
+
+=cut
+
+sub section : Chained('base') PathPart('') CaptureArgs(1) {
+    my ( $self, $c, $project_name ) = @_;
+    my $project = $c->model('Projects')->get_project_by_name( $project_name )
+        or $c->detach('/error404');
+    $c->stash( project => $project->latest_snapshot );
+}
+
+sub view : Chained('section') PathPart('') Args(0) {
+}
+
+__PACKAGE__->config(
+    action => {
+        aspect_base  => { Chained => 'section' },
+        user_base    => { Chained => 'section' },
+        comment_base => { Chained => 'section' },
+    },
+);
 
 =head1 NAME
 
@@ -25,49 +52,17 @@ Handles information about the individual text project.
 
 FIXME
 
-=cut
-
-sub base : Chained('/base') PathPart('') CaptureArgs(0) {
-}
-
-=head2 section
+=head2 item
 
 FIXME
-
-=cut
-
-sub section : Chained('base') PathPart('') CaptureArgs(1) {
-    my ( $self, $c, $project_name ) = @_;
-}
 
 =head2 view
 
 FIXME
 
-=cut
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-sub view : Chained('section') PathPart('') Args(0) {
-}
-
-__PACKAGE__->config(
-    action => {
-        aspect_base  => { Chained => 'section' },
-        user_base    => { Chained => 'section' },
-        comment_base => { Chained => 'section' },
-    },
-);
-
-=head1 AUTHORS
-
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

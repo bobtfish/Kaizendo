@@ -4,6 +4,7 @@
 use inc::Module::Install 0.96;  # xt/ and agpl_3 support
 use Module::Install::Catalyst;
 use strict;
+use Module::Install::AuthorRequires;
 
 name 'App-Kaizendo';
 
@@ -26,8 +27,16 @@ requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::Action::REST';
 requires 'Catalyst::View::TT';
+requires 'Catalyst::Model::KiokuDB';
+requires 'Moose';
+requires 'MooseX::Types';
+requires 'Moose::Autobox' => '0.11';
+requires 'Method::Signatures::Simple';
+requires 'JSON';
 requires 'namespace::autoclean';
 requires 'Config::General';
+requires 'KiokuX::Model';
+requires 'aliased';
 
 recommends 'JSON::XS';
 

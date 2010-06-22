@@ -2,37 +2,13 @@ package App::Kaizendo::Web::ControllerRole::Comment;
 use MooseX::MethodAttributes::Role;
 use namespace::autoclean;
 
-=head1 NAME
-
-App::Kaizendo::Web::ControllerRole::Comment
-
-=head1 METHODS
-
-=head2 comment_base
-
-FIXME
-
-=cut
-
 sub comment_base : Chained('base') PathPart('_c') CaptureArgs(0) {
 }
-
-=head2 comment_list
-
-Lists available comments
-
-=cut
 
 sub comment_list : Chained('comment_base') PathPart('') Args(0)
   ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
-
-=head2 comment_list_GET
-
-GET handler for the comment list method
-
-=cut
 
 sub comment_list_GET {
     my ( $self, $c ) = @_;
@@ -54,7 +30,6 @@ sub comment_list_GET {
     );
     $c->stash( template => \"Hello world, this is ControllerRole::Comment comment_list_GET($id)" );
 }
-
 
 
 =head2 comment_show
@@ -93,17 +68,27 @@ sub comment_show_GET {
 }
 
 
-=head1 AUTHORS
+=head1 NAME
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Tomas Doran <bobtfish@bobtfish.net>
+App::Kaizendo::Web::ControllerRole::Comment
 
-=head1 LICENSE
+=head1 METHODS
 
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
+=head2 comment_base
 
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+FIXME
+
+=head2 comment_list
+
+Lists available comments
+
+=head2 comment_list_GET
+
+GET handler for the comment list method
+
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 
