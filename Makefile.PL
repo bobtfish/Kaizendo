@@ -2,6 +2,7 @@
 # IMPORTANT: if you delete this file your app will not work as
 # expected.  You have been warned.
 use inc::Module::Install 0.95;  # xt/ support
+use Module::Install::Catalyst;
 use strict;
 use Module::Install::AuthorRequires;
 
