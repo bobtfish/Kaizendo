@@ -33,7 +33,6 @@ requires 'MooseX::Types';
 requires 'MooseX::Types::LoadableClass';
 requires 'Moose::Autobox' => '0.11';
 requires 'Method::Signatures::Simple';
-requires 'JSON';
 requires 'namespace::autoclean';
 requires 'Config::General';
 requires 'KiokuX::Model';
@@ -41,6 +40,8 @@ requires 'KiokuDB::Backend::DBI';
 requires 'aliased';
 
 recommends 'JSON::XS';
+recommends 'MooseX::Types::JSON' => '0.02';
+recommends 'SQL::Translator' => '0.11005';
 
 test_requires 'Test::More' => '0.88';
 
