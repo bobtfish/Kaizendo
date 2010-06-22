@@ -40,10 +40,21 @@ requires 'KiokuDB::Backend::DBI';
 requires 'aliased';
 
 recommends 'JSON::XS';
-recommends 'MooseX::Types::JSON' => '0.02';
-recommends 'SQL::Translator' => '0.11005';
 
 test_requires 'Test::More' => '0.88';
+
+author_requires 'DBIx::Class' => '0.08123';
+
+if ($Module::Install::AUTHOR) {
+    require DBIx::Class::Optional::Dependencies;
+
+    my $deploy_deps = DBIx::Class::Optional::Dependencies->req_list_for ('deploy');
+
+    for (keys %$deploy_deps) {
+        author_requires $_ => $deploy_deps->{$_};
+        recommends $_ => $deploy_deps->{$_};
+    }
+}
 
 author_requires 'Test::Pod::Coverage' => '1.04';
 author_requires 'Test::Pod'           => '1.14';
