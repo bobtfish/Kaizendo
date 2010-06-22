@@ -31,9 +31,6 @@ FIXME
 
 =cut
 
-sub base : Chained('/project/section') PathPart('') CaptureArgs(0) {
-}
-
 sub section : Chained('base') PathPart('') CaptureArgs(1) {
     my ( $self, $c, $chapter_no ) = @_;
     my $chapter = $c->stash->{project}->get_chapter_by_number($chapter_no)

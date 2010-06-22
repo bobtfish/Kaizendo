@@ -9,7 +9,7 @@ __PACKAGE__->config(
     dsn => "dbi:SQLite:dbname=kiokudb.sqlite3",
     manage_scope => 1,
     clear_leaks => 1,
-    model_class => 'App::Kaizendo::DataStore',
+    model_class => 'App::Kaizendo::Datastore',
 );
 
 has '+model_class' => ( isa => ClassName, coerce => 1 );

@@ -30,9 +30,6 @@ FIXME
 
 =cut
 
-sub list : Chained('base') PathPart('') Args(0) {
-}
-
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 
 See L<App::Kaizendo> for Authors, Copyright and License information.

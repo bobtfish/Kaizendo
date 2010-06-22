@@ -1,13 +1,13 @@
-package TestDataStore;
+package TestDatastore;
 use Exporter ();
 use Moose::Autobox;
 use Test::More;
 use FindBin qw/$Bin/;
-use aliased 'App::Kaizendo::DataStore';
-use aliased 'App::Kaizendo::DataStore::Project';
-use aliased 'App::Kaizendo::DataStore::Comment';
+use aliased 'App::Kaizendo::Datastore';
+use aliased 'App::Kaizendo::Datastore::Project';
+use aliased 'App::Kaizendo::Datastore::Comment';
 
-our @EXPORT = qw/getTestDataStore buildTestData/;
+our @EXPORT = qw/getTestDatastore buildTestData/;
 
 my $to_unlink;
 my $fn;
@@ -22,9 +22,9 @@ sub import {
     goto &Exporter::import;
 }
 
-sub getTestDataStore {
+sub getTestDatastore {
     unlink $fn if -f $fn;
-    my $storage = DataStore->new(
+    my $storage = Datastore->new(
         dsn => "dbi:SQLite:dbname=$fn",
         extra_args => { create => 1, },
     );

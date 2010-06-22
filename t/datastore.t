@@ -5,9 +5,9 @@ use Moose::Autobox;
 use FindBin qw/$Bin/;
 use lib "$Bin/lib";
 
-use TestDataStore { no_unlink => 1 };
+use TestDatastore { no_unlink => 1 };
 
-my $store = buildTestData(getTestDataStore());
+my $store = buildTestData(getTestDatastore());
 ok $store;
 
 my $s = $store->new_scope;

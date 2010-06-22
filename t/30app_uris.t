@@ -6,9 +6,9 @@ use lib "$Bin/lib";
 
 use Test::More;
 
-use TestDataStore;
+use TestDatastore;
 
-my $store = buildTestData(getTestDataStore());
+my $store = buildTestData(getTestDatastore());
 
 use Catalyst::Test 'App::Kaizendo::Web';
 

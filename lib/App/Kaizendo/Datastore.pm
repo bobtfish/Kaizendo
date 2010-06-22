@@ -1,4 +1,4 @@
-package App::Kaizendo::DataStore;
+package App::Kaizendo::Datastore;
 use Moose;
 use Method::Signatures::Simple;
 use Moose::Autobox;
@@ -16,7 +16,7 @@ around BUILDARGS => sub {
 
 method get_all_projects { # Please pay no attention to the contents of this method, it needs to die :)
     my $bulk = $self->root_set;
-    my @all = grep { $_->isa('App::Kaizendo::DataStore::Project') } $bulk->all;
+    my @all = grep { $_->isa('App::Kaizendo::Datastore::Project') } $bulk->all;
     return [ @all ];
 }
 

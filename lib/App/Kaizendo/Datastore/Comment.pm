@@ -1,8 +1,8 @@
-package App::Kaizendo::DataStore::Comment;
+package App::Kaizendo::Datastore::Comment;
 use App::Kaizendo::Moose;
 
-class_type 'App::Kaizendo::DataStore::Project';
-has project => ( is => 'ro', required => 1, isa => 'App::Kaizendo::DataStore::Project' );
+class_type 'App::Kaizendo::Datastore::Project';
+has project => ( is => 'ro', required => 1, isa => 'App::Kaizendo::Datastore::Project' );
 has text => ( is => 'ro', required => 1 );
 
 __PACKAGE__->meta->make_immutable;
