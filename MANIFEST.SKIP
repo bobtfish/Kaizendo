@@ -1,4 +1,5 @@
 books/*
+kiokudb.sqlite3$
 t/kiokudb.sqlite3$
 MANIFEST.SKIP$
 README-Github.mkdn$

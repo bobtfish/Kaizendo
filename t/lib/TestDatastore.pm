@@ -52,8 +52,7 @@ sub buildTestData {
 
     my $latest_snapshot = $doc->latest_snapshot;
     my (@chapter_fns) = glob($Bin.'/data/IHE/ch*.html');
-    ok scalar(@chapter_fns), 'There are some chapters in '."$Bin/data/IHE"
-       or diag("@chapter_fns");
+    ok scalar(@chapter_fns), 'There are some chapters in '."$Bin/data/IHE";
     for my $fn (@chapter_fns) {
         my $fh;
         open($fh, '<', $fn) or die $!;
