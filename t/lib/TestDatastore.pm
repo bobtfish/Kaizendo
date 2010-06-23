@@ -51,8 +51,9 @@ sub buildTestData {
     is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
 
     my $latest_snapshot = $doc->latest_snapshot;
-    my @chapter_fns = glob("$Bin/../books//www.dreamsongs.com/IHE/plain/ch*.html");
-    ok scalar(@chapter_fns), 'Have some chapters';
+    my (@chapter_fns) = glob($Bin.'/data/IHE/ch*.html');
+    ok scalar(@chapter_fns), 'There are some chapters in '."$Bin/data/IHE"
+       or diag("@chapter_fns");
     for my $fn (@chapter_fns) {
         my $fh;
         open($fh, '<', $fn) or die $!;
