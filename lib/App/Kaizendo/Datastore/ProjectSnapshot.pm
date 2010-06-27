@@ -15,29 +15,32 @@ has project => (
     weak_ref => 1,
 );
 
-has chapters => (
+has sections => (
     is => 'ro',
     isa => ArrayRef,
     default => sub { [] },
     traits     => ['Array'],
     handles => {
-        no_of_chapters => 'count',
-        get_chapter_by_number => 'get',
+        no_of_sections => 'count',
+        get_section_by_number => 'get',
     },
 );
 
-around get_chapter_by_number => sub {
+around get_section_by_number => sub {
     my ($orig, $self, $no) = @_;
     $self->$orig($no - 1);
 };
 
-method add_chapter (%args) {
-    my $new_chapter = Section->new( project => $self->project, number => $self->no_of_chapters + 1, text => $args{text} );
+method add_section (%args) {
+    my $new_section = Section->new(
+        project => $self->project,
+        number => $self->no_of_sections + 1,
+        text => $args{text} );
     my $new_snapshot = blessed($self)->new(
         project => $self->project,
-        chapters => [
-            $self->chapters->flatten,
-            $new_chapter,
+        sections => [
+            $self->sections->flatten,
+            $new_section,
         ],
     );
     $self->project->_add_snapshot($new_snapshot);
@@ -49,7 +52,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-App::Kaizendo::Datastore::ProjectSnapshot - A projecr at a specific point in time
+App::Kaizendo::Datastore::ProjectSnapshot - A project at a specific point in time
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 

@@ -18,6 +18,6 @@ ok $project;
 
 my $snap = $project->latest_snapshot;
 
-ok scalar($snap->chapters->flatten), 'Has some chapters';
+ok scalar($snap->sections->flatten), 'Has some chapters';
 
 done_testing;

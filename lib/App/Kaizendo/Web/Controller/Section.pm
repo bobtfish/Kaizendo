@@ -32,10 +32,10 @@ FIXME
 =cut
 
 sub section : Chained('base') PathPart('') CaptureArgs(1) {
-    my ( $self, $c, $chapter_no ) = @_;
-    my $chapter = $c->stash->{project}->get_chapter_by_number($chapter_no)
+    my ( $self, $c, $section_no ) = @_;
+    my $section = $c->stash->{project}->get_section_by_number($section_no)
         or $c->detach('/error404');
-    $c->stash(chapter => $chapter);
+    $c->stash(section => $section);
 }
 
 
