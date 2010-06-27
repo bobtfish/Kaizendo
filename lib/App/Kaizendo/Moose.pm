@@ -10,11 +10,12 @@ use Moose::Autobox ();
 
 my ( $import, $unimport, $init_meta );
 
-# Basically this invokes all the modules (as documented in the description) into
-# the calling package, ergo avoiding boilerplate code being repeated in every module..
+# Basically this invokes all the modules (as documented in the description)
+# into the calling package, ergo avoiding boilerplate code being repeated in
+# every module..
 
-# I appreciate that the code below is fairly cryptic, please see the docs for Moose::Exporter
-# for more information...
+# I appreciate that the code below is fairly cryptic, please see the docs for
+# Moose::Exporter for more information...
 sub import {
     my $class = shift;
     my $into = caller;
