@@ -15,7 +15,7 @@ my $fn;
 sub import {
     my ($class, $args) = @_;
     pop if $args;
-    $fn = $Bin . '/kiokudb.sqlite3';
+    $fn = $Bin . '/../kiokudb.sqlite3';
     unless ($args->{no_unlink}) {
         $to_unlink = $fn;
     }

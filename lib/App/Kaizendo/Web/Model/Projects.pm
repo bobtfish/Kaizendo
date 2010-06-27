@@ -6,7 +6,6 @@ use namespace::autoclean;
 extends 'Catalyst::Model::KiokuDB';
 
 __PACKAGE__->config(
-    dsn => "dbi:SQLite:dbname=kiokudb.sqlite3",
     manage_scope => 1,
     clear_leaks => 1,
     model_class => 'App::Kaizendo::Datastore',
