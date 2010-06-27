@@ -1,7 +1,7 @@
 # BUILDING
 
-To build Kaizendo from the github source, you'll need to have installed
-recent version of the following author dependencies.
+To build Kaizendo from the Github source, you'll need to have installed
+recent version of the following modules:
 
   Module::Install
   Module::Install::Catalyst
@@ -15,7 +15,7 @@ recent version of the following author dependencies.
 
 
 When done, you can install the remaining dependencies by running the
-following command in the root dir:
+following command in the source dir:
 
   cpan .
 
