@@ -17,8 +17,7 @@ with qw/
 __PACKAGE__->config( namespace => '' );
 
 
-sub base : Chained('/') PathPart('') CaptureArgs(0) {
-}
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
 
 sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
@@ -67,18 +66,6 @@ Standard 404 error page
 =head2 serialize
 
 Causes the REST serialization of the output.
-
-=head2 end
-
-Forwards to content serializer if there's no response body
-
-=cut
-
-sub end : Action {
-    my ( $self, $c ) = @_;
-    $c->forward('serialize')
-      unless $c->response->body;
-}
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 

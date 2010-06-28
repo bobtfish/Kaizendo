@@ -28,6 +28,14 @@ __PACKAGE__->config(
 
 App::Kaizendo::Web::ControllerBase::REST
 
+=head2 serialize
+
+The content serializer
+
+=head2 end
+
+Forwards to content serializer if there's no response body
+
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 
 See L<App::Kaizendo> for Authors, Copyright and License information.
