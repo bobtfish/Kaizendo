@@ -17,6 +17,7 @@ with qw/
 __PACKAGE__->config( namespace => '' );
 
 
+# Every controller chains end up here at /base
 sub base : Chained('/') PathPart('') CaptureArgs(0) {
 }
 
@@ -27,7 +28,7 @@ sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
 
 sub index_GET { }
 
-sub default : Chained('base') PathPart('') Args() {
+sub default : Chained('base') PathPart('') Args() { # Capture all args
     my ( $self, $c ) = @_;
     $c->detach('/error404');
 }
@@ -44,7 +45,8 @@ Kaizendo::Controller::Root - Root Controller for Kaizendo
 
 =head1 DESCRIPTION
 
-[enter your description here]
+This is the root controller, which decides which actions are made based on
+the URLs requested.
 
 =head1 METHODS
 
@@ -74,7 +76,7 @@ Forwards to content serializer if there's no response body
 
 =cut
 
-sub end : Action {
+sub end : Action { # gets run at the end of all chains
     my ( $self, $c ) = @_;
     $c->forward('serialize')
       unless $c->response->body;

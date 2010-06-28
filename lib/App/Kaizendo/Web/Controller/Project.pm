@@ -10,7 +10,7 @@ with qw/
   App::Kaizendo::Web::ControllerRole::Comment
   /;
 
-
+# Is chained to the Root controller base method
 sub base : Chained('/base') PathPart('') CaptureArgs(0) {
 }
 

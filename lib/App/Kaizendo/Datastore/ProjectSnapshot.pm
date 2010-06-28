@@ -4,7 +4,9 @@ use MooseX::Types::Moose qw/ ArrayRef /;
 
 use aliased 'App::Kaizendo::Datastore::Section';
 
-class_type 'App::Kaizendo::Datastore::Project';
+# Predeclare type to avoid circular class refereneces
+class_type 'App::Kaizendo::Datastore::Project'; 
+
 has project => (
     isa => 'App::Kaizendo::Datastore::Project',
     is => 'ro',
@@ -28,10 +30,10 @@ has sections => (
 
 around get_section_by_number => sub {
     my ($orig, $self, $no) = @_;
-    $self->$orig($no - 1);
+    $self->$orig($no - 1);  # Sections start at 1, arrays at 0
 };
 
-method add_section (%args) {
+method append_section (%args) {
     my $new_section = Section->new(
         project => $self->project,
         number => $self->no_of_sections + 1,
@@ -39,7 +41,7 @@ method add_section (%args) {
     my $new_snapshot = blessed($self)->new(
         project => $self->project,
         sections => [
-            $self->sections->flatten,
+            $self->sections->flatten, # Create a new snapshot, with added section
             $new_section,
         ],
     );

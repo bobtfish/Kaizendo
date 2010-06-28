@@ -4,6 +4,7 @@ use namespace::autoclean;
 
 BEGIN { extends 'Catalyst::Controller::REST'; }
 
+# Catalyst::Action::Serialize handles serializing
 sub serialize : ActionClass('Serialize') {}
 
 sub end : Action {

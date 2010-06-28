@@ -1,12 +1,12 @@
 package App::Kaizendo::Datastore::Project;
-use App::Kaizendo::Moose;
+use App::Kaizendo::Moose;  # Set up Moose for this package
 use MooseX::Types::Moose qw/ ArrayRef /;
 
 use aliased 'App::Kaizendo::Datastore::ProjectSnapshot';
+class_type 'App::Kaizendo::Datastore::ProjectSnapshot';
 
 has name => ( is => 'rw', required => 1 );
 
-class_type 'App::Kaizendo::Datastore::ProjectSnapshot';
 has snapshots => (
     is => 'ro',
     isa => ArrayRef,
@@ -29,7 +29,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-App::Kaizendo::Datastore::Project - A project
+App::Kaizendo::Datastore::Project - The Kaizendo project class description
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 
