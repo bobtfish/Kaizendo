@@ -18,8 +18,7 @@ __PACKAGE__->config( namespace => '' );
 
 
 # Every controller chains end up here at /base
-sub base : Chained('/') PathPart('') CaptureArgs(0) {
-}
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
 
 sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
