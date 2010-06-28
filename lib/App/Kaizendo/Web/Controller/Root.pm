@@ -69,17 +69,6 @@ Standard 404 error page
 
 Causes the REST serialization of the output.
 
-=head2 end
-
-Forwards to content serializer if there's no response body
-
-=cut
-
-sub end : Action { # gets run at the end of all chains
-    my ( $self, $c ) = @_;
-    $c->forward('serialize')
-      unless $c->response->body;
-}
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 
