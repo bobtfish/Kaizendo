@@ -57,7 +57,7 @@ sub buildTestData {
         my $fh;
         open($fh, '<', $fn) or die $!;
         my $data = do { local $/; <$fh> };
-        $latest_snapshot = $latest_snapshot->add_section( text => $data );
+        $latest_snapshot = $latest_snapshot->append_section( text => $data );
     }
     $store->store($doc);
 
