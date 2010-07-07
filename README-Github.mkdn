@@ -4,7 +4,7 @@ To build Kaizendo from the Github source, you'll need to have installed
 recent version of the following modules:
 
   Module::Install
-  Module::Install::Catalyst
+  Catalyst::Devel
   Module::Install::AuthorRequires
   Test::EOL
   Test::NoTabs
