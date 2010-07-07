@@ -65,7 +65,6 @@ sub buildTestData {
 
     my $author = Person->new( name => "Salve J. Nilsen", access => 1 );
     ok $author, 'Create an author';
-    isa_ok( $author, 'App::Kaizendo::Datastore::Person' );
 
     my $comment = Comment->new(
         project => $doc,
@@ -73,7 +72,7 @@ sub buildTestData {
         author  => $author,
         );
     ok $comment;
-
+    
     ok $store->store($comment);
 
     return $store;
