@@ -3,6 +3,9 @@ use App::Kaizendo::Moose;  # Set up Moose for this package
 use MooseX::Types::Moose qw/ ArrayRef /;
 
 use aliased 'App::Kaizendo::Datastore::ProjectSnapshot';
+
+# A Project has ProjectSnapshots, and ProjectSnapshots have a Project.
+# So to avoid circular class refereneces, we Predeclare type
 class_type 'App::Kaizendo::Datastore::ProjectSnapshot';
 
 has name => ( is => 'rw', required => 1 );
