@@ -4,7 +4,6 @@ There's plenty of things to do!
 
 If you want to help, here are a few pointers...
 
-
 # App::Kaizendo
 
 Set up a REST interface according to the current spec, found on
@@ -26,8 +25,7 @@ Set up a REST interface according to the current spec, found on
 
 If you want to help, join us on IRC!
 
-   #kaizendo at irc.perl.org
-
+   [#kaizendo at irc.freenode.org](irc://irc.freenode.org/kaizendo)
 
 # Content
 
@@ -42,12 +40,10 @@ we'd like the following improvements:
 * Organize the book so that it becomes one file per chapter
 * Set up the HTML files so that they easily can be converted into Template::Toolkit templates.
 
-
 # Stories and use cases
 
 We're also looking for creative and novel usage stories. What would you
 do with an authoring tool that supports aspects? Tell us!
-
 
 # How to help
 
@@ -57,4 +53,4 @@ we'd love to have your help and support! :)
 If you'd like to help the project succeed, tell us! Join the kaizendoers 
 mailing list, and send us a mail with your thoughts.
 
-  http://talk.kaizendo.org/mailman/listinfo/kaizendoers
+  <http://talk.kaizendo.org/mailman/listinfo/kaizendoers>
