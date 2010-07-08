@@ -1,24 +1,24 @@
 ---
 - 
   id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
-  parent_id: ~
-  regarding: I want a banana
+  in_reply_to: ~
+  title: I want a banana
   user:
     url: /_user/sjn
     name: Salve J. Nilsen
   message:
-    timestamp: '2010-03-19T17:26:59'
+    published: '2010-03-19T17:26:59'
     content: <
       Is this a good idea? I have heard that bananas can be bad
       for your health.
 - 
   id: '92f562c4-8c72-8fdb-a8cc-9a2bd69315e0'
-  parent_id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
-  regarding: I want a banana
+  in_reply_to: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+  title: I want a banana
   user:
     url: /_user/foo
     name: Mr. T
   message:
-    timestamp: '2010-03-19T17:34:12'
+    published: '2010-03-19T17:34:12'
     content: <
       I pity the foo that thinks bananas are bad for you!!
