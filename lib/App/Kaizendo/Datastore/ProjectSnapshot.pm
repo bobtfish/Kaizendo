@@ -1,5 +1,5 @@
 package App::Kaizendo::Datastore::ProjectSnapshot;
-use App::Kaizendo::Moose;
+use App::Kaizendo::Moose;  # Set up Moose environment
 use MooseX::Types::Moose qw/ ArrayRef /;
 
 use aliased 'App::Kaizendo::Datastore::Section';
@@ -34,15 +34,19 @@ around get_section_by_number => sub {
 };
 
 method append_section (%args) {
+
+    # Set up new section object
     my $new_section = Section->new(
         project => $self->project,
-        number => $self->no_of_sections + 1,
-        text => $args{text} );
+        id      => $self->no_of_sections + 1,
+        content => $args{content},
+        author  => $args{author}, );
+
     my $new_snapshot = blessed($self)->new(
         project => $self->project,
         sections => [
-            $self->sections->flatten, # Create a new snapshot, with added section
-            $new_section,
+            $self->sections->flatten,
+            $new_section, # Append section
         ],
     );
     $self->project->_add_snapshot($new_snapshot);

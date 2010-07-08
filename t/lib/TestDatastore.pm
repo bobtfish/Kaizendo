@@ -8,7 +8,6 @@ use aliased 'App::Kaizendo::Datastore::Project';
 use aliased 'App::Kaizendo::Datastore::Comment';
 use aliased 'App::Kaizendo::Datastore::Person';
 
-
 our @EXPORT = qw/getTestDatastore buildTestData/;
 
 my $to_unlink;
@@ -47,9 +46,12 @@ sub buildTestData {
     my ($store) = @_;
     my $s = $store->new_scope;
 
+    my $author = Person->new( name => "Salve J. Nilsen", access => 1 );
+    ok $author, 'Create an author';
+
     my $doc = Project->new(name => 'TestProject');
     ok $doc;
-
+    
     is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
 
     my $latest_snapshot = $doc->latest_snapshot;
@@ -59,12 +61,9 @@ sub buildTestData {
         my $fh;
         open($fh, '<', $fn) or die $!;
         my $data = do { local $/; <$fh> };
-        $latest_snapshot = $latest_snapshot->append_section( text => $data );
+        $latest_snapshot = $latest_snapshot->append_section( content => $data, author => $author );
     }
     $store->store($doc);
-
-    my $author = Person->new( name => "Salve J. Nilsen", access => 1 );
-    ok $author, 'Create an author';
 
     my $comment = Comment->new(
         project => $doc,
