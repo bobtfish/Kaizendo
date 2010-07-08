@@ -35,6 +35,9 @@ foreach my $uri (
     returns_success($uri);
 }
 
+# The REST API spec that these tests are based on can be found here:
+# <http://spreadsheets.google.com/pub?key=tw0LE2wYspa8DyUaJVVwm_A>
+
 # User URL tests
 foreach my $test (
       [[ GET  => '/_user', 'text/html' ], [ 200 ]],
