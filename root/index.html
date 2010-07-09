@@ -1,6 +1,15 @@
-Projects:
-<ul>
-    [% FOREACH project = projects %]
-        <li><a href="[% c.uri_for_action('/project/view', [project.name]) %]">[% project.name %]</li>
-    [% END %]
-</ul>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kaizendo Projects</title>
+</head>
+<body>
+	<h2>Projects</h2>
+	<ul>
+	    [% FOREACH project = projects %]
+        	<li><a href="[% c.uri_for_action('/project/view', [project.name]) %]">[% project.name %]</a></li>
+	    [% END %]
+	</ul>
+</body>
+</html>
