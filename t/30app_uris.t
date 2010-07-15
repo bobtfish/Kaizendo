@@ -21,14 +21,14 @@ foreach my $uri (
     /;
     /_c
     /_user
-    /TestProject
-    /TestProject/;
-    /TestProject/_user
-    /TestProject/_c
-    /TestProject/1
-    /TestProject/1/;
-    /TestProject/1/_user
-    /TestProject/1/_c
+    /IHE
+    /IHE/;
+    /IHE/_user
+    /IHE/_c
+    /IHE/1
+    /IHE/1/;
+    /IHE/1/_user
+    /IHE/1/_c
     }
   )
 {

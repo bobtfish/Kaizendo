@@ -13,11 +13,11 @@ ok $store;
 
 my $s = $store->new_scope;
 
-my $project = $store->get_project_by_name('TestProject');
-ok $project;
+my $project = $store->get_project_by_name('IHE');# Innovation Happens Elsewhere
+ok $project, "We have a project";
 
 my $snap = $project->latest_snapshot;
 
-ok scalar($snap->sections->flatten), 'Has some chapters';
+ok scalar($snap->sections->flatten), '..and it has some chapters';
 
 done_testing;

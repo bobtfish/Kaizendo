@@ -46,10 +46,13 @@ sub buildTestData {
     my ($store) = @_;
     my $s = $store->new_scope;
 
-    my $author = Person->new( name => "Salve J. Nilsen", access => 1 );
-    ok $author, 'Create an author';
+    my $author1 = Person->new( name => "Ron Goldman", access => 1 );
+    ok $author1, 'Register first author';
 
-    my $doc = Project->new(name => 'TestProject');
+    my $author2 = Person->new( name => "Richard P. Gabriel", access => 1 );
+    ok $author2, 'Register second author';
+
+    my $doc = Project->new(name => 'IHE');
     ok $doc;
     
     is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
@@ -64,7 +67,7 @@ sub buildTestData {
         my $data = do { local $/; <$fh> };
         $latest_snapshot = $latest_snapshot->append_section(
             content        => $data,
-            author         => $author,
+            author         => $author1,
             commit_message => "Add chapter from " . $fn,
             tag            => "v0.0." . ++$version, #
         );
@@ -74,8 +77,8 @@ sub buildTestData {
     # Set up comments
     my $comment = Comment->new(
         project => $doc,
-        content => 'A comment',
-        author  => $author,
+        content => 'This is a good book, believe me!',
+        author  => $author2,
         );
     ok $comment;
 
