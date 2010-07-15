@@ -31,3 +31,13 @@ or the _#kaizendo_ IRC channel on irc.freenode.org.
 # TESTING
 
 Run script/kaizendo_server.pl to test the application.
+
+# OTHER SOFTWARE
+
+This package includes code from projects that have their own licenses:
+
+  jQuery
+  JSON
+
+Please see the respective project websites for licensing information and
+the opportunity to download the newest source code.
