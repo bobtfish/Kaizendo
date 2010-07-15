@@ -54,24 +54,31 @@ sub buildTestData {
     
     is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
 
+    # Add snapshots with new sections
     my $latest_snapshot = $doc->latest_snapshot;
     my (@chapter_fns) = glob($Bin.'/data/IHE/ch*.html');
     ok scalar(@chapter_fns), 'There are some chapters in '."$Bin/data/IHE";
     for my $fn (@chapter_fns) {
-        my $fh;
+        my ($fh, $version);
         open($fh, '<', $fn) or die $!;
         my $data = do { local $/; <$fh> };
-        $latest_snapshot = $latest_snapshot->append_section( content => $data, author => $author );
+        $latest_snapshot = $latest_snapshot->append_section(
+            content        => $data,
+            author         => $author,
+            commit_message => "Add chapter from " . $fn,
+            tag            => "v0.0." . ++$version, #
+        );
     }
     $store->store($doc);
 
+    # Set up comments
     my $comment = Comment->new(
         project => $doc,
         content => 'A comment',
         author  => $author,
         );
     ok $comment;
-    
+
     ok $store->store($comment);
 
     return $store;

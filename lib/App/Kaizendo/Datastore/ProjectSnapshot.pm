@@ -17,6 +17,22 @@ has project => (
     weak_ref => 1,
 );
 
+has updated => (
+    is => 'rw',
+    isa => 'DateTime',
+    default => sub { DateTime->now(); }
+);
+
+# Each new snapshot has a tag (e.g. "v1.0" or "v1.2") - think revision tagging
+has tag => (
+    is => 'ro',
+    required => 1,
+);
+
+has commit_message => (
+    is => 'rw',
+);
+
 has sections => (
     is => 'ro',
     isa => ArrayRef,
@@ -43,11 +59,13 @@ method append_section (%args) {
         author  => $args{author}, );
 
     my $new_snapshot = blessed($self)->new(
-        project => $self->project,
+        project  => $self->project,
         sections => [
             $self->sections->flatten,
             $new_section, # Append section
         ],
+        tag      => $args{tag},
+        comment  => $args{comment},
     );
     $self->project->_add_snapshot($new_snapshot);
     return $new_snapshot;

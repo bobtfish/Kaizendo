@@ -9,13 +9,12 @@ class_type 'App::Kaizendo::Datastore::Project';
 has project => ( is => 'ro', required => 1, isa => 'App::Kaizendo::Datastore::Project', weak_ref => 1 );
 has author => ( isa => 'App::Kaizendo::Datastore::Person', is => 'rw', required => 1 );
 has content => ( is => 'rw' );
-#has contributor => ( is => 'rw', isa 'Array[Author]' ); # FIXME: Set up contributor type
+#has contributor => ( is => 'rw', isa 'Array[Author]' ); # FIXME: Set up Author type
 has id => ( isa => Int, is => 'rw', required => 1 );
 has published => ( is => 'rw', isa => 'DateTime' );
-has rights => ( is => 'rw' ); # License information
+has rights => ( is => 'rw' ); # License information # FIXME: Use Enums?
 has summary => ( is => 'rw' );
 has title => ( is => 'rw' );
-has updated => ( is => 'rw', isa => 'DateTime', default => sub { DateTime->now(); } );
 
 __PACKAGE__->meta->make_immutable;
 1;

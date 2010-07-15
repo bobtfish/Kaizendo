@@ -3,9 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kaizendo Projects</title>
+        <link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
 </head>
 <body>
-	<h2>Projects</h2>
+
+	<img class="builtby" src="/static/images/btn_88x31_built.png">
+
+	<h2>Kaizendo projects</h2>
 	<ul>
 	    [% FOREACH project = projects %]
         	<li><a href="[% c.uri_for_action('/project/view', [project.name]) %]">[% project.name %]</a></li>

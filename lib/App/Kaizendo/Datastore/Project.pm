@@ -16,16 +16,31 @@ has snapshots => (
     default => sub {
         my $self = shift;
         return [
-            ProjectSnapshot->new(project => $self),
+            ProjectSnapshot->new(project => $self, tag => "Initial commit"),
         ];
     },
-    traits     => ['Array'],
+    traits     => ['Array'], # See Moose::Meta::Attribute::Native::Trait::Array
     handles => {
         _add_snapshot => 'push',
     },
 );
 
+
 method latest_snapshot { $self->snapshots->last }
+
+method earliest_snapshot { $self->snapshots->first }
+
+method next_snapshot {
+    my $index = $self->snapshots->at;
+    $index++ unless $index == $self->snapshots->length;
+    $self->snapshots->get($index);
+}
+
+method prev_snapshot {
+    my $index = $self->snapshots->at;
+    $index-- unless $index == 0;
+    $self->snapshots->get($index);
+}
 
 __PACKAGE__->meta->make_immutable;
 1;
@@ -33,6 +48,10 @@ __PACKAGE__->meta->make_immutable;
 =head1 NAME
 
 App::Kaizendo::Datastore::Project - The Kaizendo project class description
+
+=head1 DESCRIPTION
+
+This class is the top level storage class
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 
