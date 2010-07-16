@@ -10,6 +10,8 @@ class_type 'App::Kaizendo::Datastore::ProjectSnapshot';
 
 has name => ( is => 'rw', required => 1 );
 
+has title => ( is => 'rw' );
+
 has snapshots => (
     is => 'ro',
     isa => ArrayRef,
@@ -24,7 +26,6 @@ has snapshots => (
         _add_snapshot => 'push',
     },
 );
-
 
 method latest_snapshot { $self->snapshots->last }
 

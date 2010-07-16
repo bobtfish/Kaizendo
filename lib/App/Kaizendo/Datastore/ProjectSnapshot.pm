@@ -13,6 +13,7 @@ has project => (
     required => 1,
     handles => [qw/
         name
+        title
     /],
     weak_ref => 1,
 );
@@ -32,6 +33,8 @@ has tag => (
 has commit_message => (
     is => 'rw',
 );
+
+has editor => ( is => 'rw', isa => 'App::Kaizendo::Datastore::Person' );
 
 has sections => (
     is => 'ro',

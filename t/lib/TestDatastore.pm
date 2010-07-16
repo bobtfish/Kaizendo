@@ -53,9 +53,11 @@ sub buildTestData {
     ok $author2, 'Register second author';
 
     my $doc = Project->new(name => 'IHE');
-    ok $doc;
+    ok $doc, 'Create initial project';
     
-    is scalar($doc->snapshots->flatten), 1, 'Has 1 snapshot';
+    is scalar($doc->snapshots->flatten), 1, '..and check it has 1 snapshot';
+
+    ok $doc->title("Innovation Happens Elsewhere"), 'Set project title';
 
     # Add snapshots with new sections
     my $latest_snapshot = $doc->latest_snapshot;
