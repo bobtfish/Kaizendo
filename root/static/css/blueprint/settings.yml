@@ -1,0 +1,10 @@
+# refer to http://www.yaml.org/spec/1.1/ for clarification on YAML collections
+kaizendo:
+  path: /home/sjn/src/Kaizendo/root/static/css/blueprint
+  semantic_classes:
+    "#footer, #header": ".span-24"
+    "#content": ".span-17, .colborder"
+    "#comments": ".span-7"
+    "#extra-content": ".span-6"
+    "div#navigation": ".span_24"
+    "div.section, div.entry, .feeds": ".span-6"

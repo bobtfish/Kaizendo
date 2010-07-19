@@ -1,17 +1,6 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>[% section.project.name %], Chapter [% section.id %]</title>
-
-	<link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
-	<script src="/static/js/jquery.js"  type="text/javascript" charset="utf-8"></script>
-</head>
-</head>
-<body>
-
-<img class="builtby" src="/static/images/btn_88x31_built.png">
-
+[% WRAPPER common/index.html
+   title = "$section.project.name, Chapter $section.id"
+%]
 <p id="timestamp">[% section.updated %]</p>
 
 <ul id="nav">
@@ -41,6 +30,4 @@
 
 <div id="content">[% section.content %]</div>
 
-</body>
-</html>
-
+[% END %]

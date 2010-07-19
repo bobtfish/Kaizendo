@@ -1,19 +1,11 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Kaizendo Projects</title>
-        <link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
-</head>
-<body>
-
-	<img class="builtby" src="/static/images/btn_88x31_built.png">
-
+[% WRAPPER common/index.html
+   title = 'Kaizendo projects'
+%]
 	<h2>Kaizendo projects</h2>
 	<ul>
 	    [% FOREACH project = projects %]
-        	<li><a href="[% c.uri_for_action('/project/show', [project.name]) %]">[% project.title %]</a></li>
+        	<li><a href="[% c.uri_for_action('/project/show', [project.name]) %]/">[% project.title %]</a></li>
 	    [% END %]
 	</ul>
-</body>
-</html>
+
+[% END %]
