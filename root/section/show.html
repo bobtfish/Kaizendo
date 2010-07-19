@@ -5,6 +5,8 @@
 	<title>[% section.project.name %], Chapter [% section.id %]</title>
 
 	<link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
+	<script src="/static/js/jquery.js"  type="text/javascript" charset="utf-8"></script>
+</head>
 </head>
 <body>
 
@@ -35,6 +37,8 @@
 	</li>
 </ul>
 <div id="content">[% section.content %]</div>
+
+<div id="comments">[#% INCLUDE 'comment/show.html' %]</div>
 
 </body>
 </html>
