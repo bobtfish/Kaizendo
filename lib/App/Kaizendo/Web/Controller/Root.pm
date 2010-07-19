@@ -20,12 +20,12 @@ __PACKAGE__->config( namespace => '' );
 # Every controller chains end up here at /base
 sub base : Chained('/') PathPart('') CaptureArgs(0) {}
 
-sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
+sub list : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
     my ( $self, $c ) = @_;
     $c->stash( projects => $c->model('Projects')->get_all_projects );
 }
 
-sub index_GET { }
+sub list_GET { }
 
 sub default : Chained('base') PathPart('') Args() { # Capture all args
     my ( $self, $c ) = @_;
