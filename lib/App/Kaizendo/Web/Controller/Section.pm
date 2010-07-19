@@ -39,7 +39,7 @@ sub section : Chained('base') PathPart('') CaptureArgs(1) {
 }
 
 
-sub view : Chained('section') PathPart('') Args(0) {
+sub show : Chained('section') PathPart('') Args(0) {
 }
 
 __PACKAGE__->config(

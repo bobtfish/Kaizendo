@@ -28,7 +28,7 @@ sub comment_list_GET {
             },
         },
     );
-    $c->stash( template => \"Hello world, this is ControllerRole::Comment comment_list_GET" );
+    $c->stash( template => 'comment/list.html' );
 }
 
 
@@ -64,7 +64,7 @@ sub comment_show_GET {
             },
         },
     );
-    $c->stash( template => \"Hello world, this is ControllerRole::Comment comment_show_GET($id)" );
+    $c->stash( template => 'comment/show.html' );
 }
 
 
