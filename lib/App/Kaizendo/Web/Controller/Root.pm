@@ -16,13 +16,36 @@ with qw/
 #
 __PACKAGE__->config( namespace => '' );
 
+
+# Every controller chains end up here at /base
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+
+sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
+    my ( $self, $c ) = @_;
+    $c->stash( projects => $c->model('Projects')->get_all_projects );
+}
+
+sub index_GET { }
+
+sub default : Chained('base') PathPart('') Args() { # Capture all args
+    my ( $self, $c ) = @_;
+    $c->detach('/error404');
+}
+
+sub error404 : Action {
+    my ($self, $c) = @_;
+    $c->response->body('Page not found');
+    $c->response->status(404);
+}
+
 =head1 NAME
 
 Kaizendo::Controller::Root - Root Controller for Kaizendo
 
 =head1 DESCRIPTION
 
-[enter your description here]
+This is the root controller, which decides which actions are made based on
+the URLs requested.
 
 =head1 METHODS
 
@@ -30,73 +53,26 @@ Kaizendo::Controller::Root - Root Controller for Kaizendo
 
 FIXME
 
-=cut
-
-sub base : Chained('/') PathPart('') CaptureArgs(0) {
-}
-
 =head2 index
 
-The root page (/)
-
-=cut
-
-sub index : Chained('base') PathPart('') Args(0) : ActionClass('REST') {
-    my ( $self, $c ) = @_;
-}
+The root page (/). List (projects).
 
 =head2 index_GET
 
 The root page (/) GET handler
 
-=cut
-
-sub index_GET { }
-
 =head2 default
 
 Standard 404 error page
 
-=cut
-
-sub default : Chained('base') PathPart('') Args() {
-    my ( $self, $c ) = @_;
-    $c->response->body('Page not found');
-    $c->response->status(404);
-}
-
 =head2 serialize
 
-The root page (/)
+Causes the REST serialization of the output.
 
-=cut
 
-sub serialize : ActionClass('Serialize') {
-}
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-=head2 end
-
-Forwards to content serializer if there's no response body
-
-=cut
-
-sub end : Action {
-    my ( $self, $c ) = @_;
-    $c->forward('serialize')
-      unless $c->response->body;
-}
-
-=head1 AUTHOR
-
-Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

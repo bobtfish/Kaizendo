@@ -1,0 +1,56 @@
+# TODO
+
+There's plenty of things to do! 
+
+If you want to help, here are a few pointers...
+
+# App::Kaizendo
+
+Set up a REST interface according to the current spec, found on
+<http://spreadsheets.google.com/pub?key=tw0LE2wYspa8DyUaJVVwm_A>
+
+* Set up the commenting REST API
+* Set up core features
+   * Show a section
+   * List sections
+   * Show a section aspect
+   * List section aspects
+   * Show comments related to a section aspect page
+* Create templates
+   * Section/Aspect display
+   * Section/Aspect list/navigation
+   * Javascript UI templates
+* Set up authentication features
+   * User auth/autz, roles
+
+If you want to help, join us on IRC!
+
+   [#kaizendo at irc.freenode.org](irc://irc.freenode.org/kaizendo)
+
+# Content
+
+We're looking for good example texts to use! If you know of any,
+then please add them to your own github clone of the project and
+send a pull request.
+
+Currently, we have one example text in the books/ directory, where
+we'd like the following improvements:
+
+* Clean up the HTML so that it's valid and well-formed HTML5 (or an HTML4.2, if necessary)
+* Organize the book so that it becomes one file per chapter
+* Set up the HTML files so that they easily can be converted into Template::Toolkit templates.
+
+# Stories and use cases
+
+We're also looking for creative and novel usage stories. What would you
+do with an authoring tool that supports aspects? Tell us!
+
+# How to help
+
+First of all, you should know that we're a really friendly bunch, and that
+we'd love to have your help and support! :)
+
+If you'd like to help the project succeed, tell us! Join the kaizendoers 
+mailing list, and send us a mail with your thoughts.
+
+  <http://talk.kaizendo.org/mailman/listinfo/kaizendoers>

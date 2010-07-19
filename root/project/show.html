@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>[% project.name %]</title>
+
+        <link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
+</head>
+<body>
+
+<img class="builtby" src="/static/images/btn_88x31_built.png">
+
+<ul id="nav">
+        <li class="project">
+                <a href="..">List projects</a>
+        </li>
+</ul>
+
+<h2>[% project.name %]</h2>
+<ul>
+    [% FOREACH section = project.sections %]
+        <li><a href="[% c.uri_for_action('/section/show', [project.name, section.id]) %]">Chapter [% section.id %]</a></li>
+    [% END %]
+</ul>
+</body>
+</html>
+

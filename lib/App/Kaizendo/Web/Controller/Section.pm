@@ -4,7 +4,6 @@ use namespace::autoclean;
 
 BEGIN { extends 'App::Kaizendo::Web::ControllerBase::REST' }
 
-with 'App::Kaizendo::Web::ControllerRole::Prototype';
 with qw/
   App::Kaizendo::Web::ControllerRole::Aspect
   App::Kaizendo::Web::ControllerRole::User
@@ -23,47 +22,55 @@ FIXME
 
 =cut
 
-sub base : Chained('/project/item') PathPart('') CaptureArgs(0) {
+sub base : Chained('/project/section') PathPart('') CaptureArgs(0) {
 }
 
-=head2 item
+=head2 section
 
 FIXME
 
 =cut
 
-sub item : Chained('base') PathPart('') CaptureArgs(1) {
-    my ( $self, $c, $section_name ) = @_;
+sub section : Chained('base') PathPart('') CaptureArgs(1) {
+    my ( $self, $c, $section_no ) = @_;
+    my $section = $c->stash->{project}->get_section_by_number($section_no)
+        or $c->detach('/error404');
+    $c->stash(section => $section);
 }
 
-=head2 view
 
-FIXME
-
-=cut
-
-sub view : Chained('item') PathPart('') Args(0) {
+sub show : Chained('section') PathPart('') Args(0) {
 }
 
 __PACKAGE__->config(
     action => {
-        aspect_base  => { Chained => 'item' },
-        user_base    => { Chained => 'item' },
-        comment_base => { Chained => 'item' },
+        aspect_base  => { Chained => 'section' },
+        user_base    => { Chained => 'section' },
+        comment_base => { Chained => 'section' },
     },
 );
 
-=head1 AUTHOR
+=head1 NAME
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+App::Kaizendo::Web::Controller::Section
 
-=head1 LICENSE
+=head1 METHODS
 
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
+=head2 base
 
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+FIXME
+
+=head2 section
+
+FIXME
+
+=head2 show
+
+FIXME
+
+=head1 AUTHORS, COPYRIGHT AND LICENSE
+
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

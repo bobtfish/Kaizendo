@@ -4,6 +4,17 @@ use namespace::autoclean;
 
 BEGIN { extends 'Catalyst::Controller::REST'; }
 
+# Catalyst::Action::Serialize handles serializing
+sub serialize : ActionClass('Serialize') {}
+
+sub end : Action {
+    my ( $self, $c ) = @_;
+    $c->forward('serialize')
+      unless $c->response->body;
+    die("Forced debug") if $c->debug
+        && $c->request->param('dump_info');
+}
+
 __PACKAGE__->config(
     default   => 'text/html',
     stash_key => 'rest',
@@ -18,19 +29,17 @@ __PACKAGE__->config(
 
 App::Kaizendo::Web::ControllerBase::REST
 
-=cut
+=head2 serialize
 
-=head1 AUTHOR
+The content serializer
 
-Salve J. Nilsen <sjn@kaizendo.org>
-Thomas Doran <bobtfish@bobtfish.net>
+=head2 end
 
-=head1 LICENSE
+Forwards to content serializer if there's no response body
 
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

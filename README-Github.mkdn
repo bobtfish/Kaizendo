@@ -1,0 +1,22 @@
+# BUILDING
+
+To build Kaizendo from the Github source, you'll need to have installed
+recent version of the following modules:
+
+  Module::Install
+  Catalyst::Devel
+  Module::Install::AuthorRequires
+  Test::EOL
+  Test::NoTabs
+  Test::Pod
+  Test::Pod::Coverage
+  DBIx::Class
+  SQL::Translator
+
+
+When done, you can install the remaining dependencies by running the
+following command in the source dir:
+
+  cpan .
+
+

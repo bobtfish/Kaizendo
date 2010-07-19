@@ -37,6 +37,11 @@ __PACKAGE__->config(
 
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
+    
+    # Set up DSN for the Model
+    'Model::Projects' => {
+        dsn => "dbi:SQLite:dbname=" . __PACKAGE__->path_to('kiokudb.sqlite3'),
+    },
 );
 
 # Start the application
@@ -44,7 +49,7 @@ __PACKAGE__->setup();
 
 =head1 NAME
 
-Kaizendo - A tool for collaborative authoring of polyscopic documents
+App::Kaizendo::Web - Configuration class for the Kaizendo Catalyst app
 
 =head1 SYNOPSIS
 
@@ -52,23 +57,15 @@ Kaizendo - A tool for collaborative authoring of polyscopic documents
 
 =head1 DESCRIPTION
 
-Kaizendo is a framework for discussing and improving texts and their
-alternatives.
+App::Kaizendo::Web is the main configuration class for the Kaizendo webapp.
 
 =head1 SEE ALSO
 
-L<Kaizendo::Controller::Root>, L<Catalyst>
+L<App::Kaizendo::Web::Controller::Root>, L<Catalyst>
 
-=head1 AUTHOR
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-Salve J. Nilsen <sjn@kaizendo.org>
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License v3, AGPLv3.
-
-See L<http://opensource.org/licenses/agpl-v3.html> for details.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 

@@ -5,3 +5,5 @@ www.dreamsongs.com
    "Innovation Happens Elsewhere" mirror.
    Licensed CC-BY-SA-2.0: http://creativecommons.org/licenses/by-nc-sa/2.0/
    wget -m -p -k -R .pdf -np http://www.dreamsongs.com/IHE/
+
+Parts of this book have been placed in t/data/book for testing purposes.

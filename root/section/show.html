@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>[% section.project.name %], Chapter [% section.id %]</title>
+
+	<link media="all" rel="stylesheet" href="/static/css/style.css" type="text/css" />
+	<script src="/static/js/jquery.js"  type="text/javascript" charset="utf-8"></script>
+</head>
+</head>
+<body>
+
+<img class="builtby" src="/static/images/btn_88x31_built.png">
+
+<p id="timestamp">[% section.updated %]</p>
+
+<ul id="nav">
+	<li class="section">
+		<a href="..">List Sections</a>
+	</li>
+	<li class="section">
+		<a href="">&lt;section</a>
+	</li>
+	<li class="aspect list">
+		Aspects
+		<ul>
+			<li class="aspect option">
+				<a href="">aspect1</a>
+			</li>
+			<li class="aspect option">
+				<a href="">aspect2</a>
+			</li>
+		</ul>
+	</li>
+	<li class="section">
+		<a href="">section&gt;</a>
+	</li>
+</ul>
+<div id="content">[% section.content %]</div>
+
+<div id="comments">[#% INCLUDE 'comment/show.html' %]</div>
+
+</body>
+</html>
+

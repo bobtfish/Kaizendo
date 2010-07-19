@@ -18,14 +18,9 @@ TT View for App::Kaizendo::Web.
 
 L<App::Kaizendo::Web>
 
-=head1 AUTHOR
+=head1 AUTHORS, COPYRIGHT AND LICENSE
 
-Tomas Doran
-
-=head1 LICENSE
-
-This library is free software, you can redistribute it and/or modify
-it under the same terms as Perl itself.
+See L<App::Kaizendo> for Authors, Copyright and License information.
 
 =cut
 
