@@ -19,6 +19,11 @@ interested, have a look at our [web site](http://kaizendo.org/) or join
 our [mailing list](http://talk.kaizendo.org/mailman/listinfo/kaizendoers)
 or the _#kaizendo_ IRC channel on irc.freenode.org.
 
+To get an idea of where you can help, check out the TODO.mkdn file in our
+Github repository.
+
+  [TODO](http://github.com/sjn/Kaizendo/blob/master/TODO.mkdn)
+
 # COMMUNITY
 
   * [IRC (Chat)](irc://irc.freenode.org/kaizendo)

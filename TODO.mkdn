@@ -23,9 +23,25 @@ Set up a REST interface according to the current spec, found on
 * Set up authentication features
    * User auth/autz, roles
 
+These tasks are well suited for anyone who wants to get into the
+details of Catalyst and Kaizendo.
+
 If you want to help, join us on IRC!
 
    [#kaizendo at irc.freenode.org](irc://irc.freenode.org/kaizendo)
+
+# Tests
+
+The app needs tests for all kinds of usage scenarios. Check out the
+code from Github and add your tests to the t/ dir. Testing the REST
+interface is part of this!
+
+* Create, read, update, rename and delete
+   * Projects
+   * Sections
+   * Aspects
+* Create and read comments
+* Comment invalidation and migration
 
 # Content
 
