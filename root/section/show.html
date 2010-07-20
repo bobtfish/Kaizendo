@@ -1,9 +1,12 @@
 [% WRAPPER common/index.html
    title = "$section.project.name, Chapter $section.id"
 %]
-<p id="timestamp">[% section.updated %]</p>
+<!-- Template: root/section/show.html -->
 
-<ul id="nav">
+
+<p class="updated">[% section.updated %]</p>
+
+<ul id="aspectnav">
 	<li class="section">
 		<a href="..">List Sections</a>
 	</li>
@@ -26,8 +29,8 @@
 	</li>
 </ul>
 
-<div id="comments">[% INCLUDE 'comment/show.html' %]</div>
-
 <div id="content">[% section.content %]</div>
+
+<div id="comments">[% INCLUDE 'comment/show.html' %]</div>
 
 [% END %]

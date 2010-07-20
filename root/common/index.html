@@ -1,22 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>[% Catalyst.config.name %] - [% title %]</title>
+    <!-- Template: root/common/index.html -->
+    <meta charset="UTF-8">
+    <title>[% c.config.name %] - [% title %]</title>
 
-	<link rel="stylesheet" href="/static/css/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/static/css/print.css" type="text/css" media="print">	
-	<link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">	
-	<!--[if lt IE 8]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="/static/css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/css/print.css" type="text/css" media="print">	
+    <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">	
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-        <script src="/static/js/jquery.js"  type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/jquery.js"  type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
-
-	<img class="builtby" src="/static/images/btn_88x31_built.png">
-
-	[% content %]
-
+<body class="container showgrid">
+    <div id="header">
+        <img class="built_by" src="/static/images/btn_88x31_built.png">
+    </div>
+    [% content %]
+    <div id="footer"></div>
 </body>
 </html>
