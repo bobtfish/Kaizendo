@@ -3,20 +3,21 @@
 To build Kaizendo from the Github source, you'll need to have installed
 recent version of the following modules:
 
-  Module::Install
-  Catalyst::Devel
-  Module::Install::AuthorRequires
-  Test::EOL
-  Test::NoTabs
-  Test::Pod
-  Test::Pod::Coverage
-  DBIx::Class
-  SQL::Translator
+  PERL_MM_USE_DEFAULT=1 cpan -i /
+    Module::Install /
+    Module::Install::AuthorRequires /
+    Test::EOL /
+    Test::NoTabs /
+    Test::Pod /
+    Test::Pod::Coverage /
+    Catalyst::Devel /
+    SQL::Translator /
+    DBIx::Class
 
 
 When done, you can install the remaining dependencies by running the
 following command in the source dir:
 
-  cpan .
+  PERL_MM_USE_DEFAULT=1 cpan -i .
 
 
