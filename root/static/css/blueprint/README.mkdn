@@ -4,12 +4,11 @@ This is a generated export of the Blueprint CSS library. To create an updated
 version, check out the blueprint source from Github, then edit settings.yml 
 and run the following command:
 
-  [Blueprint on Github](http://github.com/joshuaclayton/blueprint-css)
+# Updating
 
-  $ git clone http://github.com/joshuaclayton/blueprint-css.git
-  $ cd blueprint-css
-  $ $EDITOR /path/to/root/static/css/blueprint/settings.yml # update path
-  $ ruby lib/compress.rb -f /path/to/root/static/css/blueprint/settings.yml -p kaizendo
+  $ git clone http://github.com/joshuaclayton/blueprint-css.git ~/src/blueprint-css
+  $ $EDITOR settings.yml # update path to the directory the CSS files are in
+  $ ruby ~/src/blueprint-css/lib/compress.rb -f settings.yml -p kaizendo
 
 # Licensing and use
 
@@ -18,4 +17,5 @@ file in the Blueprint CSS source package.
 
 For more information, see the Blueprint CSS Framework website.
 
-  [Blueprint homepage](http://blueprintcss.org/)
+  [Home page](http://blueprintcss.org/)
+  [Source code](http://github.com/joshuaclayton/blueprint-css)

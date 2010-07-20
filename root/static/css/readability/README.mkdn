@@ -1,0 +1,18 @@
+# About Readability
+
+These files are from the arc90 labs Readability project.
+
+* [Home page](http://lab.arc90.com/experiments/readability/)
+* [Source code](http://code.google.com/p/arc90labs-readability/)
+
+# Updating
+
+To update these files, check out the source code and copy the
+relevant CSS files to this directory.
+
+ $ svn co http://arc90labs-readability.googlecode.com/svn/trunk/ ~/readability
+ $ cp ~/readability/css/readability.css ~/readability/css/readability-print.css .
+
+# License
+
+The Readability project is licensed with the Apache License 2.0.
