@@ -37,6 +37,7 @@ requires 'namespace::autoclean';
 requires 'Config::General';
 requires 'KiokuX::Model';
 requires 'KiokuDB::Backend::DBI';
+requires 'DateTime';
 requires 'aliased';
 
 recommends 'JSON::XS';
