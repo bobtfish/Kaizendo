@@ -44,6 +44,7 @@ This package includes code from projects that have their own licenses:
   jQuery
   JSON
   Blueprint CSS Framework
+  Readability
 
 Please see the respective project websites for licensing information and
 the opportunity to download the newest source code.
