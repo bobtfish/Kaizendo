@@ -4,7 +4,7 @@ use 5.008_005;
 use strict;
 use warnings;
 
-our $VERSION = '0.000_002';
+our $VERSION = '0.000_003';
 $VERSION = eval $VERSION;
 
 1;
