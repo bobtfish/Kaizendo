@@ -1,5 +1,6 @@
 books/.*
 .*\.sqlite3$
+.*\.sqlite3-journal$
 MANIFEST\.SKIP$
 README-Github.mkdn$
 pm_to_blib

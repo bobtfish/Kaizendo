@@ -1,4 +1,5 @@
 kiokudb.sqlite3
+kiokudb.sqlite3-journal
 META.yml
 inc*
 MANIFEST
