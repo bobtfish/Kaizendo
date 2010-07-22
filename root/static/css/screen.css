@@ -1,6 +1,33 @@
-/* Kaizendo main CSS */
+/* Kaizendo screen/projection CSS */
 
 img.built_by {
-	float:  right;
+	float: right;
 	border: none;
+}
+
+img.kaizendo_logo {
+	border: none;
+	margin: 5px;
+}
+
+#content {
+	background: #f4eed9;
+	min-height: 250px;
+}
+
+#left_col, #right_col, body.container {
+	background: transparent !important;
+}
+
+#footer {
+	background: transparent !important;
+	color: #3d743a;
+}
+
+html {
+	background: #3d743a repeat-x url(/static/images/background.jpg);
+}
+
+p, h1, h2 {
+	padding: 5px;
 }

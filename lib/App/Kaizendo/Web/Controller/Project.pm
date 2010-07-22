@@ -27,7 +27,7 @@ sub section : Chained('base') PathPart('') CaptureArgs(1) {
     $c->stash( project => $project->latest_snapshot );
 }
 
-sub show : Chained('section') PathPart('') Args(0) {
+sub sections : Chained('section') PathPart('') Args(0) {
 }
 
 __PACKAGE__->config(
@@ -56,9 +56,9 @@ FIXME
 
 FIXME
 
-=head2 show
+=head2 sections
 
-FIXME
+Show sections in a project
 
 =head1 AUTHORS, COPYRIGHT AND LICENSE
 

@@ -32,21 +32,21 @@ sub comment_list_GET {
 }
 
 
-=head2 comment_show
+=head2 comment_discussion
 
-Show a specific comment
+Show a comment discussion, starting at a specific id
 
 =cut
 
 
-sub comment_show : Chained('comment_base') PathPart('') Args(1)
+sub comment_discussion : Chained('comment_base') PathPart('') Args(1)
   ActionClass('REST') {
     my ( $self, $c ) = @_;
 }
 
 
 
-sub comment_show_GET {
+sub comment_discussion_GET {
     my ( $self, $c ) = @_;
     my $accepts = $c->req->headers->{accept};
 
@@ -64,7 +64,7 @@ sub comment_show_GET {
             },
         },
     );
-    $c->stash( template => 'comment/show.html' );
+    $c->stash( template => 'comment/discussion.html' );
 }
 
 

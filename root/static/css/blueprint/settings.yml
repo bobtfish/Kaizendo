@@ -2,10 +2,7 @@
 kaizendo:
   path: /home/sjn/src/Kaizendo/root/static/css/blueprint
   semantic_classes:
-    "#footer, #header": ".span-24 last"
-    "#docnav":          ".span-3"
-    "#aspectnav":       ".span-3"
-    "#content":         ".span-14"
-    "#comments":        ".span-6 last"
-    ".nav":             ".span-3"
-    "img .built_by":    ".pull-24"
+    "#footer": ".span-24 last"
+    "#left_col, #section_nav, #aspect_nav, #site_logo, #updated": ".span-4"
+    "#content": ".span-14"
+    "#right_col, #comments, #help, #login": ".span-6 last"

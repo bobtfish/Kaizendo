@@ -259,9 +259,6 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 
 /* semantic class names */
 #content {float:left;margin-right:10px;width:550px;}
-#footer, #header {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:950px;margin-right:0;}
-.nav {float:left;margin-right:10px;width:110px;}
-#comments {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:230px;}
-#docnav {float:left;margin-right:10px;width:110px;}
-#aspectnav {float:left;margin-right:10px;width:110px;}
-img .built_by {margin-left:-960px;float:left;position:relative;}
+#footer {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:950px;margin-right:0;}
+#right_col, #comments, #help, #login {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:230px;}
+#left_col, #section_nav, #aspect_nav, #site_logo, #updated {float:left;margin-right:10px;width:150px;}

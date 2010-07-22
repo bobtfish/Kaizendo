@@ -1,0 +1,29 @@
+[% WRAPPER common/index.html
+   title = project.title
+%]
+<!-- Template: root/project/sections.html -->
+
+<div id="left_col">
+
+    [% INCLUDE common/logo.html %]
+
+    <ul id="projectnav">
+        <li class="project">
+            <a href="..">Show all projects</a>
+        </li>
+    </ul>
+</div>
+
+<div id="content">
+    <h1>[% project.title %]</h1>
+    <ul>
+        [% FOREACH section = project.sections %]
+        <li><a href="[% c.uri_for_action('/section/content', [project.name, section.id]) %]/">Chapter [% section.id %]</a></li>
+        [% END %]
+    </ul>
+</div>
+
+<div id="right_col">&nbsp;</div>
+
+<!-- End of template: root/project/sections.html -->
+[% END %]

@@ -1,0 +1,22 @@
+[% WRAPPER common/index.html
+   title = 'Kaizendo projects'
+%]
+
+<div id="left_col">
+
+    [% INCLUDE common/logo.html %]
+
+</div>
+
+<div id="content">
+    <h1>Kaizendo projects</h1>
+    <ul>
+        [% FOREACH project = projects %]
+           	<li><a href="[% c.uri_for_action('/project/sections', [project.name]) %]/">[% project.title %]</a></li>
+        [% END %]
+    </ul>
+</div>
+
+<div id="right_col">&nbsp;</div>
+
+[% END %]
