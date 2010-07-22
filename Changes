@@ -1,6 +1,10 @@
 This file documents the revision history for Perl extension App::Kaizendo.
 
-0.0.003  2010-xx-xx xx:xx:xx
+0.0.004  2010-xx-xx xx:xx:xx
+	- Updated CSS and templates
+	- Rename some method calls and templates
+
+0.0.003  2010-07-20 10:58:02
         - Added tests for the REST API: /_user
 	- Add CSS files from the Blueprint and Readability projects
 	- Template reworking and updates
