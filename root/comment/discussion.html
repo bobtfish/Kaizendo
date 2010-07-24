@@ -1,11 +1,25 @@
-<ol>
-  <li>Comment 1
-     <ol>
-     	<li>Reply 1</li>
-     	<li>Reply 2</li>
-     	<li>Reply 3</li>
-     </ol>
-  </li>
-  <li>Comment 2</li>
-  <li>Comment 3</li>
+[%
+  # Temporary JSON handler, while we're testing
+  USE JSON;
+  json = INSERT sandbox/example_discussion.json;
+  discussion_data = JSON.json_decode(json);
+%]
+
+<!-- Templated created with the following Zen Code:
+ol.discussion>li#c_>div.comment{[% INCLUDE comment/content.html title="Comment" content='Oh noes' %]} ol>li#c_>div.comment{[% INCLUDE comment/content.html title="Reply" content="I can haz cheezburger" %] -->
+
+[% BLOCK new_discussion %]
+<ol class="discussion">
+    [% FOREACH this_comment = discussion_data %]
+	<li id="c_">
+		<div class="comment">[% INCLUDE comment/content.html comment=this_comment %]</div>
+        [% IF comment.replies.length > 1 %]
+          [% INCLUDE new_discussion discussion=this_comment.replies %]
+        [% END %]
+	</li>
+    [% END %]
 </ol>
+[% END %]
+
+[% INCLUDE new_discussion discussion_data=discussion_data %]
+

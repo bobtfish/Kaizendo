@@ -1,4 +1,10 @@
+#!env sh
+#
 # Testbed for figuring out the comments data
 # Using YAML::Shell for testing purposes
 
-ysh -r < comment.yml
+ysh -r < example_discussion.yml
+
+# Using JSON::XS for converting from YAML to JSON
+
+json_xs -f yaml -t json < example_discussion.yml > example_discussion.json
