@@ -13,7 +13,7 @@ ol.discussion>li#c_>div.comment{[% INCLUDE comment/content.html title="Comment" 
     [% FOREACH this_comment = discussion_data %]
 	<li id="c_">
 		<div class="comment">[% INCLUDE comment/content.html comment=this_comment %]</div>
-        [% IF comment.replies.length > 1 %]
+        [% IF comment.replies.length %]
           [% INCLUDE new_discussion discussion=this_comment.replies %]
         [% END %]
 	</li>
