@@ -4,6 +4,14 @@ This is a generated export of the Blueprint CSS library. To create an updated
 version, check out the blueprint source from Github, then edit settings.yml 
 and run the following command:
 
+# Dependencies
+
+Using the compress.rb script for generating CSS files requires the
+installation of the following packages (on Debian/Ubuntu):
+
+  rubygems
+  librmagick-ruby
+
 # Updating
 
   $ git clone http://github.com/joshuaclayton/blueprint-css.git ~/src/blueprint-css

@@ -3,23 +3,23 @@
   USE JSON;
   json = INSERT sandbox/example_discussion.json;
   discussion_data = JSON.json_decode(json);
+  depth = 0;
 %]
 
 <!-- Templated created with the following Zen Code:
 ol.discussion>li#c_>div.comment{[% INCLUDE comment/content.html title="Comment" content='Oh noes' %]} ol>li#c_>div.comment{[% INCLUDE comment/content.html title="Reply" content="I can haz cheezburger" %] -->
 
 [% BLOCK new_discussion %]
-<ol class="discussion">
+<ol class="discussion depth_[% depth %]">
     [% FOREACH this_comment = discussion_data %]
-	<li id="c_">
-		<div class="comment">[% INCLUDE comment/content.html comment=this_comment %]</div>
-        [% IF comment.replies.length %]
-          [% INCLUDE new_discussion discussion=this_comment.replies %]
+	<li id="c_[% this_comment.id.substr(0,6) %]" class="comment">
+		[% INCLUDE comment/content.html comment=this_comment %]
+        [% IF this_comment.replies.size; %]
+          [% INCLUDE new_discussion discussion_data=this_comment.replies depth=depth+1 %]
         [% END %]
 	</li>
     [% END %]
 </ol>
 [% END %]
 
-[% INCLUDE new_discussion discussion_data=discussion_data %]
-
+[% INCLUDE new_discussion discussion_data=discussion_data depth=depth %]

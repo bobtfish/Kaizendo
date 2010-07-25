@@ -258,7 +258,8 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clear {clear:both;}
 
 /* semantic class names */
+#left_col {float:left;margin-right:10px;width:150px;}
 #content {float:left;margin-right:10px;width:550px;}
 #footer {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:950px;margin-right:0;}
-#right_col, #comments, #help, #login {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:230px;}
-#left_col, #section_nav, #aspect_nav, #site_logo, #updated {float:left;margin-right:10px;width:150px;}
+#site_logo, #help, #section_nav, #aspect_nav {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:150px;}
+#right_col, #comments, #login {margin-right:0;padding-right:0;float:left;margin-right:10px;margin-right:0;width:230px;}

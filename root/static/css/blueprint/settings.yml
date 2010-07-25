@@ -1,8 +1,14 @@
+# This is the Blueprint CSS Framework configuration file used with the
+# Kaizendo project. Please see the README.mkdn file in this directory
+# for more info.
+#
 # refer to http://www.yaml.org/spec/1.1/ for clarification on YAML collections
+#
 kaizendo:
   path: /home/sjn/src/Kaizendo/root/static/css/blueprint
   semantic_classes:
     "#footer": ".span-24 last"
-    "#left_col, #section_nav, #aspect_nav, #site_logo, #updated": ".span-4"
+    "#left_col": ".span-4"
+    "#site_logo, #help, #section_nav, #aspect_nav": ".span-4 last"
     "#content": ".span-14"
-    "#right_col, #comments, #help, #login": ".span-6 last"
+    "#right_col, #comments, #login": ".span-6 last"

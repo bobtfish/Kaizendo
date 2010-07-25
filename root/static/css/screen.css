@@ -19,9 +19,74 @@ img.kaizendo_logo {
 	background: transparent !important;
 }
 
+#help {
+    /* position: fixed;  FIXME: Can't get it to work */
+    position: fixed;
+    background: #f5e6b5;
+}
+
+#aspect_nav {
+    position: fixed;
+    top: 200px;
+    background: #f5e6b5;
+}
+
+ul#aspect_nav {
+    padding: 5px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+ol.discussion {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    background: inherit;
+}
+
+.comment {
+    background: #f5f57b;
+}
+
+.comment > p.comment_title {
+    background: #f5f462;
+    margin: 0px;
+    padding: 2px;
+}
+
+.comment > p.comment_content {
+    padding: 4px;
+}
+
+ol.discussion.depth_1 {
+    padding-left: 3px;
+}
+
+ol.discussion.depth_1 > li {
+    border: 1px;
+}
+
+ol.discussion.depth_2 {
+    padding-left: 6px;
+    border-color: black;
+    border-width: 1px;
+    background: #f5f57b;
+}
+
+a.close {
+    text-decoration: none;
+    float: right;
+}
+
 #footer {
 	background: transparent !important;
-	color: #3d743a;
+	color: #2b5229;
+    text-align: center;
+}
+
+a.github_link {
+    color: inherit;
+    text-decoration: none;
 }
 
 html {
@@ -35,3 +100,4 @@ p, h1, h2 {
 .discussion p {
     padding: 0px;
 }
+

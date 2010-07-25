@@ -1,2 +1,8 @@
+<!-- Template: root/common/footer.html -->
+[% current_rev = INSERT 'common/current-revision.txt';
+   sha1 = current_rev.search('Id: ([0-9a-f]+)'); %]
         <img class="built_by" src="/static/images/btn_88x31_built.png">
-        <p class="updated">[% section.updated %] [% INCLUDE 'common/current-revision.txt' %]</p>
+        <p class="updated">[% section.updated; %]
+           <a class="github_link" href="http://github.com/sjn/Kaizendo/commit/[% sha1 %]" title="To Github">[% sha1 %]</a></p>
+
+<!-- End of template: root/common/footer.html -->

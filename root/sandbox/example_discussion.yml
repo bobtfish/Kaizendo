@@ -3,32 +3,52 @@
 -
   id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
   in_reply_to: ~
-  replies:
+  reply_ids:
     - '92f562c4-8c72-8fdb-a8cc-9a2bd69315e0'
     - '1dc551b7-5203-9e3f-97fa-9eebf92e605b'
+  discussion_id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+  replies:
+    -
+      id: '92f562c4-8c72-8fdb-a8cc-9a2bd69315e0'
+      in_reply_to: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+      reply_ids: ~
+      discussion_id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+      replies:
+        -
+          id: 'e84a39cf-9482-7385-9b5d-719736df585b'
+          in_reply_to: '92f562c4-8c72-8fdb-a8cc-9a2bd69315e0'
+          reply_ids: ~
+          discussion_id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+          title: I want a banana
+          author:
+            url: /_user/faceman
+            name: Tempelton Peck
+            id: faceman
+          published: '2010-03-19T21:19:22'
+          content: 'Shut up, B.A. the feds might be listening in.'    
+      title: I want a banana
+      author:
+        url: /_user/foo
+        name: B. A. Baracus
+        id: foo
+      published: '2010-03-19T17:34:12'
+      content: 'I pity the foo that thinks bananas are bad for you!!'
+    -
+      id: '1dc551b7-5203-9e3f-97fa-9eebf92e605b'
+      in_reply_to: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+      reply_ids: ~
+      discussion_id: '8b106f26-584c-b6ba-0f58-bdea3b289591'
+      title: I want a banana
+      author:
+        url: /_user/the_man
+        name: The Man
+        id: the_man
+      published: '2010-03-20T09:40:02'
+      content: 'Listen to The Man - Bananas are bad for you.'    
   title: I want a banana
-  user:
+  author:
     url: /_user/sjn
     name: Salve J. Nilsen
+    id: sjn
   published: '2010-03-19T17:26:59'
   content: 'Is this a good idea? I have heard that bananas can be bad for your health.'
--
-  id: '92f562c4-8c72-8fdb-a8cc-9a2bd69315e0'
-  in_reply_to: '8b106f26-584c-b6ba-0f58-bdea3b289591'
-  replies: ~
-  title: I want a banana
-  user:
-    url: /_user/foo
-    name: Mr. T
-  published: '2010-03-19T17:34:12'
-  content: 'I pity the foo that thinks bananas are bad for you!!'
--
-  id: '1dc551b7-5203-9e3f-97fa-9eebf92e605b'
-  in_reply_to: '8b106f26-584c-b6ba-0f58-bdea3b289591'
-  replies: ~
-  title: I want a banana
-  user:
-    url: /_user/the_man
-    name: The Man
-  published: '2010-03-20T09:40:02'
-  content: 'Listen to The Man - Bananas are bad for you.'
